@@ -1,0 +1,26 @@
+Добрый день
+Про лисп
+
+Используем
+Sbcl
+StealBankCommonLisp
+
+Stroganovyv@bmstu.ru
+nbtol@bmstu.ru
+
+https://habrahabr.ru/company/edison/blog/271103/
+
+https://clojurescript.ru/koans
+
+ClojureScript Koans
+http://clojurescriptkoans.com/
+
+И материал, который никто не скидывал https://youtu.be/7BPQ-gpXKt4
+
+
+
+
+
+https://github.com/fukamachi/woo
+https://vk.com/away.php?to=https%3A%2F%2Fdept-info.labri.fr%2F~strandh%2FTeaching%2FMTP%2FCommon%2FDavid-Lamkins%2Fchapter01.html&cc_key=
+https://www.quicklisp.org/beta/
