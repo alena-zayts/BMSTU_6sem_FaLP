@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.4)  14 FEB 2022 23:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.4)  15 FEB 2022 20:52
 entering extended mode
 **./report.tex
 (report.tex
@@ -1186,7 +1186,7 @@ File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 ) [5
 
  <./img/1.5.png> <./img/1.6.png>] [6]
-Overfull \hbox (12.69185pt too wide) in paragraph at lines 324--324
+Overfull \hbox (12.69185pt too wide) in paragraph at lines 323--323
  |\T2A/cmr/bx/n/14.4 5. На-пи-сать лямбда-выражение и со-от-вет-ству-ю-щую функ
 -цию. Пред-
  []
@@ -1194,7 +1194,7 @@ Overfull \hbox (12.69185pt too wide) in paragraph at lines 324--324
 <img/1.png, id=48, 573.14125pt x 121.45375pt>
 File: img/1.png Graphic file (type png)
 <use img/1.png>
-Package pdftex.def Info: img/1.png  used on input line 339.
+Package pdftex.def Info: img/1.png  used on input line 338.
 (pdftex.def)             Requested size: 401.19614pt x 85.01703pt.
 [7
 
@@ -1209,29 +1209,31 @@ File: img/3.png Graphic file (type png)
 <use img/3.png>
 Package pdftex.def Info: img/3.png  used on input line 364.
 (pdftex.def)             Requested size: 113.12184pt x 120.14804pt.
- (report.bbl) [8 <./img/2.png> <./img/3.png>] (report.aux) ) 
+ (report.bbl) [8
+
+ <./img/2.png> <./img/3.png>] (report.aux) ) 
 Here is how much of TeX's memory you used:
  30105 strings out of 478864
  737814 string characters out of 2858518
- 1678554 words of memory out of 10000000
+ 1680554 words of memory out of 10000000
  47519 multiletter control sequences out of 15000+600000
  417287 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,6n,103p,756b,1715s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\alena\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lasi1200.pk> <C:\Users\alen
-a\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lasx1200.pk> <C:\Users\
-alena\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lass1200.pk> <C:\Us
-ers\alena\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0600.pk> <C
-:\Users\alena\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1440.
-pk> <C:\Users\alena\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx3
-583.pk> <C:\Users\alena\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\l
-abx2074.pk> <C:\Users\alena\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi6
-00\larm1440.pk> <C:\Users\alena\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/
-dpi600\labx1440.pk>
-Output written on report.pdf (9 pages, 172518 bytes).
+ 99i,6n,103p,756b,1509s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\alena\AppData\Local\MiKT
+eX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lasi1200.pk> <C:\Users\alena\AppData\Local\
+MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lasx1200.pk> <C:\Users\alena\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lass1200.pk> <C:\Users\alena\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0600.pk> <C:\Users\alena\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1440.pk> <C:\Users\al
+ena\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx3583.pk> <C:\User
+s\alena\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx2074.pk> <C:\
+Users\alena\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk> 
+<C:\Users\alena\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.
+pk>
+Output written on report.pdf (9 pages, 168511 bytes).
 PDF statistics:
- 393 PDF objects out of 1000 (max. 8388607)
+ 381 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

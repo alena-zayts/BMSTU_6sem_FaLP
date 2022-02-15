@@ -301,22 +301,21 @@ cons - имеет фиксированное количество аргумен
 
 	(list 'Fred 'and 'Wilma) => (Fred and Wilma). 
 	(list 'Fred '(and Wilma)) => (Fred (and Wilma))
-	(cons Nil Nil) => (Nil)
-	(cons T Nil) => (T)
+	(cons Nil Nil) => (Nil . Nil) => (Nil)
+	(cons T Nil) => (T . Nil) => (T)
 	(cons Nil T) => (Nil . T)
 	(list Nil) => (Nil)
-	(cons '(T) Nil)	 => ((T))
+	(cons '(T) Nil)	 => ((T) . Nil)	 => ((T))
 	(list '(one two) '(free temp)) => ((one two) (free temp))
 	
-	(cons 'Fred '(and Willma)) => (Fred and Willma)
-	(cons 'Fred '(Wilma)) => (Fred Willma)
+	(cons 'Fred '(and Willma)) => (Fred . (and Willma)) => (Fred and Willma)
+	(cons 'Fred '(Wilma)) => (Fred .  (Willma)) => (Fred Willma)
 	(list Nil Nil) => (Nil Nil)
 	(list T Nil) => (T Nil)
 	(list Nil T) => (Nil T)
-	(cons T (list Nil)) => (T Nil)
-	;; (cons T (list Nil)) = (cons T (Nil))	= (T Nil)
+	(cons T (list Nil)) => (cons T '(Nil)) => (T . (Nil)) => (T Nil)
 	(list '(T) Nil) => ((T) Nil)
-	(cons '(one two) '(free temp)) => ((one two) free temp))
+	(cons '(one two) '(free temp)) => ((one two) . (free temp))  => ((one two) free temp)
 \end{lstlisting}
 
 \section*{5. Написать лямбда-выражение и соответствующую функцию. Представить результаты в виде списочных ячеек.}
@@ -336,6 +335,7 @@ cons - имеет фиксированное количество аргумен
 
 \includegraphics[scale=0.7]{img/1}
 
+\clearpage
 2. Написать функцию (f ar1 ar2), возвращающую ((ar1) (ar2)).
 \begin{lstlisting}[language=Lisp]
 	;;
