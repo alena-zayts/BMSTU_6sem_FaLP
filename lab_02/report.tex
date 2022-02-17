@@ -199,24 +199,43 @@ S-выражение ::= <атом> | <точечная пара>,
 
 6. (equal (abs (- 2 4)) 3)
 
+\section*{2. Написать функцию, вычисляющую гипотенузу прямоугольного треугольника по заданным катетам и составить диаграмму её вычисления.}
 
-
-
-
-
-
-
-
-
-3. Написать функцию (f ar1), возвращающую (((ar1))).
 \begin{lstlisting}[language=Lisp]
-	;;
-	(defun f3 (ar1) (list (list (list ar1))))
-	(f3 1) => (((1)))
-	;;
-	(lambda (ar1) (list (list (list ar1))))
-	((lambda (ar1) (list (list (list ar1)))) 1) => (((1)))
+	(defun hypotenuse (a b) (sqrt (+ (* a a) (* b  b))))
+	(hypotenuse 3 4) => 5.0 
 \end{lstlisting}
+
+\section*{3. Написать функцию, вычисляющую объем параллелепипеда по 3-м его сторонам, и составить диаграмму ее вычисления.}
+
+\begin{lstlisting}[language=Lisp]
+	 (defun p_volume (a b c) (* (* a b) c))
+	(p_volume 2 3 4) => 24 
+	;; or
+	(defun p_volume (a b c) (* a b c))
+	(p_volume 2 3 4) => 24 
+\end{lstlisting}
+
+\section*{4. Каковы результаты вычисления следующих выражений?(объяснить возможную ошибку и варианты ее устранения)}
+
+1. (list 'a c) => The variable C is unbound.
+
+2. (cons 'a (b c))
+
+3. (cons 'a '(b c))
+
+4. (caddy (1 2 3 4 5))
+
+5. (cons 'a 'b 'c)
+
+6. (list 'a (b c))
+
+7. (list a '(b c))
+
+8. (list (+ 1 '(length '(1 2 3))))
+
+
+
 
 
 
