@@ -175,6 +175,13 @@ S-выражение ::= <атом> | <точечная пара>,
 \section*{3. Способы создания функций}
 
 
+\section*{4. Функции Car и Cdr}
+
+\section*{5. Назначение и отличие в работе Cons и List}
+
+
+
+
 
 
 
@@ -211,12 +218,15 @@ S-выражение ::= <атом> | <точечная пара>,
 
 \includegraphics[scale=1]{img/1.6}
 
+\clearpage
 \section*{2. Написать функцию, вычисляющую гипотенузу прямоугольного треугольника по заданным катетам и составить диаграмму её вычисления.}
 
 \begin{lstlisting}[language=Lisp]
 	(defun hypotenuse (a b) (sqrt (+ (* a a) (* b  b))))
 	(hypotenuse 3 4) => 5.0 
 \end{lstlisting}
+
+\includegraphics[scale=1]{img/2}
 
 \section*{3. Написать функцию, вычисляющую объем параллелепипеда по 3-м его сторонам, и составить диаграмму ее вычисления.}
 
@@ -228,28 +238,263 @@ S-выражение ::= <атом> | <точечная пара>,
 	(p_volume 2 3 4) => 24 
 \end{lstlisting}
 
+\includegraphics[scale=1]{img/3}
+
 \section*{4. Каковы результаты вычисления следующих выражений?(объяснить возможную ошибку и варианты ее устранения)}
 
-1. (list 'a c) => The variable C is unbound.
+\textbf{1.}
+ 
+\begin{lstlisting}[language=Lisp]
+(list 'a c) => The variable C is unbound.
+\end{lstlisting}
 
-2. (cons 'a (b c))
+Одна из возможных ошибок: переменная c не связана со значением. Решение: задать переменнной c некоторое значение.
+\begin{lstlisting}[language=Lisp]
+(let ((c 'c)) (list 'a c)) => (A C)
+\end{lstlisting}
 
-3. (cons 'a '(b c))
-
-4. (caddy (1 2 3 4 5))
-
-5. (cons 'a 'b 'c)
-
-6. (list 'a (b c))
-
-7. (list a '(b c))
-
-8. (list (+ 1 '(length '(1 2 3))))
-
-
+Другая из возможных ошибок: предполагалось, что с -- это символ. Решение: использовать функцию quote (или сокращенную -- апостроф) для блокировки вычисления аргумента.
+\begin{lstlisting}[language=Lisp]
+	(list 'a 'c) => (A C)
+\end{lstlisting}
 
 
 
+
+
+\textbf{2.}
+\begin{lstlisting}[language=Lisp]
+	 (cons 'a (b c)) => Undefined function: B, Undefined variable: C
+\end{lstlisting}
+
+Одна из возможных ошибок: функция b не связана со своим определением, а переменная c не связана со своимм значением. Решение: определить функцию b с одним аргументом (или переменным количеством аргументов), а переменной c задать некоторое значение.
+\begin{lstlisting}[language=Lisp]
+	(defun b (c) (cons 'b (cons c Nil)))
+	(b 'c) => (B C)
+	(let ((c 'c)) (cons 'a (b c))) => (A B C)
+	
+\end{lstlisting}
+
+Другая из возможных ошибок: предполагалось, что (b c) -- это список из символов b и c. Решение: использовать функцию quote (или сокращенную -- апостроф) для блокировки вычисления аргументов.
+\begin{lstlisting}[language=Lisp]
+	(cons 'a '(b c)) => (A B C)
+\end{lstlisting}
+
+
+
+
+
+
+\textbf{3.} 
+\begin{lstlisting}[language=Lisp]
+	(cons 'a '(b c)) => (A B C)
+\end{lstlisting}
+Ошибок нет
+
+
+
+
+
+\textbf{4.} 
+
+\begin{lstlisting}[language=Lisp]
+	(caddy (1 2 3 4 5))  => Undefined function: CADDY
+\end{lstlisting}
+
+Одна из возможных ошибок: функция caddy не связана со своим определением. Решение: определить функцию caddy, принимающую один аргумент  (или переменное ччисло аргуентов), и использовать функцию quote (или сокращенную -- апостроф) для блокировки вычисления аргумента.
+\begin{lstlisting}[language=Lisp]
+	(defun caddy (arg) arg)
+	(caddy '(1 2 3 4 5)) => (1 2 3 4 5)
+\end{lstlisting}
+
+Другая из возможных ошибок: предполагалось вызвать функцию caddr для получения третьего элемента списка (1 2 3 4 5). Решение: исправить опечатку (заменить caddy на caddr) и использовать функцию quote (или сокращенную -- апостроф) для блокировки вычисления аргумента.
+\begin{lstlisting}[language=Lisp]
+	(caddr '(1 2 3 4 5)) => 3
+\end{lstlisting}
+
+
+
+
+\textbf{5.}
+
+\begin{lstlisting}[language=Lisp]
+	(cons 'a 'b 'c)  => The function CONS is called with three arguments, but wants exactly two.
+\end{lstlisting}
+
+Ошибка: функция cons вызвана с тремя аргументами, хотя она принимает два аргумента. Решение: предполагая, что автор хотел получить список из трех символов  (a b c), можно либо первым аргументом передать символ a, а вторым -- список (b c), либо использовать функцию list вместо cons.
+
+
+\begin{lstlisting}[language=Lisp]
+	(cons 'a '(b c)) => (A B C)
+	(list 'a 'b 'c) => (A B C)
+\end{lstlisting}
+
+
+
+
+\textbf{6.} 
+\begin{lstlisting}[language=Lisp]
+	(list 'a (b c)) => Undefined function: B, Undefined variable: C
+\end{lstlisting}
+
+(Аналогично пункту 2)
+
+Одна из возможных ошибок: функция b не связана со своим определением, а переменная c не связана со своимм значением. Решение: определить функцию b с одним аргументом (или переменным количеством аргументов), а переменной c задать некоторое значение.
+\begin{lstlisting}[language=Lisp]
+	(defun b (c) (cons 'b (cons c Nil)))
+	(b 'c) => (B C)
+	(let ((c 'c)) (list 'a (b c))) => (A (B C))
+	
+\end{lstlisting}
+
+Другая из возможных ошибок: предполагалось, что (b c) -- это список из символов b и c. Решение: использовать функцию quote (или сокращенную -- апостроф) для блокировки вычисления аргументов.
+\begin{lstlisting}[language=Lisp]
+	(list 'a '(b c)) => (A (B C))
+\end{lstlisting}
+
+
+
+
+
+
+
+\textbf{7.} 
+\begin{lstlisting}[language=Lisp]
+	(list a '(b c)) => The variable A is unbound.
+\end{lstlisting}
+
+Одна из возможных ошибок: переменная a не связана со значением. Решение: задать переменнной a некоторое значение.
+\begin{lstlisting}[language=Lisp]
+	(let ((a 'a)) (list a '(b c))) => (A (B C))
+\end{lstlisting}
+
+Другая из возможных ошибок: предполагалось, что a -- это символ. Решение: использовать функцию quote (или сокращенную -- апостроф) для блокировки вычисления аргумента.
+\begin{lstlisting}[language=Lisp]
+	(list 'a '(b c)) => (A (B C))
+\end{lstlisting}
+
+
+
+
+
+
+
+
+\textbf{8.} 
+
+\begin{lstlisting}[language=Lisp]
+	(list (+ 1 '(length '(1 2 3)))) =>   Value of '(LENGTH '(1 2 3)) in (+ 1 '(LENGTH '(1 2 3))) is (LENGTH '(1 2 3)), not a NUMBER.
+\end{lstlisting}
+
+Функция + в качестве аргументов ожидает аргументы типа NUMBER. Вторымм аргументом ей передано '(length '(1 2 3)). Функция length возвращает длину переданного ей списка (тип NUMBER), однако апостроф блокирует вычисление. Таким образом, вместо длины списка типа NUMBER функции + в качестве второго аргумента передается значение (LENGTH '(1 2 3)). Решение - убрать апостроф, блокирующий вычисления аргумента.
+
+\begin{lstlisting}[language=Lisp]
+	(list (+ 1 (length '(1 2 3)))) => (4)
+\end{lstlisting}
+
+
+
+
+
+
+\section*{5. Написать функцию longer\_then от двух списков-аргументов, которая возвращает Т, если первый аргумент имеет большую длину}
+
+\begin{lstlisting}[language=Lisp]
+	(defun longer_then (list1 list2) (> (length list1) (length list2)))
+	(longer_then '(1 2 3) '(1 2)) => T
+	(longer_then '(1 2) '(1 2 3)) => NIL
+	(longer_then Nil '(1)) => NIL
+	 (longer_then '(1 2) '(1 2)) => NIL
+\end{lstlisting}
+
+\section*{6. Каковы результаты вычисления следующих выражений?}
+
+\begin{lstlisting}[language=Lisp]
+	(cons 3 (list 5 6)) => (3 5 6)
+	(cons 3 '(list 5 6)) => (3 LIST 5 6)
+	(list 3 'from 9 'lives (- 9 3)) => (3 FROM 9 LIVES 6)
+	(+ (length for 2 too)) (car '(21 22 23))) => The variable FOR is unbound.
+	(cdr '(cons is short for ans)) => (IS SHORT FOR ANS)
+	(car (list one two))  =>  Undefined variables: ONE TWO
+	(car (list 'one 'two)) => ONE
+\end{lstlisting}
+
+
+\section*{7. Дана функция (defun mystery (x) (list (second x) (first x))). Какие результаты вычисления следующих выражений?}
+
+first и rest -- мнемоничные синонимичные названия для функций car и cdr. Функции от SECOND до TENTH извлекают соответствующие элементы списка. LAST	возвращает последнюю cons-ячейку в списке (если вызывается с целочисленным аргументом n, возвращает n ячеек).
+
+\begin{lstlisting}[language=Lisp]
+	(mystery (one two)) =>  The variable TWO is unbound 
+	(mystery (last one two)) => The variable ONE is unbound
+	(mystery free) => The variable FREE is unbound
+	(mystery one 'two) => The variable ONE is unbound
+\end{lstlisting}
+
+Примеры корректной работы:
+\begin{lstlisting}[language=Lisp]
+	(mystery '(one two)) =>  (TWO ONE)
+	(mystery '(last one two)) => (ONE LAST)
+	(mystery (last '(one two))) => (NIL TWO)
+	(mystery '(free)) => (NIL FREE)
+\end{lstlisting}
+
+\section*{8. Написать функцию, которая переводит температуру в системе Фаренгейта температуру по Цельсию (defun f-to-c (temp)…)}
+
+Формулы: c = 5/9*(f-32.0); f = 9/5*c+32.0. 
+
+Как бы назывался роман Р. Брэдбери "451 по Фаренгейту" в системе по Цельсию?
+
+\begin{lstlisting}[language=Lisp]
+	(defun f-to-c (temp) (* (/ 5 9) (- temp 32.0)))
+	(f-to-c 451) => 232.77779
+	
+	(defun c-to-f (temp) (+ (* (/ 9 5) temp) 32.0))
+	(c-to-f 232.77779) => 451.0
+\end{lstlisting}
+
+Ответ: "232.77779 по Цельсию"
+
+\section*{9. Что получится при вычисления каждого из выражений?}
+
+Eval выполняет двойное  вычисление своего аргумента. Эта функция является обычной, и первое  вычисление аргумента выполняет так же, как и любая обычная функция.  Полученное при этом выражение вычисляется ещё раз. Такое двойное  вычисление может понадобиться либо для снятия блокировки вычислений (установленной функцией quote), либо же для вычисления сформированного в ходе первого вычисления нового функционального вызова.
+ 
+Функционал apply является обычной функцией с двумя  вычисляемыми аргументами, обращение к ней имеет вид: (apply F L), где F – функциональный аргумент и L – список, рассматриваемый как список фактических параметров для F. Значение функционала – результат применения F к этим фактическим параметрам.
+
+В диалекте Common Lisp для замыкания функционального аргумента встроена специальная форма (function F), где F – определяющее  выражение функции. Эту форму часто называют функциональной  блокировкой, поскольку она аналогична по действию функции quote, но  не просто квотирует аргумент, а как бы замыкает значения используемых  в функциональном аргументе F свободных переменных, фиксируя их  значения из контекста его определения. Функциональную блокировку  можно записывать короче, с помощью двух знаков \#'.
+ 
+\begin{lstlisting}[language=Lisp]
+	(list 'cons t NIL) =>  (CONS T NIL)
+	(eval (list 'cons t NIL)) => (T)
+	(eval (eval (list 'cons t NIL))) => The function COMMON-LISP:T is undefined
+	;(eval t) => T
+	(apply #cons "(t NIL)) => illegal complex number format: #CONS
+	;(apply #'cons '(t NIL)) => (T)
+	(eval NIL) => NIL
+	(list 'eval NIL) => (EVAL NIL) 
+	(eval (list 'eval NIL)) => NIL
+	;(eval (list 'eval NIL)) = (eval (eval NIL)) = (eval NIL) => NIL
+\end{lstlisting}
+
+\section*{Дополнительно}
+
+1. Написать функцию, вычисляющую катет по заданной гипотенузе и другому катету  прямоугольного треугольника, и составить диаграмму ее вычисления.
+
+\begin{lstlisting}[language=Lisp]
+	(defun cathet (hyp another_cathet) (sqrt (- (* hyp hyp) (* another_cathet another_cathet))))
+	(cathet 5 4) => 3.0
+\end{lstlisting}
+
+\includegraphics[scale=1.2]{img/d1}
+
+2. Написать функцию, вычисляющую площадь трапеции по ее основаниям и высоте, и составить диаграмму ее вычисления.
+
+\begin{lstlisting}[language=Lisp]
+	(defun trapezoid_area (a b h) (* 0.5 h (+ a b)))
+	(trapezoid_area 2 4 3) => 9.0
+\end{lstlisting}
+
+\includegraphics[scale=1.2]{img/d2}
 
 	\bibliographystyle{utf8gost705u}  % стилевой файл для оформления по ГОСТу
 	
