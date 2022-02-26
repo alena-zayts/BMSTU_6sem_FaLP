@@ -441,7 +441,10 @@ list и append определяются с помощью cons.
 (defun compare_results (res1 res2) 
 (if (check_continue_game res2)
 (and
-(print (list 'Игрок 1 'набрал res1 'Игрок 2 'набрал res2))
+(print (list 'rrrr))
+(print (list 'Сравнение 'по 'очкам))
+(print (list 'Игрок 1 'набрал res1))
+(print (list 'Игрок 2 'набрал res2))
 (cond 
 ((< res1 res2) (and (print (list 'Игрок 2 'выиграл 'по 'очкам)) 2))
 ((> res1 res2) (and (print (list 'Игрок 1 'выиграл 'по 'очкам)) 1))
