@@ -477,6 +477,23 @@ $(cond \; (p_1  \; e_{11}  \;  e_{12}  \;  …  \;  e_{1m_1})  \;  (p_2  \;  e_{
 		) 
 		'diff
 	))
+	
+; if		
+(defun how-alike (x y) 
+	(if 
+		(if (= x y) T (equal x y))
+		'the_same
+		(if 
+			(if (oddp x) (oddp y))
+			'both_odd 
+			(if 
+				(if (evenp x) (evenp y))
+				'both_even
+				'diff
+			)
+		)
+	)
+)
 \end{lstlisting}
 
 	\bibliographystyle{utf8gost705u}  % стилевой файл для оформления по ГОСТу

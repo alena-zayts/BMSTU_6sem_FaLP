@@ -1,0 +1,437 @@
+
+
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[14pt]{extsizes}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} 
+\usepackage{pgfplots}
+\usepackage{filecontents}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{eucal}
+\usepackage{enumitem}
+%s\documentclass[openany]{book}
+\frenchspacing
+
+\usepackage{titlesec}
+\titleformat{\section}
+{\normalsize\bfseries}
+{\thesection}
+{1em}{}
+\titlespacing*{\chapter}{0pt}{-30pt}{8pt}
+\titlespacing*{\section}{\parindent}{*4}{*4}
+\titlespacing*{\subsection}{\parindent}{*4}{*4}
+
+\usepackage{indentfirst} % Красная строка
+
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+
+% Для листинга кода:
+\lstset{ %
+	language=lisp,                 % выбор языка для подсветки (здесь это С)
+	texcl=true,
+	extendedchars=\true,
+	basicstyle=\small\sffamily, % размер и начертание шрифта для подсветки кода
+	numbers=left,               % где поставить нумерацию строк (слева\справа)
+	numberstyle=\tiny,           % размер шрифта для номеров строк
+	stepnumber=1,                   % размер шага между двумя номерами строк
+	numbersep=5pt,                % как далеко отстоят номера строк от подсвечиваемого кода
+	showspaces=false,            % показывать или нет пробелы специальными отступами
+	showstringspaces=false,      % показывать или нет пробелы в строках
+	showtabs=false,             % показывать или нет табуляцию в строках
+	frame=single,              % рисовать рамку вокруг кода
+	tabsize=2,                 % размер табуляции по умолчанию равен 2 пробелам
+	captionpos=t,              % позиция заголовка вверху [t] или внизу [b] 
+	breaklines=true,           % автоматически переносить строки (да\нет)
+	breakatwhitespace=false, % переносить строки только если есть пробел
+	escapeinside={\#*}{*)},  % если нужно добавить комментарии в коде
+	%inputencoding=utf8x,
+	%extendedchars=\true
+}
+
+
+
+\usepackage[left=2cm,right=2cm, top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+% Для измененных титулов глав:
+\usepackage{titlesec, blindtext, color} % подключаем нужные пакеты
+\definecolor{gray75}{gray}{0.75} % определяем цвет
+\newcommand{\hsp}{\hspace{20pt}} % длина линии в 20pt
+% titleformat определяет стиль
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
+
+% plot
+\usepackage{pgfplots}
+\usepackage{filecontents}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+
+\begin{document}
+	%\def\chaptername{} % убирает "Глава"
+	\thispagestyle{empty}
+	\begin{titlepage}
+		\noindent \begin{minipage}{0.15\textwidth}
+			\includegraphics[width=\linewidth]{img/b_logo}
+		\end{minipage}
+		\noindent\begin{minipage}{0.9\textwidth}\centering
+			\textbf{Министерство науки и высшего образования Российской Федерации}\\
+			\textbf{Федеральное государственное бюджетное образовательное учреждение высшего образования}\\
+			\textbf{~~~«Московский государственный технический университет имени Н.Э.~Баумана}\\
+			\textbf{(национальный исследовательский университет)»}\\
+			\textbf{(МГТУ им. Н.Э.~Баумана)}
+		\end{minipage}
+		
+		\noindent\rule{18cm}{3pt}
+		\newline\newline
+		\noindent ФАКУЛЬТЕТ $\underline{\text{«Информатика и системы управления»}}$ \newline\newline
+		\noindent КАФЕДРА $\underline{\text{«Программное обеспечение ЭВМ и информационные технологии»}}$\newline\newline\newline\newline\newline
+		
+		\begin{center}
+			\noindent\begin{minipage}{1.1\textwidth}\centering
+				\Large\textbf{  Отчет по лабораторной работе №5}\newline
+				\textbf{по дисциплине <<Функциональное и логическое}\newline
+				\textbf{~~~программирование>>}\newline\newline
+			\end{minipage}
+		\end{center}
+		
+		\noindent\textbf{Тема} $\underline{\text{Использование управляющих структур, работа со списками}}$\newline\newline
+		\noindent\textbf{Студент} $\underline{\text{Зайцева А. А.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline\newline
+		\noindent\textbf{Группа} $\underline{\text{ИУ7-62Б~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline\newline
+		\noindent\textbf{Оценка (баллы)} $\underline{\text{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline\newline
+		\noindent\textbf{Преподаватели} $\underline{\text{Толпинская Н.Б., Строганов Ю. В.~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline\newline\newline
+		
+		\begin{center}
+			\vfill
+			Москва~---~\the\year
+			~г.
+		\end{center}
+	\end{titlepage}
+	
+\chapter*{Теоретические вопросы}
+
+\section*{1. Структуроразрушающие и не разрушающие структуру списка функции}
+
+Функции, работающие со списками, делятся на:
+\begin{itemize}
+	\item функции, не разрушающие структуру списка (сохраняется возможность работать с исходным списком);
+	\item функции, разрушающие структуру списка (не сохраняется возможность работы с исходным списком, зато функция выполнятся быстрее по сравнению со своим не разрушающим аналогом, так как не создаются копии cons-ячеек).
+\end{itemize}
+
+Из-за такого разделения существует много дублирующих функций: функциям, не разрушающим структуру списка (reverse, substitute, ...) соответствуют структуроразрушающие функции, которые, как правило, начинаются с буквы <<n>>, как признак того, что не создаются копии (nreverse, nsubstitute, ...). conc является структуроразрушающим аналогом append, delete -- структуроразрушающим аналогом remove.
+
+\section*{2. Отличие в работе функций cons, list, append, nconс и в их результате}
+
+cons принимает 2 указателя на любые S-выражения и возвращает новую cons-ячейку (списковую ячейку), содержащую 2 значения. Если второе значение не NIL и не другая cons-ячейка, то ячейка печатается как два значения в скобках, разделённые точкой (так называемая точечная пара). Иначе, по сути, эта функция включает значение первого аргумента в начало списка, являющегося значением второго аргумента. 
+
+Функция list, составляющая список из значений своих аргументов (у которого голова -- это первый аргумент, хвост -- все остальные аргументы), создает столько списковых ячеек, сколько аргументов ей было передано. Эта функция относится к особым, поскольку у неё может быть произвольное число аргументов, но при этом все аргументы вычисляются.
+
+append принимает произвольное количество аргументов-списков и соединяет (сливает)  элементы верхнего уровня всех списков в один список. Действие append иногда называют конкатенацией списков. В результате должен быть построен новый список.
+
+Например: (append (list 1 2) (list 3 4)) ==> (1 2 3 4). 
+
+С точки зрения функционального подхода, задача функции append - вернуть список (1 2 3 4) не изменяя ни одну из cons-ячеек в списках-аргументах (1 2) и (3 4). append на самом деле создаёт только две новые cons-ячейки, чтобы хранить значения 1 и 2, соединяя их вместе и делая ссылку из CDR второй ячейки на первый элемент последнего аргумента - списка (3 4). После этого функция возвращает cons-ячейку содержащую 1. Ни одна из входных cons-ячеек не была изменена, и результатом, как и требовалось, является список (1 2 3 4). Единственная хитрость в том, что результат, возвращаемый функцией append имеет общие cons-ячейки со списком (3 4). Таким образом, если последний переданный список будет модифицирован, то  итоговый список будет также изменен.
+
+nconc -- это структуроразрушающая версия append. Как и append, nconc возвращает соединение своих аргументов, но строит такой результат следующим образом: для каждого непустого аргумента-списка, nconc устанавливает в cdr его последней cons-ячейки ссылку на первую cons-ячейку следующего непустого аргумента-списка. После этого она возвращает первый список, который теперь является головой результата-соединения.
+
+Итак, отличия: cons является базисной, list, append, nconc -- нет; list, append, nconc принимают произвольное количество аргументов (причем аргументами append и nconc могут быть только списки), cons -- фиксированное (два); cons создает точечную пару или список (в зависимости от второго аргумента), list, append и nconc -- список; cons и list создают новые списковые ячейки (все), append имеет общие списковые ячейки с последним списком, nconc не создает cons-ячеек; conc является структуроразрушающей, а cons, list и append -- нет.
+
+Пусть (setf lst1 '( a b)); (setf lst2 '(c d).
+
+
+
+\begin{lstlisting}[language=Lisp]	
+	(cons lst1 lst2) => ((A B) C D)
+	lst1 => (A B)
+	(list lst1 lst2) => ((A B) (C D))
+	lst1 => (A B)
+	(append lst1 lst2) => (A B C D)
+	lst1 => (A B)
+	(nconc lst1 lst2) => (A B C D)
+	lst1 => (A B C D)
+\end{lstlisting}
+
+
+
+	
+\chapter*{Практические задания}	
+
+\section*{1. Написать функцию, которая по своему списку-аргументу lst определяет, является ли он палиндромом (то есть равны ли lst и (reverse lst)).}
+
+Работа только с верхним уровнем: список '((1 2) 3 (1 2))) считается палиндромом, а список '((1 2) 3 (2 1))) -- нет.
+
+\begin{lstlisting}[language=Lisp]	
+; c использованием стандартных функций
+(defun is_palindrome (lst) (equalp lst (reverse lst)))
+
+; с использованиемм самостоятельно реализованных функций
+(defun my_length (lst &optional (len 0)) 
+	(cond 
+		((null lst) len)
+		((my_length (cdr lst) (+ len 1)))
+	)
+)
+
+(defun my_equalp (x1 x2)
+	(cond 
+		((numberp x1) (and (numberp x2) (= x1 x2)))
+		((atom x1) (and (atom x2) (eq x1 x2)))
+		((consp x1) (and (consp x2)  (my_equalp (car x1)  (car x2)) (my_equalp (cdr x1) (cdr x2))))
+		((listp x1) (and (listp x2) (= (my_length x1) (my_length x2)) (my_equalp (car x1)  (car x2)) (my_equalp (cdr x1) (cdr x2))))	
+	)
+)
+
+
+(defun my_rev_upper (lst) 
+	(if (null lst)
+		Nil 
+		(append 
+			(my_rev_upper (cdr lst)) 
+			(cons (car lst) Nil))
+	)
+)
+
+(defun is_palindrome (lst) (my_equalp lst (my_rev_upper lst)))
+
+;тесты
+(is_palindrome '(1 2 3)) => NIL
+(is_palindrome '(1 2 1)) => T
+(is_palindrome '((1) 2 1)) => NIL
+
+(is_palindrome '((1 2) 3 (1 2))) => T
+(is_palindrome '((1 2) 3 (2 1))) => NIL
+\end{lstlisting}
+
+\clearpage
+Работа по всем уровням (и использование самостоятельно реализованных функций): список '((1 2) 3 (1 2))) не считается палиндромом, а список '((1 2) 3 (2 1))) -- да.
+
+\begin{lstlisting}[language=Lisp]	
+(defun my_rev_deeper (lst) 
+	(if (null lst) 
+		Nil 
+		(append 
+			(my_rev_deeper (cdr lst))
+			(if (atom (car lst)) 	
+				(cons (car lst) Nil)
+				(list (my_rev_deeper (car lst)))
+			)
+		)
+	)
+)
+	
+(defun is_palindrome (lst) (my_equalp lst (my_rev_deeper lst)))
+	
+;тесты
+(is_palindrome '(1 2 3)) => NIL
+(is_palindrome '(1 2 1)) => T
+(is_palindrome '((1) 2 1)) => NIL
+
+(is_palindrome '((1 2) 3 (1 2))) => Nil
+(is_palindrome '((1 2) 3 (2 1))) => T
+(is_palindrome '((1 (2 3)) 4 ((3 2) 1))) => T
+\end{lstlisting}
+
+\section*{2. Написать предикат set-equal, который возвращает t, если два его множества-аргумента содержат одни и те же элементы, порядок которых не имеет значения}
+
+Если элементами множеств являются только атомы (с использованием встроенных функций):
+
+\begin{lstlisting}[language=Lisp]	
+
+(defun set-equal (set1 set2)
+	(if (null set1)  
+		(null set2)
+		(if (member (car set1) set2) 
+			(set-equal (cdr set1) (remove (car set1) set2 :count 1))
+			Nil
+		)
+	)
+)
+\end{lstlisting}
+
+Комментарии к решению:
+\begin{itemize}
+	\item если передаваемые аргументы -- множества в том понимании, что элементы в них не повторяются, то дополнительный параметр :count 1 в функции remove можно не указывать;
+	\item ветвь if (null set1) необходима, так как если множества совпадают, то при последнем вызове set-equal аргументами будут два пустых списка. Тогда далее будет произведена проверка, является ли (car set1)=Nil членом set2=Nil, результатом которой будет Nil, и задача будет решена неверно.
+\end{itemize}
+
+
+Если элементами множеств могут быть другие множества (и с использованием собственных функций):
+
+\begin{lstlisting}[language=Lisp]	
+(defun my_member (elem lst)
+	(if (null lst)
+		Nil
+		(if (my_equalp elem (car lst))
+			lst
+			(my_member elem (cdr lst)))
+	)
+)
+
+(defun my_list_without_last (lst)
+	(if (null (cdr lst))
+		Nil
+		(cons (car lst) (my_list_without_last (cdr lst)))
+	)
+)
+
+(defun my_member_before (elem lst)
+	(if (my_member elem lst)
+		(my_member_before elem (my_list_without_last lst))
+		lst
+	)
+)
+
+(defun my_remove_first (elem lst)
+	(append 
+		(my_member_before elem lst) 
+		(cdr (my_member elem lst)))
+)
+
+(defun set-equal (set1 set2)
+	(if (null set1)  
+		(null set2)
+		(if (my_member (car set1) set2) 
+			(set-equal (cdr set1) (my_remove_first (car set1) set2))
+			Nil
+		)
+	)
+)
+
+(set-equal '(1 2 3) '(1 2 3)) => T
+(set-equal '() '()) => T
+(set-equal '(1 2) '(1 2 3)) => NIL
+(set-equal '(1) '(1 2)) => NIL
+(set-equal '(1 2) '(1 (2))) => NIL
+(set-equal '(1 (2)) '(1 (2))) => T
+(set-equal '(1 (2)) '(1 (2 3))) => NIL
+\end{lstlisting}
+
+%(set-equal '(1 2 2 3) '(1 2 3)) => Nil
+
+\section*{3. Напишите свои необходимые функции, которые обрабатывают таблицу из 4-х точечных пар: (страна . столица), и возвращают по стране - столицу, а по столице — страну.}
+
+\begin{lstlisting}[language=Lisp]
+(defun find_capital_by_country (table country)
+	(if (null table)
+		(and (print '(No such country)) Nil)
+		(if (eq (caar table) country)
+			(cdar table)
+			(find_capital_by_country (cdr table) country)
+		)
+	)
+)
+
+(defun find_country_by_capital (table capital)
+	(if (null table)
+		(and (print '(No such capital)) Nil)
+		(if (eq (cdar table) capital)
+			(caar table)
+			(find_country_by_capital (cdr table) capital)
+		)
+	)
+)
+
+
+
+(defvar table)
+(setq table '((Russia . Moscow) (GreatBritain . London) (France . Paris) (Italy . Roma)))
+
+(find_capital_by_country table 'Russia) => MOSCOW
+(find_capital_by_country table 'Italy) => ROMA
+(find_capital_by_country table 'USA) =>"(NO SUCH COUNTRY)" NIL
+
+(find_country_by_capital table 'Moscow) => Russia
+(find_country_by_capital table 'Paris) => FRANCE
+(find_country_by_capital table 'Washington) =>"(NO SUCH CAPITAL)" NIL
+\end{lstlisting}
+
+\section*{4. Напишите функцию swap-first-last, которая переставляет в списке-аргументе первый и последний элементы.}
+
+\begin{lstlisting}[language=Lisp]
+(defun my_last (lst) 
+	(if (null (cdr lst))
+		(car lst)
+		(my_last (cdr lst))
+	)
+)
+	
+(defun my_list_without_last (lst)
+	(if (null (cdr lst))
+		Nil
+		(cons (car lst) (my_list_without_last (cdr lst)))
+	)
+)
+
+(defun swap-first-last (lst)
+	(if (cdr lst)
+		(append 
+			(cons (my_last lst) Nil)
+			(my_list_without_last (cdr lst)) 
+			(cons (car lst) Nil)	
+		)
+		lst
+	)
+)
+	
+(swap-first-last '(1 2 3)) => (3 2 1)
+
+; для 2 приведенных ниже примеров и нужна проверка if (cdr lst)
+(swap-first-last '()) => Nil
+(swap-first-last '(1)) => (1)
+
+(swap-first-last '(1 2)) => (2 1)
+(swap-first-last '((1 2) 3 4 5)) => 
+\end{lstlisting}
+
+\section*{5. Напишите функцию swap-first-last, которая переставляет в списке-аргументе первый и последний элементы.}
+
+\begin{lstlisting}[language=Lisp]
+	(defun my_last (lst) 
+	(if (null (cdr lst))
+	(car lst)
+	(my_last (cdr lst))
+	)
+	)
+	
+	(defun my_list_without_last (lst)
+	(if (null (cdr lst))
+	Nil
+	(cons (car lst) (my_list_without_last (cdr lst)))
+	)
+	)
+	
+	(defun swap-first-last (lst)
+	(if (cdr lst)
+	(append 
+	(cons (my_last lst) Nil)
+	(my_list_without_last (cdr lst)) 
+	(cons (car lst) Nil)	
+	)
+	lst
+	)
+	)
+	
+	(swap-first-last '(1 2 3)) => (3 2 1)
+	
+	; для 2 приведенных ниже примеров и нужна проверка if (cdr lst)
+	(swap-first-last '()) => Nil
+	(swap-first-last '(1)) => (1)
+	
+	(swap-first-last '(1 2)) => (2 1)
+	(swap-first-last '((1 2) 3 4 5)) => 
+\end{lstlisting}
+
+
+	\bibliographystyle{utf8gost705u}  % стилевой файл для оформления по ГОСТу
+	
+	\bibliography{51-biblio}          % имя библиографической базы (bib-файла)
+
+	
+\end{document}
