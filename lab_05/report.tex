@@ -387,47 +387,257 @@ nconc -- это структуроразрушающая версия append. К
 (swap-first-last '(1)) => (1)
 
 (swap-first-last '(1 2)) => (2 1)
-(swap-first-last '((1 2) 3 4 5)) => 
+(swap-first-last '((1 2) 3 4 5)) => (5 3 4 (1 2))
 \end{lstlisting}
 
-\section*{5. Напишите функцию swap-first-last, которая переставляет в списке-аргументе первый и последний элементы.}
+\section*{5. Напишите функцию swap-two-element, которая переставляет в списке-аргументе два указанных своими порядковыми номерами элемента в этом списке.}
 
 \begin{lstlisting}[language=Lisp]
-	(defun my_last (lst) 
-	(if (null (cdr lst))
-	(car lst)
-	(my_last (cdr lst))
+; индексация начинается с 0
+(defun my_nth (lst n)
+	(if (or (< n 0) (< (my_length lst) (- n 1)))
+		(print '(Error no such index))
+		(if (= n 0)
+			(car lst)
+			(my_nth (cdr lst) (- n 1))
+		)
 	)
+)
+
+; from-элемента в результате нет
+(defun list_slice_from (lst from)
+	(if (= from -1)
+		lst
+		(list_slice_from (cdr lst) (- from 1))
 	)
-	
-	(defun my_list_without_last (lst)
-	(if (null (cdr lst))
-	Nil
-	(cons (car lst) (my_list_without_last (cdr lst)))
+)
+
+(defun list_without_last_n (lst n)
+	(if (= n 0)
+		lst
+		(list_without_last_n (my_list_without_last lst) (- n 1))
 	)
+)
+
+; to-элемента в результате нет
+(defun list_slice_to (lst to)
+	(list_without_last_n lst (- (my_length lst) to))
+)
+
+; элементы to и from не входят в результат
+(defun list_slice_from_to (lst from to)
+	(list_slice_from (list_slice_to lst to) from)
+)
+
+(defun swap-two-element-inner (lst index1 index2)
+	(if (<= 0 index1 index2 (- (my_length lst) 1))
+		(append 
+			(list_slice_to lst index1)
+			(cons (my_nth lst index2) Nil)
+			(list_slice_from_to lst index1 index2)
+			(if (= index1 index2) ;защита от дублирования
+				Nil	
+				(cons (my_nth lst index1) Nil)
+			)
+			(list_slice_from lst index2)
+		)
+		(print '(Error in indexes))
 	)
-	
-	(defun swap-first-last (lst)
-	(if (cdr lst)
-	(append 
-	(cons (my_last lst) Nil)
-	(my_list_without_last (cdr lst)) 
-	(cons (car lst) Nil)	
+)
+
+(defun swap-two-element (lst index1 index2)
+	(if (< index1 index2)
+		(swap-two-element-inner lst index1 index2)
+		(swap-two-element-inner lst index2 index1)
 	)
-	lst
-	)
-	)
-	
-	(swap-first-last '(1 2 3)) => (3 2 1)
-	
-	; для 2 приведенных ниже примеров и нужна проверка if (cdr lst)
-	(swap-first-last '()) => Nil
-	(swap-first-last '(1)) => (1)
-	
-	(swap-first-last '(1 2)) => (2 1)
-	(swap-first-last '((1 2) 3 4 5)) => 
+)
+
+(swap-two-element '(0 1 2 3 4 5 6 7) 2 4) => (0 1 4 3 2 5 6 7)
+(swap-two-element '(0 1 2 3 4 5 6 7) 0 7) => (7 1 2 3 4 5 6 0)
+(swap-two-element '(0 1 2 3 4 5 6 7) -1 2) => (ERROR IN INDEXES)
+(swap-two-element '(0 1 2 3 4 5 6 7) 1 8) => (ERROR IN INDEXES)
+(swap-two-element '(0 1 2 3 4 5 6 7) 5 3) => (0 1 2 5 4 3 6 7)
+(swap-two-element '(0 1 2 3 4 5 6 7) 3 3) => (0 1 2 3 4 5 6 7)
 \end{lstlisting}
 
+
+\section*{6. Напишите две функции, swap-to-left и swap-to-right, которые производят одну круговую перестановку в списке-аргументе влево и вправо, соответственно}
+
+\begin{lstlisting}[language=Lisp]
+(defun my_list_without_last (lst)
+	(if (null (cdr lst))
+		Nil
+		(cons (car lst) (my_list_without_last (cdr lst)))
+	)
+)
+
+(defun my_last (lst) 
+	(if (null (cdr lst))
+		(car lst)
+		(my_last (cdr lst))
+	)
+)
+
+(defun swap-to-right (lst)
+	(if (null (cdr lst))
+		lst
+		(cons (my_last lst) (my_list_without_last lst))
+	)
+)
+
+(defun swap-to-left (lst)
+	(if (null (cdr lst))
+		lst
+		(cons (cdr lst) (cons (car lst) Nil))
+	)
+)
+
+(swap-to-left ()) => Nil
+(swap-to-right ()) => Nil
+(swap-to-left '(1)) => (1)
+(swap-to-right '(1)) => (1)
+(swap-to-left '(1 2 (3 4))) => ((2 (3 4)) 1)
+(swap-to-right '(1 2 (3 4))) => ((3 4) 1 2)
+\end{lstlisting}
+
+
+\section*{7. Напишите функцию, которая добавляет к множеству двухэлементных списков новый двухэлементный список, если его там нет.}
+
+\begin{lstlisting}[language=Lisp]
+(defun my_equalp (x1 x2)
+	(cond 
+		((numberp x1) (and (numberp x2) (= x1 x2)))
+		((atom x1) (and (atom x2) (eq x1 x2)))
+		((consp x1) (and (consp x2)  (my_equalp (car x1)  (car x2)) (my_equalp (cdr x1) (cdr x2))))
+		((listp x1) (and (listp x2) (= (my_length x1) (my_length x2)) (my_equalp (car x1)  (car x2)) (my_equalp (cdr x1) (cdr x2))))	
+	)
+)
+
+(defun my_member (elem lst)
+	(if (null lst)
+		Nil
+		(if (my_equalp elem (car lst))
+			lst
+			(my_member elem (cdr lst)))
+	)
+)
+
+(defun update (elem set)
+	(if (my_member elem set)
+		set
+		(cons elem set)
+	)
+)
+
+(update '(0 1) '((1 2) (2 3) (3 4))) => ((0 1) (1 2) (2 3) (3 4))
+(update '(1 2) '((1 2) (2 3) (3 4))) => ((1 2) (2 3) (3 4))
+(update '(1 2) Nil) => ((1 2))
+\end{lstlisting}
+
+
+\section*{8. Напишите функцию, которая умножает на заданное число-аргумент первый числовой элемент списка из заданного 3-х элементного списка-аргумента, когда}
+
+a) все элементы списка --- числа,
+
+\begin{lstlisting}[language=Lisp]
+(defun my_mult (num lst) 
+	(cons 
+		(* num (car lst)) 
+		(cdr lst)
+	)
+)
+
+(my_mult 2 '(1 2 3)) => (2 2 3)
+\end{lstlisting}
+
+\clearpage
+б) элементы списка -- любые объекты.
+
+\begin{lstlisting}[language=Lisp]
+
+(defun my_mult (num smth)
+	(cond 
+		((null smth) Nil)
+		((numberp smth) (* num smth))
+		((atom smth) smth)
+		; cons
+		(T (let ((res_car (my_mult num (car smth))))
+			(if (my_equalp (car smth) res_car)
+				(cons (car smth) (my_mult num (cdr smth)))
+				(cons res_car (cdr smth))
+			)
+		   )
+		)
+	)
+)
+
+
+(my_mult 2 '(1 2 3)) => (2 2 3)
+(my_mult 2 '(a b c)) => (A B C)
+(my_mult 2 '(a 2 3)) => (A 4 3)
+(my_mult 2 '(a (2 . 3) (4 5 6))) => (A (4 . 3) (4 5 6))
+(my_mult 2 '(a (b . 3) (4 5 6))) => (A (B . 6) (4 5 6))
+(my_mult 2 '(a (b . c) (d 5 6))) => (A (B . C) (D 10 6))
+(my_mult 2 '(a (b . c) (d e 6))) => (A (B . C) (D E 12))
+(my_mult 2 '(a (b . c) (d f (g 5) 10))) => (A (B . C) (D F (G 10) 10))
+(my_mult 2 Nil) => Nil
+\end{lstlisting}
+
+\section*{9. Напишите функцию, select-between, которая из списка-аргумента из 5 чисел выбирает только те, которые расположены между двумя указанными границами-аргументами и возвращает их в виде списка (упорядоченного по возрастанию списка чисел (+ 2 балла))}
+
+\begin{lstlisting}[language=Lisp]
+	
+(defun select-between (lst a b)
+	(if (null lst)
+		Nil
+		(if (< a (car lst) b)
+			(cons (car lst) (select-between (cdr lst) a b))
+			(select-between (cdr lst) a b)
+		)
+	)
+)
+
+(select-between '(0 3 7 5 4) 1 6) => (3 5 4)
+
+(defun my_sort (lst)
+	(if (null lst)
+		Nil
+		(append 
+			(my_sort (remove-if (lambda (x) (< (car lst) x)) (cdr lst)))
+			(list (car lst))
+			(my_sort (remove-if (lambda (x) (> (car lst) x)) (cdr lst)))
+		)
+	)
+)
+
+(defun select-greater (lst a)
+	(if (null (cdr lst))
+		Nil
+		(if (< a (car lst))
+			lst
+			(select-greater (cdr lst) a)
+		)
+	)
+)
+
+
+(defun select-lower (lst b)
+	(if (null (cdr lst))
+		Nil
+		(if (> b (car lst))
+			(cons (car lst) (select-lower (cdr lst) b))
+			Nil
+		)
+	)
+)
+
+(defun select-between-sorted (lst a b)	
+	(select-greater (select-lower (my_sort lst) b) a)	
+)
+
+(select-between-sorted '(0 3 7 5 4) 1 6) => (3 4 5)
+
+\end{lstlisting}
 
 	\bibliographystyle{utf8gost705u}  % стилевой файл для оформления по ГОСТу
 	
