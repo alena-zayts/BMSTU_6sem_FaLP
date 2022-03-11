@@ -86,35 +86,25 @@
 
 \chapter*{Практические задания}	
 
-\section*{1. Написать функцию, которая по своему списку-аргументу lst определяет, является ли он палиндромом (то есть равны ли lst и (reverse lst)). Списки одноуровневые}
+\section*{1. Написать функцию, которая по своему списку-аргументу lst определяет, является ли он палиндромом (то есть равны ли lst и (reverse lst)). Списки одноуровневые.}
 
-
-\begin{lstlisting}[language=Lisp]	
-; 1. Проверка на равенство исходного списка и инвертированного исходного списка.
-
+1. Проверка на равенство исходного списка и инвертированного исходного списка.
+\begin{lstlisting}[language=Lisp]
 (defun is_palindrome (lst) 
-	(equalp 
-		lst 
-		(reverse lst)
-	)
+	(equalp lst (reverse lst))
 )
+\end{lstlisting}
 
-; 2. Проверка на равенство первой половины исходного списка и 
-; инвертированной второй половины исходного списка (если список нечетной длины, 
-; то центральный элемент не попадает ни в первый, ни во второй список)
-; (этот вариант и было предложено реализовать)
+2. Проверка на равенство первой половины исходного списка и инвертированной второй половины исходного списка (если список нечетной длины, то центральный элемент не попадает ни в первый, ни во второй список) (этот вариант и было предложено реализовать).
 
-;(nthcdr n lst) выполняет для списка lst операцию cdr n раз, и возвращает результат
-;(floor n) усекает значения по нижней границе
-;(ceiling n) усекает значения по верхней границе.
-
+(nthcdr n lst) выполняет для списка lst операцию cdr n раз, и возвращает результат. (floor n) усекает значения по нижней границе. (ceiling n) усекает значения по верхней границе.
+\begin{lstlisting}[language=Lisp]
 (defun first_n (n lst) 
 	(cond 
-		((null lst) lst)
-		((= n 0) Nil)
+		((or (null lst) (= n 0)) Nil)
 		(t (cons 
-				(car lst) 
-				(first_n (- n 1) (cdr lst))
+				  (car lst) 
+				  (first_n (- n 1) (cdr lst))
 			 )
 		)
 	)
@@ -128,13 +118,12 @@
 		)
 	)
 )
+\end{lstlisting}
 
+\clearpage
+3. Рекурсивно: сравнить первый и последний элемент исходного списка, первый и последний элемент исходного списка без первого и последнего элемента, и так далее (если длина списка нечетная, то центральный элемент ни с чем не сравнивается).
 
-
-; 3. Рекурсивно: сравнить первый и последний элемент исходного списка, первый и последний 
-; элемент исходного списка без первого и последнего элемента и так далее.
-; (если длина списка нечетная, то центральный элемент ни с чем не сравнивается)
-
+\begin{lstlisting}[language=Lisp]
 (defun list_without_last (lst)
 	(cond
 		((null (cdr lst)) Nil)
@@ -201,13 +190,12 @@ $
 
 
 
-\clearpage
+
 \section*{3. Напишите свои необходимые функции, которые обрабатывают таблицу из 4-х точечных пар: (страна . столица), и возвращают по стране - столицу, а по столице — страну.}
 
-
+1. Используя информацию о том, что в таблице ровно 4 точечные пары.
 
 \begin{lstlisting}[language=Lisp]
-; 1. Используя информацию о том, что в таблице ровно 4 точечные пары
 (defun find_capital_by_country (table country)
 	(cond
 		((eql (caar table) country) (cdar table))
@@ -225,15 +213,13 @@ $
 		((eql (cdaddr (cdr table)) capital) (caaddr (cdr table)))
 	)
 )
+\end{lstlisting}
 
-; Используя some
-; Функция (SOME TEST LIST1 ... LISTN) выполняет действия предиката TEST над 
-; CAR-элементами списков LIST1,...,LISTN, затем - над CADR-обьектами каждого
-; списка и т.д. до тех пор, пока тест не вернет значение, отличное от NIL, 
-; или не встретится конец списка. Если тест возвращает значение, отличное от NIL, 
-; функция SOME возвращает это значение, если же конец списка достигнут, 
-; функция SOME возвращает NIL.
+2. Используя функционал some.
 
+(some \#'test lst1 ... lstn) выполняет действия предиката test над car-элементами списков lst1,...,lstn, затем - над cadr-обьектами каждого  списка и т.д. до тех пор, пока тест не вернет значение, отличное от Nil, или не встретится конец списка. Если тест возвращает значение, отличное от Nil, функция some возвращает это значение, если же конец списка достигнут, функция some возвращает Nil.
+
+\begin{lstlisting}[language=Lisp]
 (defun find_capital_by_country (table country)
 	(some 
 		#'(lambda (row) (cond ((eql (car row) country) (cdr row)))) 
@@ -247,13 +233,14 @@ $
 		table
 	) 
 )
+\end{lstlisting}
 
 
+3. Используя функции assoc/rassoc.
 
-; Используя assoc/rassoc
-; Функция assoc (rassoc) выбирает из ассоциативного списка, заданного вторым аргументом, 
-; первую пару, в которой первый (второй) элемент совпадает со значением первого аргумента. 
+assoc (rassoc) выбирает из ассоциативного списка, заданного вторым аргументом, первую точечную пару, в которой первый (второй) элемент совпадает со значением первого аргумента. 
 
+\begin{lstlisting}[language=Lisp]
 (defun find_capital_by_country (table country)
 	(cdr (assoc country table))
 )
@@ -270,11 +257,11 @@ $
 
 (find_capital_by_country table 'Russia) => MOSCOW
 (find_capital_by_country table 'Italy) => ROMA
-(find_capital_by_country table 'USA) =>"(NO SUCH COUNTRY)" NIL
+(find_capital_by_country table 'USA) => NIL
 
 (find_country_by_capital table 'Moscow) => Russia
 (find_country_by_capital table 'Paris) => FRANCE
-(find_country_by_capital table 'Washington) =>"(NO SUCH CAPITAL)" NIL
+(find_country_by_capital table 'Washington) => NIL
 \end{lstlisting}
 
 \if 0
@@ -295,6 +282,16 @@ $
 \clearpage
 \section*{5. Напишите функцию swap-two-element, которая переставляет в списке-аргументе два указанных своими порядковыми номерами элемента в этом списке.}
 
+1. Собирать список из элементов исходного списка в следующем порядке: 
+\begin{itemize}
+	\item элементы, которые стоят до индекса min(index1 index2) (не включительно);
+	\item элемент с индексом max(index1 index2);
+	\item элементы, которые стоят между индексами min(index1 index2) и max(index1 index2) (не включительно);
+	\item элемент с индексом min(index1 index2);
+	\item элементы, которые стоят после индекса max(index1 index2) (не включительно);
+\end{itemize}
+
+
 \begin{lstlisting}[language=Lisp]
 ; элемент n не входит в результат
 (defun list_till_n (n lst) 
@@ -309,13 +306,19 @@ $
 	(nthcdr (+ from 1) (list_till_n to lst))
 )
 
+; в этой функции index1 < index2
 (defun swap-two-element-inner (lst index1 index2)
-	(append 
+	(nconc 
 		(list_till_n index1 lst)
 		(cons (nth index2 lst) (list_slice_from_to lst index1 index2))
 		(cons (nth index1 lst) (nthcdr (+ index2 1) lst))	
 	)
 )
+
+
+
+
+
 
 
 (defun swap-two-element (lst index1 index2)
@@ -329,8 +332,65 @@ $
 		((= index1 index2) lst)
 	)
 )
+\end{lstlisting}
 
 
+
+2. Рекурсивно записывать в конец результирующего списка голову исходного списка, голову хвоста исходного списка и так далее. Если достигли элемента с индексом index1 (index2), то записать вместо головы элемент с индексом index2 (index1). В конце инвертировать результирующий список
+
+(a) Без использования nconc, рекурсивно доходя до конца исходного списка
+\begin{lstlisting}[language=Lisp]
+; в этой функции index1 < index2
+(defun swap-two-element-inner (lst index1 index2 res elem1)
+	(cond 
+		((null lst) (reverse res))
+		((= index1 0) (swap-two-element-inner (cdr lst) (- index1 1) (- index2 1) (cons (nth index2 lst) res) elem1))
+		((= index2 0) (swap-two-element-inner (cdr lst) index1 (- index2 1) (cons elem1 res) elem1))
+		(t (swap-two-element-inner (cdr lst) (- index1 1) (- index2 1) (cons (car lst) res) elem1))
+	)
+)
+
+(defun swap-two-element (lst index1 index2)
+	(cond 
+		((and (< index1 index2) (< -1 index1) (< index2 (length lst)))
+			(swap-two-element-inner lst index1 index2 () (nth index1 lst))
+		)
+		((and (> index1 index2) (< -1 index2) (< index1 (length lst)))
+			(swap-two-element-inner lst index2 index1 () (nth index2 lst))
+		)
+		((= index1 index2) lst)
+	)
+)
+\end{lstlisting}
+\clearpage
+(б) С использованием ncon, рекурсивно доходя только до элемента с индексом index2 (swap-two-element-inner не заменяет элемент с индексом index2  на элемент с индексом index1). 
+
+\begin{lstlisting}[language=Lisp]
+; в этой функции index1 < index2
+(defun swap-two-element-inner (lst index1 index2 res)
+	(cond 
+		((= index2 0) (reverse res))
+		((= index1 0) (swap-two-element-inner (cdr lst) (- index1 1) (- index2 1) (cons (nth index2 lst) res)))
+		(t (swap-two-element-inner (cdr lst) (- index1 1) (- index2 1) (cons (car lst) res)))
+	)
+)
+	
+(defun swap-two-element (lst index1 index2)
+	(cond 
+		((and (< index1 index2) (< -1 index1) (< index2 (length lst)))
+			(nconc (swap-two-element-inner lst index1 index2 ()) (cons (nth index1 lst) (nthcdr (+ index2 1) lst)))
+		)
+		((and (> index1 index2) (< -1 index2) (< index1 (length lst)))
+			(nconc (swap-two-element-inner lst index2 index1 ()) (cons (nth index2 lst) (nthcdr (+ index1 1) lst)))
+		)
+		((= index1 index2) lst)
+	)
+)
+	
+\end{lstlisting}
+
+Все варианты функций проверялись на следующих тестах:
+\begin{lstlisting}[language=Lisp]
 (swap-two-element '(0 1 2 3 4 5 6 7) 2 4) => (0 1 4 3 2 5 6 7)
 (swap-two-element '(0 1 2 3 4 5 6 7) 0 7) => (7 1 2 3 4 5 6 0)
 (swap-two-element '(0 1 2 3 4 5 6 7) -1 2) => Nil
@@ -347,11 +407,9 @@ $
 (swap-two-element '(0 1 2 3 4 5 6 7) 3 3)
 (swap-two-element '(0 1 2 3 4 5 6 7) -1 2)
 (swap-two-element '(0 1 2 3 4 5 6 7) 1 8)
+(swap-two-element '(0 1 2 3 4 5 6 7) 0 1)
 $
 \fi
-
-
-
 
 	\bibliographystyle{utf8gost705u}  % стилевой файл для оформления по ГОСТу
 	
