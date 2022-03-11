@@ -1,0 +1,530 @@
+
+
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[14pt]{extsizes}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} 
+\usepackage{pgfplots}
+\usepackage{filecontents}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{eucal}
+\usepackage{enumitem}
+%s\documentclass[openany]{book}
+\frenchspacing
+
+\usepackage{titlesec}
+\titleformat{\section}
+{\normalsize\bfseries}
+{\thesection}
+{1em}{}
+\titlespacing*{\chapter}{0pt}{-30pt}{8pt}
+\titlespacing*{\section}{\parindent}{*4}{*4}
+\titlespacing*{\subsection}{\parindent}{*4}{*4}
+
+\usepackage{indentfirst} % Красная строка
+
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+
+% Для листинга кода:
+\lstset{ %
+	language=lisp,                 % выбор языка для подсветки (здесь это С)
+	texcl=true,
+	extendedchars=\true,
+	basicstyle=\small\sffamily, % размер и начертание шрифта для подсветки кода
+	numbers=left,               % где поставить нумерацию строк (слева\справа)
+	numberstyle=\tiny,           % размер шрифта для номеров строк
+	stepnumber=1,                   % размер шага между двумя номерами строк
+	numbersep=5pt,                % как далеко отстоят номера строк от подсвечиваемого кода
+	showspaces=false,            % показывать или нет пробелы специальными отступами
+	showstringspaces=false,      % показывать или нет пробелы в строках
+	showtabs=false,             % показывать или нет табуляцию в строках
+	frame=single,              % рисовать рамку вокруг кода
+	tabsize=2,                 % размер табуляции по умолчанию равен 2 пробелам
+	captionpos=t,              % позиция заголовка вверху [t] или внизу [b] 
+	breaklines=true,           % автоматически переносить строки (да\нет)
+	breakatwhitespace=false, % переносить строки только если есть пробел
+	escapeinside={\#*}{*)},  % если нужно добавить комментарии в коде
+	%inputencoding=utf8x,
+	%extendedchars=\true
+}
+
+
+
+\usepackage[left=2cm,right=2cm, top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+% Для измененных титулов глав:
+\usepackage{titlesec, blindtext, color} % подключаем нужные пакеты
+\definecolor{gray75}{gray}{0.75} % определяем цвет
+\newcommand{\hsp}{\hspace{20pt}} % длина линии в 20pt
+% titleformat определяет стиль
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
+
+% plot
+\usepackage{pgfplots}
+\usepackage{filecontents}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+
+\begin{document}
+	%\def\chaptername{} % убирает "Глава"
+	\thispagestyle{empty}
+	\begin{titlepage}
+		\noindent \begin{minipage}{0.15\textwidth}
+			\includegraphics[width=\linewidth]{img/b_logo}
+		\end{minipage}
+		\noindent\begin{minipage}{0.9\textwidth}\centering
+			\textbf{Министерство науки и высшего образования Российской Федерации}\\
+			\textbf{Федеральное государственное бюджетное образовательное учреждение высшего образования}\\
+			\textbf{~~~«Московский государственный технический университет имени Н.Э.~Баумана}\\
+			\textbf{(национальный исследовательский университет)»}\\
+			\textbf{(МГТУ им. Н.Э.~Баумана)}
+		\end{minipage}
+		
+		\noindent\rule{18cm}{3pt}
+		\newline\newline
+		\noindent ФАКУЛЬТЕТ $\underline{\text{«Информатика и системы управления»}}$ \newline\newline
+		\noindent КАФЕДРА $\underline{\text{«Программное обеспечение ЭВМ и информационные технологии»}}$\newline\newline\newline\newline\newline
+		
+		\begin{center}
+			\noindent\begin{minipage}{1.1\textwidth}\centering
+				\Large\textbf{  Отчет по лабораторной работе №6}\newline
+				\textbf{по дисциплине <<Функциональное и логическое}\newline
+				\textbf{~~~программирование>>}\newline\newline
+			\end{minipage}
+		\end{center}
+		
+		\noindent\textbf{Тема} $\underline{\text{Использование функционалов}}$\newline\newline
+		\noindent\textbf{Студент} $\underline{\text{Зайцева А. А.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline\newline
+		\noindent\textbf{Группа} $\underline{\text{ИУ7-62Б~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline\newline
+		\noindent\textbf{Оценка (баллы)} $\underline{\text{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline\newline
+		\noindent\textbf{Преподаватели} $\underline{\text{Толпинская Н.Б., Строганов Ю. В.~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline\newline\newline
+		
+		\begin{center}
+			\vfill
+			Москва~---~\the\year
+			~г.
+		\end{center}
+	\end{titlepage}
+
+
+\chapter*{Практические задания}	
+
+Используя функционалы:
+
+
+\section*{1. Напишите функцию, которая уменьшает на 10 все числа из списка-аргумента этой функции.}
+
+1. Если все элементы списка -- числа. 
+\begin{lstlisting}[language=Lisp]
+; используя функционал mapcar
+(defun all_minus_10 (lst)
+	(mapcar #'(lambda (x) (- x 10)) lst)
+)
+
+; используя функционал mapcan
+(defun all_minus_10 (lst)
+	(mapcan #'(lambda (x) (cons (- x 10) Nil)) lst)
+)
+
+(all_minus_10 '(0 10 -10 5.5 2/3)) => (-10 0 -20 -4.5 -28/3)
+(all_minus_10 Nil) => NIL
+\end{lstlisting}
+
+2. Элементы списка -- любые объекты.
+
+a) Работа только по верхнему уровню. 
+
+\begin{lstlisting}[language=Lisp]
+; используя функционал mapcar.
+(defun all_minus_10 (lst)
+	(mapcar 
+		#'(lambda (x) (cond ((numberp x) (- x 10)) (x)))
+		lst
+	)
+)
+
+; рекурсивно
+; а) с помощью  рекурсии, собирающей результат на выходе
+(defun all_minus_10 (lst)
+	(cond 
+		((null lst) Nil)
+		((numberp (car lst)) (cons (- (car lst) 10) (all_minus_10 (cdr lst))))
+		(t (cons (car lst) (all_minus_10 (cdr lst))))
+	)
+)	
+
+
+
+
+
+
+
+
+; б) через "хвостовую рекурсию" 
+
+(defun all_minus_10_inner (lst result)
+	(cond 
+		((null lst) (reverse result))
+		((numberp (car lst)) (all_minus_10_inner (cdr lst) (cons (- (car lst) 10) result)))
+		(t (all_minus_10_inner (cdr lst) (cons (car lst) result)))
+	)
+)
+
+(defun all_minus_10 (lst) 
+	(all_minus_10_inner lst ())
+)
+
+
+(all_minus_10 '(0 a "abc" (1 k) 2/3)) => (-10 A "abc" (1 K) -28/3)
+\end{lstlisting}
+
+б) Работа по всем уровням структурированного списка.
+\begin{lstlisting}[language=Lisp]
+; вспомогательная функция, так как mapcar работает только со списками 
+; (не с точечными парами).
+(defun all_minus_10_cons (cns)
+	(cond 
+		((and (numberp (car cns)) (numberp (cdr cns))) (cons (- (car cns) 10) (- (cdr cns) 10)))
+		((numberp (car cns)) (cons (- (car cns) 10) (cdr cns)))
+		((numberp (cdr cns)) (cons (car cns) (- (cdr cns) 10)))
+		(t (cons (car cns) (cdr cns))))
+)
+
+; используя функционал mapcar.
+; Для определения того, является ли x точечной парой, используется проверка (atom (cdr x)) 
+; вместо (consp x) из-за следующих результатов:
+; (listp '(k . 10))=(consp '(k . 10)) => T)
+; (consp '(1 (K . 10)))=(listp '(1 (K . 10))) => T
+(defun all_minus_10 (lst)
+	(mapcar 
+		#'(lambda (x) 
+			(cond 
+				((numberp x) (- x 10))
+				((atom x) x)
+				((atom (cdr x)) (all_minus_10_cons x))
+				((listp x) (all_minus_10 x))
+				
+			))
+		lst)
+)	
+
+
+; рекурсивно
+; а) с помощью  рекурсии, собирающей результат на выходе
+(defun all_minus_10 (lst)
+	(cond 
+		((null lst) Nil)
+		((numberp (car lst)) (cons (- (car lst) 10) (all_minus_10 (cdr lst))))
+		((atom (car lst)) (cons (car lst) (all_minus_10 (cdr lst))))
+		((atom (cdr (car lst))) (cons (all_minus_10_cons (car lst)) (all_minus_10 (cdr lst))))
+		(t (cons (all_minus_10 (car lst)) (all_minus_10 (cdr lst))))
+	)
+)	
+
+; б) через "хвостовую рекурсию" 
+
+(defun all_minus_10_inner (lst result)
+	(cond 
+		((null lst) (reverse result))
+		((numberp (car lst)) (all_minus_10_inner (cdr lst) (cons (- (car lst) 10) result)))
+		((atom (car lst)) (all_minus_10_inner (cdr lst) (cons (car lst) result)))
+		((atom (cdr (car lst))) (all_minus_10_inner (cdr lst) (cons (all_minus_10_cons (car lst)) result)))
+		(t (all_minus_10_inner (cdr lst) (cons (all_minus_10_inner (car lst) ()) result)))
+	)
+)
+
+(defun all_minus_10 (lst) 
+	(all_minus_10_inner lst ())
+)
+
+
+(all_minus_10 '(0 a "abc" (1 (k . 10)) 2/3)) => (-10 A "abc" (-9 (K . 0)) -28/3)
+\end{lstlisting}
+
+
+
+\clearpage
+\section*{2. Напишите функцию, которая умножает на заданное число-аргумент все числа из заданного списка-аргумента, когда:}
+
+1. Все элементы списка -- числа.
+\begin{lstlisting}[language=Lisp]
+; используя функционал mapcar
+(defun mult_all (lst num)
+	(mapcar #'(lambda (x) (* x num)) lst)
+)
+(mult_all '(0 10 -10 5.5 2/3) 2) => (0 20 -20 11.0 4/3)
+\end{lstlisting}
+
+2. Элементы списка -- любые объекты.
+
+\begin{lstlisting}[language=Lisp]
+; используя функционал mapcar.
+(defun mult_all (lst num)
+	(mapcar 
+		#'(lambda (x) (cond ((numberp x) (* x num)) (x)))
+		lst
+	)
+)
+
+; рекурсивно
+; а) с помощью  рекурсии, собирающей результат на выходе
+(defun mult_all (lst num)
+	(cond 
+		((null lst) Nil)
+		((numberp (car lst)) (cons (* (car lst) num) (mult_all (cdr lst) num)))
+		(t (cons (car lst) (mult_all (cdr lst) num)))
+	)
+)	
+
+; б) через "хвостовую рекурсию" 
+(defun mult_all_inner (lst result num)
+	(cond 
+		((null lst) (reverse result))
+		((numberp (car lst)) (mult_all_inner (cdr lst) (cons (* (car lst) num) result) num))
+		(t (mult_all_inner (cdr lst) (cons (car lst) result) num))
+	)
+)
+
+(defun mult_all (lst num) 
+	(mult_all_inner lst () num)
+)
+
+
+(mult_all '(0 a "abc" (1 k) 2/3) 2) => (0 A "abc" (1 K) 4/3)
+\end{lstlisting}
+
+
+
+\section*{3. Написать функцию, которая по своему списку-аргументу lst определяет является ли он палиндромом (то есть равны ли lst и (reverse lst))}
+
+1. Проверка на равенство исходного списка и инвертированного исходного списка.
+\begin{lstlisting}[language=Lisp]
+(defun is_palindrome (lst) 
+	(equalp lst (reverse lst))
+)
+\end{lstlisting}
+
+2. Проверка на равенство первой половины исходного списка и инвертированной второй половины исходного списка (если список нечетной длины, то центральный элемент не попадает ни в первый, ни во второй список).
+
+(nthcdr n lst) выполняет для списка lst операцию cdr n раз, и возвращает результат. (floor n) усекает значения по нижней границе. (ceiling n) усекает значения по верхней границе.
+\begin{lstlisting}[language=Lisp]
+(defun first_n (n lst) 
+	(cond 
+		((or (null lst) (= n 0)) Nil)
+		(t (cons 
+			(car lst) 
+			(first_n (- n 1) (cdr lst))
+			)
+		)
+	)
+)
+
+(defun is_palindrome (lst)
+	(let ((half_len (/ (length lst) 2)))
+		(equalp 
+			(first_n (floor half_len) lst) 
+			(reverse (nthcdr (ceiling half_len) lst))
+		)
+	)
+)
+\end{lstlisting}
+
+\clearpage
+3. Рекурсивно: сравнить первый и последний элемент исходного списка, первый и последний элемент исходного списка без первого и последнего элемента, и так далее (если длина списка нечетная, то центральный элемент ни с чем не сравнивается).
+
+\begin{lstlisting}[language=Lisp]
+(defun list_without_last (lst)
+	(cond
+		((null (cdr lst)) Nil)
+		(t (cons 
+			(car lst) 
+			(list_without_last (cdr lst))
+			)
+		)
+	)
+)
+	
+(defun is_palindrome (lst)
+	(cond 
+		((null (cdr lst)) t)
+		((eql (car lst) (car (last lst))) ;т. к. (last '(1 2))=>(2)
+			(is_palindrome (list_without_last (cdr lst))))
+	)
+)
+\end{lstlisting}
+
+
+Все варианты функций проверялись на следующих тестах:
+\begin{lstlisting}[language=Lisp]
+(is_palindrome Nil) => T
+(is_palindrome '(1)) => T
+(is_palindrome '(1 2 3)) => NIL
+(is_palindrome '(1 2 1)) => T
+(is_palindrome '(1 2 3 1)) => NIL
+(is_palindrome '(1 2 2 1)) => T
+\end{lstlisting}
+
+\if 0
+$
+(is_palindrome Nil)
+(is_palindrome '(1))
+(is_palindrome '(1 2 3))
+(is_palindrome '(1 2 1))
+(is_palindrome '(1 2 3 1))
+(is_palindrome '(1 2 2 1))
+$
+\fi
+
+\clearpage
+\section*{4. Написать предикат set-equal, который возвращает t, если два его множества-аргумента содержат одни и те же элементы, порядок которых не имеет значения}
+
+Все элементы первого множества последовательно удаляются из обоих множеств. Если исходные множества эквиваленты, то в конце получим два пустых множества.
+
+\begin{lstlisting}[language=Lisp]
+(defun set-equal (set1 set2)
+	(cond 
+		((null set1) (null set2)) ;3 тест
+		((null set2) Nil) ;4 тест
+		(t (set-equal (cdr set1) (remove (car set1) set2)))
+	)
+)
+
+(set-equal '(1 2 3) '(1 2 3)) => T
+(set-equal '() '()) => T
+(set-equal '(1 2) '(1 2 3)) => NIL
+(set-equal '(1 2) '(1)) => NIL
+\end{lstlisting}
+
+
+\section*{5. Написать функцию которая получает как аргумент список чисел, а возвращает список квадратов этих чисел в том же порядке.}
+
+1. Используя функционал mapcar
+\begin{lstlisting}[language=Lisp] 
+(defun squares (lst)
+	(mapcar #'(lambda (x) (* x x)) lst)
+)
+
+(squares '(0 10 -10 5.5 2/3)) => (0 100 100 30.25 4/9)
+\end{lstlisting}
+
+2. Рекурсивно
+
+\begin{lstlisting}[language=Lisp]
+; а) с помощью  рекурсии, собирающей результат на выходе
+(defun squares (lst)
+	(cond 
+		((null lst) Nil)
+		(t (let ((x (car lst))) (cons (* x x) (squares (cdr lst)))))
+	)
+)	
+
+
+
+
+; б) через "хвостовую рекурсию" 
+(defun squares_inner (lst result)
+	(cond 
+		((null lst) (reverse result))
+		(t (squares_inner (cdr lst) (let ((x (car lst))) (cons (* x x) result))))
+	)
+)
+
+(defun squares (lst) 
+	(squares_inner lst ())
+)
+\end{lstlisting}
+
+\section*{TODO и mapcan6. Напишите функцию, select-between, которая из списка-аргумента, содержащего только числа, выбирает только те, которые расположены между двумя указанными границами-аргументами и возвращает их в виде списка (упорядоченного по возрастанию списка чисел (+ 2 балла)).}
+
+\section*{7. Написать функцию, вычисляющую декартово произведение двух своих списков-аргументов. (Напомним, что А х В это множество всевозможных пар (a b), где а принадлежит А, принадлежит В.)}
+
+1. С помощью функционалов mapcar и mapcan
+\begin{lstlisting}[language=Lisp]
+(defun decart (lstx lsty) 
+	(mapcan 
+		#'(lambda (x) (mapcar 
+					#'(lambda (y) (cons x (cons y Nil))) 
+					lsty
+					)
+		  )
+		lstx
+	)
+)
+	
+(decart '(a b) '(1 2)) => ((a 1) (a 2) (b 1) (b 2))
+	
+\end{lstlisting}
+
+\clearpage
+2. Рекурсивно
+\begin{lstlisting}[language=Lisp]
+; по принципу move-to с лекции
+; составляет список из каждого элемента lst и cons-ячейки cns
+(defun decart_row (lst cns res) 
+	(cond
+		((null lst) res)
+		(t (decart_row (cdr lst) cns (cons (cons (car lst) cns) res)))
+	)
+)
+
+; по принципу move-to с лекции 
+; (nconc вместо cons, lsty неизменен, lstx уменьшается в размере)
+(defun decart_inner (lstx lsty res) 
+	(cond
+		((null lstx) res)
+		(t (decart_inner 
+				(cdr lstx) 
+				lsty 
+				(nconc 
+					(decart_row lsty (cons (car lstx) Nil) ())
+					res
+				)
+			)
+		)
+	)
+)	
+
+(defun decart (lstx lsty) 
+	(decart_inner lstx lsty ())
+)
+
+(decart '(a b) '(1 2)) => ((2 B) (1 B) (2 A) (1 A))	
+\end{lstlisting}
+
+
+\section*{8. Почему так реализовано reduce, в чем причина?}
+
+Функционал reduce выполняет следующее преобразование исходного списка L=>(e1 e2 … en) с использованием начального значения A и бинарной операции-функции F: (reduce F L A) = (F(…(F(F A e1) e2))…en). Можно сказать, что значение A логически добавляется в начало списка L.
+
+\begin{itemize}
+	\item Если список содержит ровно один элемент и начальное значение не задано, то этот элемент возвращается, а функция не вызывается. 
+	\item Если список пуст и задано начальное значение, то возвращается начальное значение, а функция не вызывается. 
+	\item Если список пуст и начальное значение не задано, то функция вызывается без аргументов, и reduce возвращает то, что вернет функция. Это единственный случай, когда функция вызывается с другим количеством аргументов, кроме двух.
+\end{itemize}
+
+\begin{lstlisting}[language=Lisp]
+; в задании указано, что (reduce #'+ 0) => 0, но
+(reduce #'+ 0) => Value of 0 in (REDUCE #'+ 0) is 0, not a SEQUENCE.
+; возможно, имелось в виду следующее:
+(reduce #'+ () 0) => 
+(reduce #'+ ()) => 0
+\end{lstlisting}
+
+(reduce \#'+ ()): список пуст, начальное значение не указано, следовательно, функция + вызывается без аргументов, и reduce возвращает то, что вернет функция +. (+) => 0, поэтому и (reduce #'+ ()) => 0.
+
+
+	\bibliographystyle{utf8gost705u}  % стилевой файл для оформления по ГОСТу
+	
+	\bibliography{51-biblio}          % имя библиографической базы (bib-файла)
+
+	
+\end{document}
