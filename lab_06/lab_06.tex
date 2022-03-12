@@ -164,13 +164,7 @@ a) Работа только по верхнему уровню.
 
 
 
-
-
-
-
-
 ; б) через "хвостовую рекурсию" 
-
 (defun all_minus_10_inner (lst result)
 	(cond 
 		((null lst) (reverse result))
@@ -195,10 +189,11 @@ a) Работа только по верхнему уровню.
 	(cond 
 		((and (numberp (car cns)) (numberp (cdr cns))) (cons (- (car cns) 10) (- (cdr cns) 10)))
 		((numberp (car cns)) (cons (- (car cns) 10) (cdr cns)))
-		((numberp (cdr cns)) (cons (car cns) (- (cdr cns) 10)))
+		((and (numberp (cdr cns)) (atom (car cns))) (cons (car cns) (- (cdr cns) 10)))
+		((and (numberp (cdr cns)) (consp (car cns))) (cons (all_minus_10_cons (car cns)) (- (cdr cns) 10)))
+		((consp (car cns)) (cons (all_minus_10_cons (car cns)) (cdr cns)))
 		(t (cons (car cns) (cdr cns))))
 )
-
 ; используя функционал mapcar.
 ; Для определения того, является ли x точечной парой, используется проверка (atom (cdr x)) 
 ; вместо (consp x) из-за следующих результатов:
@@ -214,9 +209,7 @@ a) Работа только по верхнему уровню.
 				((listp x) (all_minus_10 x))
 				
 			))
-		lst)
-)	
-
+		lst))	
 
 ; рекурсивно
 ; а) с помощью  рекурсии, собирающей результат на выходе
@@ -231,7 +224,6 @@ a) Работа только по верхнему уровню.
 )	
 
 ; б) через "хвостовую рекурсию" 
-
 (defun all_minus_10_inner (lst result)
 	(cond 
 		((null lst) (reverse result))
@@ -247,7 +239,8 @@ a) Работа только по верхнему уровню.
 )
 
 
-(all_minus_10 '(0 a "abc" (1 (k . 10)) 2/3)) => (-10 A "abc" (-9 (K . 0)) -28/3)
+(all_minus_10 '(0 a "abc" (1 (k . 10)) 2/3 ((1 . f) . 10))) => 
+	(-10 A "abc" (-9 (K . 0)) -28/3 ((-9 . F) . 0))
 \end{lstlisting}
 
 
@@ -443,7 +436,99 @@ $
 )
 \end{lstlisting}
 
-\section*{TODO и mapcan6. Напишите функцию, select-between, которая из списка-аргумента, содержащего только числа, выбирает только те, которые расположены между двумя указанными границами-аргументами и возвращает их в виде списка (упорядоченного по возрастанию списка чисел (+ 2 балла)).}
+\section*{6. Напишите функцию, select-between, которая из списка-аргумента, содержащего только числа, выбирает только те, которые расположены между двумя указанными границами-аргументами и возвращает их в виде списка (упорядоченного по возрастанию списка чисел (+ 2 балла)).}
+
+(Границы не включительно)
+
+Сортировка:
+\begin{lstlisting}[language=Lisp]
+; блочная (карманная, корзинная) сортировка
+(defun my_sort (lst)
+	(cond ((null lst) Nil)
+		(t (nconc 
+			(my_sort (remove-if-not (lambda (x) (> (car lst) x)) (cdr lst)))
+			(remove-if-not (lambda (x) (= (car lst) x)) lst)
+			(my_sort (remove-if-not (lambda (x) (< (car lst) x)) (cdr lst)))
+			)
+		)
+	)
+)
+
+; сортировка выбором
+
+; в эту функцию не должен попадать пустой список 
+; (лямбда-функция принимает строго 2 аргумента)
+(defun list_max (lst)
+	(reduce 
+		#'(lambda (a b) (cond ((> a b) a) (b)))
+		lst
+	)
+)
+
+
+(defun my_sort_inner (lst res)
+	(cond 
+		((null lst) res)
+		(t (let* 
+				(
+					(cur_max (list_max lst))
+					(lst_rest (remove cur_max lst :count 1))
+				) 
+				(my_sort_inner lst_rest (cons cur_max res))
+			)
+		)
+	)
+)
+
+(defun my_sort (lst)
+	(my_sort_inner lst ())
+)
+\end{lstlisting}
+
+1. Используя функционал remove-if-not, сортировка после выделения элементов, которые расположены между двумя указанными границами-аргументами.
+\begin{lstlisting}[language=Lisp]	
+(defun select-between-inner (lst a b)
+	(remove-if-not #'(lambda (x) (< a x b)) lst)
+)
+
+(defun select-between (lst a b)
+	(cond 
+		((< a b) (select-between-inner lst a b))
+		(t (select-between-inner lst b a))
+	)
+)
+(defun select-between-sorted (lst a b)
+	(my_sort (select-between lst a b))
+)
+\end{lstlisting}
+
+2. Рекурсивно. Сначала исходный список сортируется, а затем обрезается: от первого элемента, большего нижней границы, до последнего элемента, меньшего верхней границы	
+\begin{lstlisting}[language=Lisp]
+; в функциях select-greater и select-lower предполагается, что переданный список 
+; отсортирован по возрастанию
+(defun select-greater (lst a)
+	(cond 
+		((null lst) Nil)
+		((< a (car lst)) lst)
+		(t (select-greater (cdr lst) a))
+	)
+)
+
+(defun select-lower (lst b)
+	(cond 
+		((null lst) Nil)
+		((<= b (car lst)) Nil)
+		(t (cons (car lst) (select-lower (cdr lst) b)))
+	)
+)
+
+(defun select-between-sorted (lst a b)	
+	(select-greater (select-lower (my_sort lst) b) a)	
+)
+
+(select-between-sorted '(0 3 7 6 5 4 1) 1 6) => (3 4 5)
+
+\end{lstlisting}
 
 \section*{7. Написать функцию, вычисляющую декартово произведение двух своих списков-аргументов. (Напомним, что А х В это множество всевозможных пар (a b), где а принадлежит А, принадлежит В.)}
 
@@ -500,7 +585,7 @@ $
 (decart '(a b) '(1 2)) => ((2 B) (1 B) (2 A) (1 A))	
 \end{lstlisting}
 
-
+\clearpage
 \section*{8. Почему так реализовано reduce, в чем причина?}
 
 Функционал reduce выполняет следующее преобразование исходного списка L=>(e1 e2 … en) с использованием начального значения A и бинарной операции-функции F: (reduce F L A) = (F(…(F(F A e1) e2))…en). Можно сказать, что значение A логически добавляется в начало списка L.
