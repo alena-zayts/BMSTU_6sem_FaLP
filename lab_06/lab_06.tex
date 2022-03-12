@@ -440,7 +440,9 @@ $
 
 (Границы не включительно)
 
-Сортировка:
+1. Используя функционал remove-if-not, сортировка по неубываню после выделения элементов, которые расположены между двумя указанными границами-аргументами.
+
+Сортировка по неубыванию:
 \begin{lstlisting}[language=Lisp]
 ; блочная (карманная, корзинная) сортировка
 (defun my_sort (lst)
@@ -465,7 +467,6 @@ $
 	)
 )
 
-
 (defun my_sort_inner (lst res)
 	(cond 
 		((null lst) res)
@@ -485,7 +486,7 @@ $
 )
 \end{lstlisting}
 
-1. Используя функционал remove-if-not, сортировка после выделения элементов, которые расположены между двумя указанными границами-аргументами.
+Функция
 \begin{lstlisting}[language=Lisp]	
 (defun select-between-inner (lst a b)
 	(remove-if-not #'(lambda (x) (< a x b)) lst)
@@ -502,33 +503,55 @@ $
 )
 \end{lstlisting}
 
-2. Рекурсивно. Сначала исходный список сортируется, а затем обрезается: от первого элемента, большего нижней границы, до последнего элемента, меньшего верхней границы	
+
+2. Отсортировать список по невозрастанию. Оставить часть списка, начиная с первого элемента, меньшего верхней границы. Инвертировать список (получаем отсортированный по неубыванию). Оставить часть списка, начиная с первого элемента, большего нижней границы.
+
+Блочная сортировка по невозрастанию:
 \begin{lstlisting}[language=Lisp]
-; в функциях select-greater и select-lower предполагается, что переданный список 
-; отсортирован по возрастанию
-(defun select-greater (lst a)
-	(cond 
-		((null lst) Nil)
-		((< a (car lst)) lst)
-		(t (select-greater (cdr lst) a))
+(defun my_sort (lst)
+	(cond ((null lst) Nil)
+		(t (nconc 
+			(my_sort (remove-if-not (lambda (x) (< (car lst) x)) (cdr lst)))
+			(remove-if-not (lambda (x) (= (car lst) x)) lst)
+			(my_sort (remove-if-not (lambda (x) (> (car lst) x)) (cdr lst)))
+			)
+		)
 	)
 )
-
-(defun select-lower (lst b)
-	(cond 
-		((null lst) Nil)
-		((<= b (car lst)) Nil)
-		(t (cons (car lst) (select-lower (cdr lst) b)))
-	)
-)
-
-(defun select-between-sorted (lst a b)	
-	(select-greater (select-lower (my_sort lst) b) a)	
-)
-
-(select-between-sorted '(0 3 7 6 5 4 1) 1 6) => (3 4 5)
-
 \end{lstlisting}
+
+Функция
+\begin{lstlisting}[language=Lisp]
+(defun leave_upper (lst b)
+		(member (find-if #'(lambda (x) (< x b)) lst) lst)
+)
+	
+(defun leave_lower (lst a)
+	(member (find-if #'(lambda (x) (> x a)) lst) lst)
+)
+
+(defun select-between-sorted-inner (lst a b)
+	(leave_lower 
+		(reverse 
+			(leave_upper 
+				(my_sort lst) 
+				b)
+			)
+		a)
+)
+
+(defun select-between-sorted (lst a b)
+	(cond
+		((< a b) (select-between-sorted-inner lst a b))
+		(t (select-between-sorted-inner lst b a))
+	)
+)
+
+(select-between-sorted '(1 3 2 4 5 7 6) 1 7) => (2 3 4 5 6)
+(select-between-sorted '(1 3 2 4 5 7 6) 6 2) => (3 4 5)
+\end{lstlisting}
+
+(Рекурсивно -- см. 7 лабораторная работа, номер 5)
 
 \section*{7. Написать функцию, вычисляющую декартово произведение двух своих списков-аргументов. (Напомним, что А х В это множество всевозможных пар (a b), где а принадлежит А, принадлежит В.)}
 
@@ -655,9 +678,9 @@ $
 $
 \fi
 
-	\bibliographystyle{utf8gost705u}  % стилевой файл для оформления по ГОСТу
+	%\bibliographystyle{utf8gost705u}  % стилевой файл для оформления по ГОСТу
 	
-	\bibliography{51-biblio}          % имя библиографической базы (bib-файла)
+	%\bibliography{51-biblio}          % имя библиографической базы (bib-файла)
 
 	
 \end{document}
