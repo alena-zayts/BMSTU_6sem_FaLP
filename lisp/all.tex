@@ -688,6 +688,7 @@ Append всегда делает копии, поэтому в рекурсии 
 Т.к. в Lisp используются рекурсивно определенные структуры, то рекурсия — это естественный принцип обработки таких структур. При организации рекурсии можно использовать как функции с именем, так и локально определенные с помощью лямбда выражений. Кроме этого, при организации рекурсии можно использовать функционалы или использовать рекурсивную функцию внутри функционала.
 
 
+
 \section{Лекция}
 
 visual prolog 5.2
@@ -788,6 +789,142 @@ visual prolog 5.2
 Обычно - позиционное соответсттвие, а здесь порядок следования фактических параметров указвается именами
 
 Это даетт указывать не все аргументы при вызове, указывать в произвольном порядке.
+
+\section{Лекция 6}
+
+
+
+Еще виды рекурсивных функций:
+
+1. Хвостовая рекурсия: может быть реализована с 1 или несколькими условиями выхода.
+
+Вообще хорошая рекурсия - когда результат не надо собирать на выходе. ХР -- когда не остается недовычисленного результата в конце.
+
+В общем виде ХВ:
+
+
+\begin{lstlisting}[language=Lisp]
+(defun fun (x)
+	(cond (end_test end_value)
+		(t (fun changed_x))
+	)
+)
+\end{lstlisting}
+
+Поиск первого атома (на всех уровнях) в списке
+
+\begin{lstlisting}[language=Lisp]
+(defun first_atom (lst)
+	(cond 
+		((atom lst) lst)
+		(t (first_atom (car lst)))
+	)
+)
+\end{lstlisting}
+
+
+Первое нечетное - не работает
+
+\begin{lstlisting}[language=Lisp]
+(defun find_first_odd (lst)
+	(cond 
+		((null lst) Nil)
+		((odd (first_atom lst)) (first_a lst)) ; нужно ли еще проверять на то, число это или нет
+		(t (find_first_odd (cdr lst)))
+	)
+)
+\end{lstlisting}
+
+My_nth по верхнему уровню
+
+\begin{lstlisting}[language=Lisp]
+(defun my_nth (lst n)
+	(cond 
+		((null lst) Nil)
+		((= n 0) (car lst))
+		(t (my_nth (cdr lst) (- n 1)))
+	)
+)
+\end{lstlisting}
+
+
+
+
+
+
+2. Дополняемая 
+
+Общий вид
+
+\begin{lstlisting}[language=Lisp]
+(defun func (x)
+	(cond (end_test end_value)
+		(t (add_function add_value (func changed_x)))
+	)
+)
+\end{lstlisting}
+
+
+length
+
+\begin{lstlisting}[language=Lisp]
+(defun my_length (lst)
+	(cond 
+		((null lst) 0)
+		(t (+ 1 (my_length (cdr lst))))
+	)
+)
+\end{lstlisting}
+
+
+Преобразование многоуровневогоо списка в одноуровневый
+
+\begin{lstlisting}[language=Lisp]
+(defun into_one_level (lst)
+	(cond 
+		((null lst) Nil)
+		((atom lst) (cons lst Nil))
+		(t (append 
+			(int_one_level (car lst))
+			(into_one_level. (cdr lst))
+		))
+	)
+)
+\end{lstlisting}
+
+
+
+Сортировка
+
+
+\begin{lstlisting}[language=Lisp]
+(defun insert_help (x lst)
+	(cond
+		((null lst) (cons x Nil))
+		((<=x (car lst)) (cons x lst))
+		(t (cons (car lst) (insert_help x (cdr lst))))
+	)
+)
+
+(defun sort_help (lst1 lst2)
+	(cond
+		((null lst1) lst2)
+		(t (sort_help. (cdr lst1) (cons (car lst1) lst2)))
+	)
+)
+
+
+(defun sort (lst) (sort_holp lst ()))
+\end{lstlisting}
+
+
+
+
+\begin{lstlisting}[language=Lisp]
+
+\end{lstlisting}
+
+
 
 
 \end{document}
