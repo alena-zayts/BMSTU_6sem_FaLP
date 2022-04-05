@@ -206,10 +206,10 @@ a) Работа только по верхнему уровню.
 				((numberp x) (- x 10))
 				((atom x) x)
 				((atom (cdr x)) (all_minus_10_cons x))
-				((listp x) (all_minus_10 x))
-				
+				(t (all_minus_10 x))	
 			))
-		lst))	
+		lst)
+)	
 
 ; рекурсивно
 ; а) с помощью  рекурсии, собирающей результат на выходе
@@ -306,51 +306,48 @@ a) Работа только по верхнему уровню.
 )
 \end{lstlisting}
 
-2. Проверка на равенство первой половины исходного списка и инвертированной второй половины исходного списка (если список нечетной длины, то центральный элемент не попадает ни в первый, ни во второй список).
+
+
+2. Проверка на равенство инвертированной первой половины исходного списка и второй половины исходного списка (если список нечетной длины, то центральный элемент не попадает ни в первый, ни во второй список) (этот вариант и было предложено реализовать).
 
 (nthcdr n lst) выполняет для списка lst операцию cdr n раз, и возвращает результат. (floor n) усекает значения по нижней границе. (ceiling n) усекает значения по верхней границе.
 \begin{lstlisting}[language=Lisp]
-(defun first_n (n lst) 
+(defun first_n_rev (n lst res) 
 	(cond 
-		((or (null lst) (= n 0)) Nil)
-		(t (cons 
-			(car lst) 
-			(first_n (- n 1) (cdr lst))
-			)
-		)
+		((or (null lst) (= n 0)) res)
+		(t (first_n_rev (- n 1) (cdr lst) (cons (car lst) res)))
 	)
 )
 
 (defun is_palindrome (lst)
 	(let ((half_len (/ (length lst) 2)))
 		(equalp 
-			(first_n (floor half_len) lst) 
-			(reverse (nthcdr (ceiling half_len) lst))
+			(first_n_rev (floor half_len) lst ()) 
+			(nthcdr (ceiling half_len) lst)
 		)
 	)
 )
 \end{lstlisting}
 
+
+
 \clearpage
 3. Рекурсивно: сравнить первый и последний элемент исходного списка, первый и последний элемент исходного списка без первого и последнего элемента, и так далее (если длина списка нечетная, то центральный элемент ни с чем не сравнивается).
 
 \begin{lstlisting}[language=Lisp]
-(defun list_without_last (lst)
+; в данной задаче допустимо возвращать инвертированный список
+(defun list_without_last (lst res)
 	(cond
-		((null (cdr lst)) Nil)
-		(t (cons 
-			(car lst) 
-			(list_without_last (cdr lst))
-			)
-		)
+		((null (cdr lst)) res)
+		(t (list_without_last (cdr lst) (cons (car lst) res)))
 	)
 )
-	
+
 (defun is_palindrome (lst)
 	(cond 
 		((null (cdr lst)) t)
 		((eql (car lst) (car (last lst))) ;т. к. (last '(1 2))=>(2)
-			(is_palindrome (list_without_last (cdr lst))))
+			(is_palindrome (list_without_last (cdr lst) ())))
 	)
 )
 \end{lstlisting}
@@ -450,8 +447,7 @@ $
 		(t (nconc 
 			(my_sort (remove-if-not (lambda (x) (> (car lst) x)) (cdr lst)))
 			(remove-if-not (lambda (x) (= (car lst) x)) lst)
-			(my_sort (remove-if-not (lambda (x) (< (car lst) x)) (cdr lst)))
-			)
+			(my_sort (remove-if-not (lambda (x) (< (car lst) x)) (cdr lst))))
 		)
 	)
 )
@@ -463,8 +459,7 @@ $
 (defun list_max (lst)
 	(reduce 
 		#'(lambda (a b) (cond ((> a b) a) (b)))
-		lst
-	)
+		lst)
 )
 
 (defun my_sort_inner (lst res)
@@ -513,17 +508,15 @@ $
 		(t (nconc 
 			(my_sort (remove-if-not (lambda (x) (< (car lst) x)) (cdr lst)))
 			(remove-if-not (lambda (x) (= (car lst) x)) lst)
-			(my_sort (remove-if-not (lambda (x) (> (car lst) x)) (cdr lst)))
-			)
-		)
-	)
+			(my_sort (remove-if-not (lambda (x) (> (car lst) x)) (cdr lst))))
+		))
 )
 \end{lstlisting}
 
 Функция
 \begin{lstlisting}[language=Lisp]
 (defun leave_upper (lst b)
-		(member (find-if #'(lambda (x) (< x b)) lst) lst)
+	(member (find-if #'(lambda (x) (< x b)) lst) lst)
 )
 	
 (defun leave_lower (lst a)
@@ -562,12 +555,9 @@ $
 		#'(lambda (x) (mapcar 
 					#'(lambda (y) (cons x (cons y Nil))) 
 					lsty
-					)
-		  )
-		lstx
-	)
-)
-	
+					))
+		lstx)
+)	
 (decart '(a b) '(1 2)) => ((a 1) (a 2) (b 1) (b 2))
 	
 \end{lstlisting}

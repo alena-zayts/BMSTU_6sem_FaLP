@@ -71,6 +71,7 @@
 % plot
 \usepackage{pgfplots}
 \usepackage{filecontents}
+\usepackage[unicode, pdftex]{hyperref}
 \usetikzlibrary{datavisualization}
 \usetikzlibrary{datavisualization.formats.functions}
 
@@ -79,7 +80,13 @@
 
 
 
+\url{https://github.com/Winterpuma/bmstu_FaLP/tree/master/CommonLisp/theory}
 
+\url{https://github.com/Winterpuma/bmstu_FaLP/wiki}
+
+\includegraphics[scale=1]{img/1}
+
+\includegraphics[scale=1]{img/2}
 
 \section*{Базис Lisp}
 	
@@ -191,7 +198,7 @@ Eval выполняет двойное  вычисление своего арг
 
 Вызов (eval S-выражение):
 
-%\includegraphics[scale=0.5]{img/eval}
+\includegraphics[scale=0.5]{img/eval}
 
 \section*{Классификация функций}
 
@@ -679,6 +686,109 @@ Append всегда делает копии, поэтому в рекурсии 
 (move-to lst ())
 
 Т.к. в Lisp используются рекурсивно определенные структуры, то рекурсия — это естественный принцип обработки таких структур. При организации рекурсии можно использовать как функции с именем, так и локально определенные с помощью лямбда выражений. Кроме этого, при организации рекурсии можно использовать функционалы или использовать рекурсивную функцию внутри функционала.
+
+
+\section{Лекция}
+
+visual prolog 5.2
+
+продолжаем классификацию рекурсий.
+Дополняемая рекурсия
+
+\begin{lstlisting}[language=Lisp]
+(defun fn (x)
+	(cond 
+		(end-test end_value)
+		(t (_cons _add_value (fn changed_x)))))
+		
+; можно с ддополнительным условием
+(defun fn (x)
+(cond
+	(end-test end_value)
+	(add-test (add_fun add_val (fn changed_x)))
+	(t (fn changed2_x)))
+	 
+; функция, которая выделяет из списка символы
+(defun extracct_symbolls (lst)
+	(cond 
+		((null lst) Nil)
+		((symbolp (car lst))
+			(cons (car lst) (extract_symbols (cdr llst))))))
+;car-cdr-дополлняемаяя рекурсия
+(defun fn (x)
+	(cond
+		(end-test end_value)
+		(t (commbner (fn changed_x)))
+			(fn changed2_x)))
+			
+(defun first_member (lst)
+	(cond
+		((number  lst) st)
+		((atom lst) Nil)
+		(t (or (first_number (car lst)
+			)first_number (ccdr lst)))
+	)
+)
+
+; количество списковых ячеек, которые представляяют список в памяти
+(defun cons_sells (lst)
+	(if (atom lst) 0
+		(+ (length lst)
+			(reduce #'+ (mapcar #'cons_sells lst)))))
+			
+(defun into_one_llevel (lst rst)
+	(cond ((null lst) rst)
+		((atom lst) (cons lst rst))
+		(t (into_one_level (cdr lst)))))
+		
+
+\end{lstlisting}
+
+\section*{Про свойства}
+(boundp'symbol) - связан ли со значением
+(fboundp'symbol) - связан ли с функцией 
+
+указатель properties - на список четной длины: имя, значение (в том числе функциональное определение)
+
+(pufprop 'symbol property\_name propert\_value) - формировать список свойств
+
+(remprop 'symbol property\_name) - удалить пару имя значение
+
+(syntd-plist 'symbol) - посмотреть список свойств
+
+\section*{Механизм ключевых слов}
+
+Действует на все аргументы после ключевого слова до следующего ключевого  слова.
+
+1. Необязательный параметр: \&optional
+
+В перечислении аргументов группа аргументов предваряется \&. 
+
+(defun tt1 (x \&optional y) (list x y))
+параметр y можно не указывать, по умолчанию Nil. 
+
+Можно указать значение по умолчанию для необязательного параметра
+
+(defun tt2 (x \&optionall (y (+ x  1))) (list x y))
+
+2. Произвольное количество аргументов: \&rest. Перед последним обязательным аргументов. Тоогда этот последний аргумент будет связан с хвостом
+
+(defun average (\&rest arg)
+	(/  (reduce \#'+ arg) (length arg)) 1.0)
+
+(average 2 3 4 5) - arg со всем списком
+
+Если бы был в начале еще ооддин аргумент, то ему было бы 2, а остальное - arg
+
+3. \&key
+
+(defun f1 (\&key x y) (...))
+
+: x 1
+Обычно - позиционное соответсттвие, а здесь порядок следования фактических параметров указвается именами
+
+Это даетт указывать не все аргументы при вызове, указывать в произвольном порядке.
+
 
 \end{document}
 

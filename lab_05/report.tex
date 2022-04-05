@@ -95,26 +95,22 @@
 )
 \end{lstlisting}
 
-2. Проверка на равенство первой половины исходного списка и инвертированной второй половины исходного списка (если список нечетной длины, то центральный элемент не попадает ни в первый, ни во второй список) (этот вариант и было предложено реализовать).
+2. Проверка на равенство инвертированной первой половины исходного списка и второй половины исходного списка (если список нечетной длины, то центральный элемент не попадает ни в первый, ни во второй список) (этот вариант и было предложено реализовать).
 
 (nthcdr n lst) выполняет для списка lst операцию cdr n раз, и возвращает результат. (floor n) усекает значения по нижней границе. (ceiling n) усекает значения по верхней границе.
 \begin{lstlisting}[language=Lisp]
-(defun first_n (n lst) 
+(defun first_n_rev (n lst res) 
 	(cond 
-		((or (null lst) (= n 0)) Nil)
-		(t (cons 
-				  (car lst) 
-				  (first_n (- n 1) (cdr lst))
-			 )
-		)
+		((or (null lst) (= n 0)) res)
+		(t (first_n_rev (- n 1) (cdr lst) (cons (car lst) res)))
 	)
 )
 
 (defun is_palindrome (lst)
 	(let ((half_len (/ (length lst) 2)))
 		(equalp 
-			(first_n (floor half_len) lst) 
-			(reverse (nthcdr (ceiling half_len) lst))
+			(first_n_rev (floor half_len) lst ()) 
+			(nthcdr (ceiling half_len) lst)
 		)
 	)
 )
@@ -124,14 +120,11 @@
 3. Рекурсивно: сравнить первый и последний элемент исходного списка, первый и последний элемент исходного списка без первого и последнего элемента, и так далее (если длина списка нечетная, то центральный элемент ни с чем не сравнивается).
 
 \begin{lstlisting}[language=Lisp]
-(defun list_without_last (lst)
+; в данной задаче допустимо возвращать инвертированный список
+(defun list_without_last (lst res)
 	(cond
-		((null (cdr lst)) Nil)
-		(t (cons 
-				(car lst) 
-				(list_without_last (cdr lst))
-			)
-		)
+		((null (cdr lst)) res)
+		(t (list_without_last (cdr lst) (cons (car lst) res)))
 	)
 )
 
@@ -139,7 +132,7 @@
 	(cond 
 		((null (cdr lst)) t)
 		((eql (car lst) (car (last lst))) ;т. к. (last '(1 2))=>(2)
-			(is_palindrome (list_without_last (cdr lst))))
+			(is_palindrome (list_without_last (cdr lst) ())))
 	)
 )
 \end{lstlisting}
@@ -411,9 +404,9 @@ $
 $
 \fi
 
-	\bibliographystyle{utf8gost705u}  % стилевой файл для оформления по ГОСТу
+	%\bibliographystyle{utf8gost705u}  % стилевой файл для оформления по ГОСТу
 	
-	\bibliography{51-biblio}          % имя библиографической базы (bib-файла)
+	%\bibliography{51-biblio}          % имя библиографической базы (bib-файла)
 
 	
 \end{document}
