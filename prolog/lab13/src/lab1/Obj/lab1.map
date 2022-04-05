@@ -1,0 +1,1661 @@
+ PDC Linker 50.35 20000313.10.LINK55.
+  Module 'Exe\lab1.exe' Map. Tue Apr 05 22:02:10 2022
+
+Frame 010000   Size 004A70.  Name=<   .data>, 	Chars=C0000040h. [IRW]
+Frame 020000   Size 0001D0.  Name=<  .rdata>, 	Chars=40000040h. [IR]
+Frame 030000   Size 02E8A0.  Name=<   .text>, 	Chars=60000020h. [CER]
+Frame 060000   Size 000550.  Name=<  PRODBG>, 	Chars=C0000040h. [IRW]
+Frame 070000   Size 000650.  Name=<    .bss>, 	Chars=C0000080h. [URW]
+
+	--- S e g m e n t s : ---
+
+Frame 010000   Size 004A70.  Name=<   .data>, 	Chars=C0000040h. [IRW]
+010000:000000 0017D4   .bss::BSS::DGROUP F=4
+   010000   Module 'C:\VIP52\Vpi\Lib\Win32\MSC\Init32.obj'
+   010000   Module 'VPISYS.OBJ'
+   010008   Module 'VPIMISC.OBJ'
+   010190   Module 'VPIDIALS.OBJ'
+   0101A8   Module 'runinit.obj'
+   0101AC   Module 'runbtrak.obj'
+   0101AC   Module 'pfpbindc.obj'
+   0101B0   Module 'conv_si.obj'
+   0101C8   Module 'rununify.obj'
+   0101C8   Module 'erracces.obj'
+   011710   Module 'iowritef.obj'
+   011730   Module 'conv_ls.obj'
+   011740   Module 'rntsynch.obj'
+   011790   Module 'pfpmath.obj'
+   011790   Module 'memsidi.obj'
+   011790   Module 'scanint.obj'
+   011794   Module 'rntcfci.obj'
+   011794   Module 'rntconv.obj'
+010000:0017D4 00328C   .data::DATA::DGROUP F=4
+   0117D4   Module 'C:\VIP52\Vpi\Lib\Win32\MSC\Init32.obj'
+   011834   Module 'C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\lab1\Obj\VPITools.obj'
+   0118B4   Module 'C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\lab1\Obj\lab1.obj'
+   011E94   Module 'Obj\lab1.sym'
+   0133D4   Module 'VPIERR.OBJ'
+   01342C   Module 'VPISYS.OBJ'
+   013624   Module 'VPIMISC.OBJ'
+   01362C   Module 'VPIDIALS.OBJ'
+   0138BC   Module 'VPIAPPLD.OBJ'
+   0138CC   Module 'VPIMENU.OBJ'
+   0138D0   Module 'VPIWIN.OBJ'
+   0138D8   Module 'VPIPICT.OBJ'
+   0138DC   Module 'VPIMETA.OBJ'
+   0138E4   Module 'VPIFONT.OBJ'
+   013910   Module 'VPICREAT.OBJ'
+   01392C   Module 'runinit.obj'
+   013B04   Module 'runbtrak.obj'
+   013C20   Module 'errinit.obj'
+   013C50   Module 'runflags.obj'
+   013C5C   Module 'osinit.obj'
+   013C60   Module 'errrep1.obj'
+   013CDC   Module 'runexcpt.obj'
+   013DA4   Module 'memheapn.obj'
+   013DE4   Module 'osabort.obj'
+   013E4C   Module 'chinit.obj'
+   01444C   Module 'hashinit.obj'
+   014454   Module 'dbmin.obj'
+   014464   Module 'iomin.obj'
+   01448C   Module 'rntinit.obj'
+   01456C   Module 'iobuff.obj'
+   014574   Module 'pfpbindc.obj'
+   0146BC   Module 'rnthread.obj'
+   0146C4   Module 'conv_si.obj'
+   0146D0   Module 'rununify.obj'
+   0146D4   Module 'errfatal.obj'
+   014704   Module 'fnmfns.obj'
+   014714   Module 'erracces.obj'
+   01484C   Module 'errputms.obj'
+   01485C   Module 'iowritef.obj'
+   01489C   Module 'errsys.obj'
+   0148A4   Module 'errlast.obj'
+   0148AC   Module 'emmend.obj'
+   0148BC   Module 'rntcfact.obj'
+   0148DC   Module 'rntassz.obj'
+   0148E4   Module 'memobj.obj'
+   0149E0   Module 'pfpmath.obj'
+   0149EC   Module 'memsidi.obj'
+   0149EC   Module 'osgdir.obj'
+   0149F0   Module 'osfmatch.obj'
+   014A18   Module 'ioconsol.obj'
+   014A24   Module 'convdata.obj'
+   014A3C   Module 'conv_fs.obj'
+   014A5C   Module 'osgenvs.obj'
+   014A60   Module 'rntcfci.obj'
+010000:004A60 000010   PROMODE::DATA::DGROUP F=4
+   014A60   Module 'C:\VIP52\Vpi\Lib\Win32\MSC\Init32.obj'
+
+Frame 020000   Size 0001D0.  Name=<  .rdata>, 	Chars=40000040h. [IR]
+020000:000000 0001D0   .rdata::.rdata::.rdata F=4
+   020000   Module 'C:\VIP52\Vpi\Lib\Win32\MSC\Init32.obj'
+   020000   Module 'runbtrak.obj'
+   020000   Module 'pfpbindc.obj'
+   020078   Module 'rununify.obj'
+   020078   Module 'pfpmath.obj'
+   020078   Module 'memsidi.obj'
+   020078   Module 'conv_fs.obj'
+   0201B8   Module 'rntcfci.obj'
+   0201B8   Module 'rntconv.obj'
+
+Frame 030000   Size 02E8A0.  Name=<   .text>, 	Chars=60000020h. [CER]
+030000:000000 02DEF0   .text::CODE::<no group> F=4
+   030000   Module 'C:\VIP52\Vpi\Lib\Win32\MSC\Init32.obj'
+   0300A0   Module 'C:\VIP52\Vpi\Lib\Win32\MSC\CMain.obj'
+   0301B0   Module 'C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\lab1\Obj\VPITools.obj'
+   0301D0   Module 'C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\lab1\Obj\lab1.obj'
+   030340   Module 'Obj\lab1.sym'
+   030340   Module 'VPIERR.OBJ'
+   0304F0   Module 'VPISYS.OBJ'
+   034BB0   Module 'VPIMISC.OBJ'
+   039DC0   Module 'VPIDIALS.OBJ'
+   03ADD0   Module 'VPITIMER.OBJ'
+   03B9D0   Module 'VPIAPPLD.OBJ'
+   03CCE0   Module 'VPIMENU.OBJ'
+   03ED80   Module 'VPICURS.OBJ'
+   03F510   Module 'VPIWIN.OBJ'
+   0440E0   Module 'VPIPICT.OBJ'
+   047230   Module 'VPIMETA.OBJ'
+   0480E0   Module 'VPIDRAW.OBJ'
+   04B2F0   Module 'VPIFONT.OBJ'
+   04C170   Module 'VPICREAT.OBJ'
+   04FFA0   Module 'runinit.obj'
+   0509D0   Module 'errinit.obj'
+   050C40   Module 'runflags.obj'
+   050C90   Module 'runerr.obj'
+   050DD0   Module 'osinit.obj'
+   050E00   Module 'errrep1.obj'
+   050F60   Module 'runexit1.obj'
+   050FA0   Module 'runexcpt.obj'
+   051660   Module 'memheapn.obj'
+   052580   Module 'strcat0.obj'
+   0525B0   Module 'strcat.obj'
+   0525F0   Module 'memsetc.obj'
+   052650   Module 'memgstk.obj'
+   052A40   Module 'strcmp.obj'
+   052A70   Module 'memmov.obj'
+   052B40   Module 'osabort.obj'
+   052E80   Module 'chinit.obj'
+   0530D0   Module 'hashinit.obj'
+   053110   Module 'dbmin.obj'
+   0532B0   Module 'iomin.obj'
+   053330   Module 'rntinit.obj'
+   0534F0   Module 'iobuff.obj'
+   0535A0   Module 'ossysp.obj'
+   053610   Module 'meminit.obj'
+   0536A0   Module 'pfpbindc.obj'
+   054570   Module 'rnthread.obj'
+   054670   Module 'memsetc0.obj'
+   0546C0   Module 'conv_si.obj'
+   0547D0   Module 'strcat0m.obj'
+   054840   Module 'memsave.obj'
+   054980   Module 'errfatal.obj'
+   0549B0   Module 'fnmfns.obj'
+   0556E0   Module 'osexist.obj'
+   0557A0   Module 'erracces.obj'
+   0569E0   Module 'errsave.obj'
+   056A10   Module 'errputms.obj'
+   056AE0   Module 'ioout.obj'
+   056CD0   Module 'iowritef.obj'
+   0583F0   Module 'errsys.obj'
+   058500   Module 'errlast.obj'
+   0585C0   Module 'conv_ls.obj'
+   058640   Module 'emmend.obj'
+   058670   Module 'osclose.obj'
+   0586B0   Module 'osflock.obj'
+   058780   Module 'ioinit.obj'
+   058A90   Module 'rntsynch.obj'
+   058AF0   Module 'rntcfact.obj'
+   058F00   Module 'rntassz.obj'
+   059260   Module 'memobj.obj'
+   059740   Module 'osthread.obj'
+   059850   Module 'memreall.obj'
+   0598A0   Module 'rntcpyg3.obj'
+   0598F0   Module 'memgsptr.obj'
+   059940   Module 'iogpath.obj'
+   0599E0   Module 'osgdisk.obj'
+   059A30   Module 'osgdir.obj'
+   059BE0   Module 'osfmatch.obj'
+   05A430   Module 'osrdtext.obj'
+   05A470   Module 'scanint.obj'
+   05A810   Module 'osseek.obj'
+   05A860   Module 'osopen.obj'
+   05AAB0   Module 'strcatm.obj'
+   05AB50   Module 'osseekrd.obj'
+   05ABC0   Module 'strcmpi.obj'
+   05AC70   Module 'oswrbin.obj'
+   05ACE0   Module 'oswrtext.obj'
+   05AD80   Module 'ioconsol.obj'
+   05AEB0   Module 'conv_fs.obj'
+   05BC00   Module 'conv_bs.obj'
+   05BE40   Module 'memadjst.obj'
+   05BE90   Module 'fnmsrch.obj'
+   05C110   Module 'osgenvs.obj'
+   05C170   Module 'ioclose.obj'
+   05C370   Module 'ioflush.obj'
+   05C460   Module 'strncmp.obj'
+   05C4A0   Module 'rntconv.obj'
+   05D5A0   Module 'rntcpyg2.obj'
+   05D650   Module 'rntcpyg4.obj'
+   05D9C0   Module 'strsstr.obj'
+   05DB80   Module 'strlower.obj'
+   05DBC0   Module 'convbntx.obj'
+   05DC40   Module 'osrdbin.obj'
+   05DCF0   Module 'convtxbn.obj'
+   05DDA0   Module 'osflush.obj'
+   05DDE0   Module 'rntfixup.obj'
+   05DE30   Module 'memcopyh.obj'
+   05DE70   Module 'memcopyg.obj'
+   05DEB0   Module 'brksimp.obj'
+030000:02DEF0 000378   RUNBTRAK_TEXT::CODE::<no group> F=4
+   05DEF0   Module 'runbtrak.obj'
+030000:02E268 000008   RUNSTK_TEXT::CODE::<no group> F=4
+   05E268   Module 'runstk.obj'
+030000:02E270 000018   STRSTRLEN_TEXT::CODE::<no group> F=4
+   05E270   Module 'strlen.obj'
+030000:02E288 0002EC   RUNUNIFY_TEXT::CODE::<no group> F=4
+   05E288   Module 'rununify.obj'
+030000:02E574 0001F4   PFPMATH_TEXT::CODE::<no group> F=4
+   05E574   Module 'pfpmath.obj'
+030000:02E768 000124   MEMSIDI_TEXT::CODE::<no group> F=4
+   05E768   Module 'memsidi.obj'
+030000:02E88C 000008   RNTCFCI_TEXT::CODE::<no group> F=4
+   05E88C   Module 'rntcfci.obj'
+
+Frame 060000   Size 000550.  Name=<  PRODBG>, 	Chars=C0000040h. [IRW]
+060000:000000 000550   PRODBG::PRODBG::PRODBG F=4
+   060000   Module 'C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\lab1\Obj\VPITools.obj'
+   060120   Module 'C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\lab1\Obj\lab1.obj'
+   060550   Module 'Obj\lab1.sym'
+
+Frame 070000   Size 000650.  Name=<    .bss>, 	Chars=C0000080h. [URW]
+070000:000000 000644   *** Comm1 ***::BSS::<no group> F=0
+
+	     ------- Names by value Map ---------
+Frame 010000   Size 004A70.  Name=<   .data>, 	Chars=C0000040h. [IRW]
+010000:000000 0017D4   .bss::BSS::DGROUP F=4
+010000:0017D4 00328C   .data::DATA::DGROUP F=4
+--- From 'rntconv.obj'
+01:000117D6 __fltused  (Idle)
+--- From 'rntcfact.obj'
+01:00011826 _INIT_StartOfData 
+--- From 'C:\VIP52\Vpi\Lib\Win32\MSC\CMain.obj'
+01:00011827 _PROLOG_ModTab 
+--- From 'C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\lab1\Obj\lab1.obj'
+01:000118B4 $global$dom$char 
+01:000118CC $global$dom$byte 
+01:000118E4 $global$dom$sbyte 
+01:000118FC $global$dom$ushort 
+01:00011914 $global$dom$short 
+01:0001192C $global$dom$unsigned 
+01:00011944 $global$dom$integer 
+01:0001195C $global$dom$ulong 
+01:00011974 $global$dom$long 
+01:0001198C $global$dom$real 
+01:000119A4 $global$dom$binary 
+01:000119BC $global$dom$ref 
+01:000119D4 $global$dom$string 
+01:000119EC $global$dom$symbol 
+01:00011A04 $global$dom$char$ 
+01:00011A1C $global$dom$byte$ 
+01:00011A34 $global$dom$sbyte$ 
+01:00011A4C $global$dom$ushort$ 
+01:00011A64 $global$dom$short$ 
+01:00011A7C $global$dom$unsigned$ 
+01:00011A94 $global$dom$integer$ 
+01:00011AAC $global$dom$ulong$ 
+01:00011AC4 $global$dom$long$ 
+01:00011ADC $global$dom$real$ 
+01:00011AF4 $global$dom$binary$ 
+01:00011B0C $global$dom$ref$ 
+01:00011B24 $global$dom$string$ 
+01:00011B3C $global$dom$symbol$ 
+01:00011B54 $global$dom$word 
+01:00011B6C $global$dom$dword 
+01:00011B84 $global$dom$file 
+01:00011B9C $global$dom$db_selector 
+01:00011BB4 $global$dom$bt_selector 
+01:00011BCC $global$dom$reg 
+01:00011BE4 $global$dom$dbasedom 
+01:00011BFC $global$dom$place 
+01:00011C14 $global$dom$accessmode 
+01:00011C2C $global$dom$denymode 
+01:00011C44 $global$dom$bgi_ilist 
+01:00011E31 _PROLOG_Vars 
+--- From 'Obj\lab1.sym'
+01:00011E94 _PROLOG_SymbolTable 
+--- From 'VPISYS.OBJ'
+01:00013434 _szTile 
+01:00013444 _szCascade 
+01:00013458 _szArrange 
+01:0001345C _xPDC_szWindow 
+--- From 'VPICREAT.OBJ'
+01:00013468 _xPDC_szButton 
+01:00013474 _xPDC_szEdit 
+01:00013480 _xPDC_szStatic 
+01:0001348C _xPDC_szListBox 
+01:0001349C _xPDC_szComboBox 
+01:000134AC _xPDC_szScrollBar 
+01:000134B0 _hLibr3d 
+--- From 'VPIMENU.OBJ'
+01:000134B4 _xPDC_ACTIVE 
+--- From 'VPISYS.OBJ'
+01:000134B8 _xPDC_TASK_PALETTE 
+01:000134BC _xPDC_TASK_NUMPALETTES  (Idle)
+--- From 'VPICREAT.OBJ'
+01:000134C0 _xPDC_skipevents 
+--- From 'VPIWIN.OBJ'
+01:000134D4 _xPDC_szPDCTopLevel 
+--- From 'VPICREAT.OBJ'
+01:000134E4 _xPDC_szPDCChild 
+--- From 'VPIWIN.OBJ'
+01:000134F4 _xPDC_szPDCFrame 
+--- From 'VPICREAT.OBJ'
+01:00013504 _xPDC_szPDCMDIChild 
+01:00013518 _xPDC_szDynIcon 
+--- From 'VPIWIN.OBJ'
+01:00013530 _xPDC_PrintClass 
+--- From 'VPIAPPLD.OBJ'
+01:00013540 _xPDC_ExecApp 
+01:00013544 _xPDC_task_win 
+--- From 'VPIWIN.OBJ'
+01:00013548 _xPDC_bMDI 
+01:0001354C _xPDC_b3D 
+--- From 'VPIAPPLD.OBJ'
+01:00013550 _xPDC_ACCELERATORS 
+--- From 'VPITIMER.OBJ'
+01:00013554 _xPDC_bACCELERATORS 
+--- From 'VPIWIN.OBJ'
+01:00013558 _xPDC_tBarheight 
+01:0001355C _xPDC_sBarheight 
+01:00013560 _xPDC_lBarheight 
+01:00013564 _xPDC_rBarheight 
+01:00013568 _xPDC_bERASEBACKGROUND 
+01:0001356C _xPDC_bPLATFORM_VALIDATE 
+01:00013570 _xPDC_bPRN_Q_RAW 
+--- From 'VPICREAT.OBJ'
+01:00013574 _xPDC_ARG_VAL 
+--- From 'VPIWIN.OBJ'
+01:00013578 _xPDC_bSuppressUpdateCheck 
+01:0001357C _xPDC_ERRHANDLER 
+--- From 'VPICURS.OBJ'
+01:00013580 _bPDC_obscure_cursor 
+--- From 'VPIMISC.OBJ'
+01:00013584 _xPDC_twdDLL 
+--- From 'VPISYS.OBJ'
+01:00013588 _xPDC_num_threads 
+--- From 'VPIDIALS.OBJ'
+01:0001365C _xPDC_Ask_lpData 
+01:000137AC _xPDC_LIST_lpData 
+--- From 'runinit.obj'
+01:00013960 _PTD_ptr 
+--- From 'rntcfci.obj'
+01:00013B04 ___MainThreadDescr__ 
+01:00013B4C ___PTD__ 
+--- From 'runexit1.obj'
+01:00013B4C _RUN_BTop 
+--- From 'runexcpt.obj'
+01:00013B50 _RUN_TrapTop 
+--- From 'runbtrak.obj'
+01:00013B54 _RUN_Trail 
+01:00013B58 _RUN_TTop 
+01:00013B5C _RUN_MaxTTop 
+--- From 'rntconv.obj'
+01:00013B60 _RUN_ExitCode 
+--- From 'runexit1.obj'
+01:00013B64 _RUN_ErrorFlag 
+--- From 'runbtrak.obj'
+01:00013B68 _RUN_SaveStack 
+--- From 'errlast.obj'
+01:00013B6C _ERR_SaveErrorNo 
+--- From 'runbtrak.obj'
+01:00013B70 _ERR_SaveSourceOffset  (Idle)
+01:00013B74 _ERR_SaveIncludeNo  (Idle)
+--- From 'memgstk.obj'
+01:00013B78 _MEM_CommitTop 
+--- From 'rntconv.obj'
+01:00013B7C _MEM_GTop 
+--- From 'memgstk.obj'
+01:00013B80 _MEM_GBase 
+01:00013B84 _MEM_GMax 
+--- From 'runbtrak.obj'
+01:00013B88 _User_Data  (Idle)
+01:00013B8C _ErrorCursor_Ptr  (Idle)
+--- From 'erracces.obj'
+01:00013B90 _ERR_NativeOsErrorCode 
+01:00013B94 _RUN_ExceptionCode 
+--- From 'runexcpt.obj'
+01:00013B98 _RUN_ExceptionInProgress 
+--- From 'erracces.obj'
+01:00013B9C _ERR_AdditiveInfo 
+--- From 'errinit.obj'
+01:00013C20 _ERR_SourceOffset  (Idle)
+01:00013C24 _ERR_IncludeNo  (Idle)
+--- From 'memobj.obj'
+01:00013C28 _ERR_FileTable 
+--- From 'errlast.obj'
+01:00013C2C _ERR_SaveFileTable 
+--- From 'errsys.obj'
+01:00013C3C _ERR_FileName 
+01:00013C44 _ERR_FileDir 
+01:00013C48 _ERR_File 
+--- From 'errputms.obj'
+01:00013C4C _ERR_UserErrRepFns 
+--- From 'ioconsol.obj'
+01:00013C50 _RUN_IsVpi 
+01:00013C54 _RUN_IsEasyWin 
+--- From 'brksimp.obj'
+01:00013C58 _RUN_IsEasyWinBreaked 
+--- From 'osinit.obj'
+01:00013C5C _NT_LibraryNeeded_v52 
+--- From 'memheapn.obj'
+01:00013DA4 _MemManagerDescr 
+01:00013DD4 _MEM_HStat_CB 
+--- From 'chinit.obj'
+01:00013E4C _CH_LowerTab 
+01:00013F4C _CH_UpperTab 
+01:0001404C _CH_ClassTab 
+--- From 'hashinit.obj'
+01:0001444C _HASH_GlobSymbPtr 
+01:00014450 _HASH_SymbRoot 
+--- From 'dbmin.obj'
+01:00014454 _DB_FDesArr 
+01:00014458 _DB_Initialized 
+01:0001445C _DB_MemBases 
+01:00014460 _DB_NoOfDbSel 
+--- From 'ioflush.obj'
+01:00014464 _IO_Vars 
+--- From 'iomin.obj'
+01:00014484 _IO_SystemPF 
+--- From 'rntinit.obj'
+01:0001448C _RNT_iiii  (Idle)
+01:000144A0 _RNT_ReadTermErrorOccured 
+01:000144A4 _RNT_ReadTermErrorLinePos  (Idle)
+--- From 'iowritef.obj'
+01:0001456C _IOBUFF_Size 
+01:00014570 _IOBUFF_Rate 
+--- From 'rununify.obj'
+01:000146D0 _RUN_uc 
+--- From 'emmend.obj'
+01:000148AC _EMM_Active 
+01:000148B0 _EMM_Frame  (Idle)
+01:000148B4 _EMM_Pages  (Idle)
+--- From 'rntcfact.obj'
+01:000148BC ___  (Idle)
+--- From 'memobj.obj'
+01:000148E4 _MEM_ObjectsListHead 
+--- From 'conv_bs.obj'
+01:00014A24 _CONV_HexChar 
+010000:004A60 000010   PROMODE::DATA::DGROUP F=4
+--- From 'rntcfci.obj'
+01:00014A60 endbyt 
+Frame 020000   Size 0001D0.  Name=<  .rdata>, 	Chars=40000040h. [IR]
+020000:000000 0001D0   .rdata::.rdata::.rdata F=4
+Frame 030000   Size 02E8A0.  Name=<   .text>, 	Chars=60000020h. [CER]
+030000:000000 02DEF0   .text::CODE::<no group> F=4
+--- From 'oswrtext.obj'
+03:00030000 __chkstk 
+--- From 'C:\VIP52\Vpi\Lib\Win32\MSC\Init32.obj'
+03:0003002F _PDCPrologStart  (Idle)
+--- From 'C:\VIP52\Vpi\Lib\Win32\MSC\CMain.obj'
+03:000300A0 _WinMain@16 
+--- From 'C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\lab1\Obj\VPITools.obj'
+03:000301B1 VPITools$StackOverFlow 
+03:000301B6 VPITools$error  (Idle)
+--- From 'VPIMISC.OBJ'
+03:000301D0 _PROLOG_ErrReport 
+--- From 'C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\lab1\Obj\lab1.obj'
+03:000301D5 _CFG_Load  (Idle)
+03:000301D7 lab1$StackOverFlow  (Idle)
+03:000301DC lab1$error  (Idle)
+03:000301EC lab1$record$1 
+03:000302F8 _PROLOG_Goal 
+--- From 'VPIERR.OBJ'
+03:00030340 _vpi_ErrorMsg 
+--- From 'VPISYS.OBJ'
+03:0003058A _vpi_Init  (Idle)
+03:00030B98 _XPDC_InitDll 
+03:00031008 _XPDC_FreeDll 
+03:00031374 _EnumChildProc@8 
+03:0003141F _EnumChildProc1@8 
+03:00031444 _PDCStdProc@16 
+--- From 'VPIAPPLD.OBJ'
+03:00032088 _PDCClassProc@16 
+--- From 'VPISYS.OBJ'
+03:00032654 _CloseEnumProc@8 
+03:000326E3 _PDCMDIFrameProc@16 
+03:000331EE _PDCMDIChildProc@16 
+03:000338C9 _PDCIconProc@16 
+--- From 'VPIAPPLD.OBJ'
+03:0003394A _PDCSubclassProc@16 
+--- From 'VPICREAT.OBJ'
+03:00033CAA _PDCDlgProc@16 
+--- From 'VPISYS.OBJ'
+03:00034232 _xPDC_WindowProc 
+--- From 'VPIMISC.OBJ'
+03:00034BB0 _xPDC_get_pressed_key 
+--- From 'VPICREAT.OBJ'
+03:00034C11 _xPDC_ConvertFlags 
+--- From 'VPIMISC.OBJ'
+03:00034E8F _xPDC_ConvertVKCodes 
+03:000350D2 _xPDC_ConvertMessage2Event 
+--- From 'VPICREAT.OBJ'
+03:00035AC4 _xPDC_ConvertWS2WC 
+03:00035CEC _xPDC_ConvertWC_2WS 
+--- From 'VPIMISC.OBJ'
+03:000371CF _xPDC_ConvertWM2ECONTROL 
+--- From 'VPICREAT.OBJ'
+03:000373F0 _xPDC_GetControlClassName 
+03:000374D3 _XPDC_AddWSFlag 
+03:0003750E _xPDC_ConvertSTYLE2FLAGS 
+--- From 'VPIFONT.OBJ'
+03:00037D91 _xPDC_GetDC_PDC 
+--- From 'VPIMISC.OBJ'
+03:00037FC3 _xPDC_ElaborateEVENT 
+03:0003815B _XPDC_DirectCallHandler 
+--- From 'VPIFONT.OBJ'
+03:0003824D _xPDC_CallHandler 
+--- From 'VPIMISC.OBJ'
+03:00038576 _xPDC_AddDlgToList 
+--- From 'VPIWIN.OBJ'
+03:00038735 _XPDC_GetNumDlgFromList 
+--- From 'VPIMISC.OBJ'
+03:000387B7 _xPDC_RemoveDlgFromList 
+--- From 'VPIWIN.OBJ'
+03:0003885A _XPDC_GetParentDlg 
+--- From 'VPIMISC.OBJ'
+03:000388DD _xPDC_FreeAllObject 
+03:00038B58 _xPDC_RestoreDC 
+03:00038C9A _xPDC_do_WM_KEYDOWN 
+03:00038D22 _xPDC_do_WM_KEYUP 
+03:00038D70 _xPDC_do_WM_PAINT 
+03:00039220 _xPDC_do_WM_DRAWITEM 
+03:000392F6 _xPDC_ErrReport 
+--- From 'VPIWIN.OBJ'
+03:00039429 _xPDC_C2PROString 
+--- From 'VPICREAT.OBJ'
+03:00039499 _xPDC_PRO2CString 
+03:000394FF _xPDC_StringSize 
+--- From 'VPIFONT.OBJ'
+03:00039556 _xPDC_GetParentWin 
+--- From 'VPICREAT.OBJ'
+03:0003961A _XPDC_GetWinData 
+03:000397C5 _XPDC_CheckType 
+--- From 'VPIMISC.OBJ'
+03:00039AB8 _EnumTaskWndProc@8 
+--- From 'VPIMETA.OBJ'
+03:00039B22 _XPDC_GetTaskWindow 
+--- From 'VPIMISC.OBJ'
+03:00039B45 _XPDC_GetTaskWindowEx 
+--- From 'VPICREAT.OBJ'
+03:00039BCC _XPDC_GetTaskWinData 
+--- From 'VPIMISC.OBJ'
+03:00039C8C _convert_mnemonics_WIN2OS2  (Idle)
+03:00039D9A _XPDC_ReduceEntryFieldRect  (Idle)
+--- From 'VPIDIALS.OBJ'
+03:00039F46 _dlg_Ask_0  (Idle)
+03:00039F6B _dlg_Ask_1 
+03:00039F95 _dlg_Ask_2 
+03:0003A00B _xPDC_AskDlgProc@16 
+03:0003A322 _dlg_MessageBox 
+03:0003A5B2 _dlg_Note_0  (Idle)
+03:0003A5CE _dlg_Note_1 
+03:0003A616 _dlg_Error_0  (Idle)
+03:0003A632 _dlg_Error_1 
+03:0003A67A _dlg_GetStr_0  (Idle)
+03:0003A6A4 _dlg_GetStr_1 
+03:0003A76C _xPDC_Get_RespDlgProc@16 
+03:0003A8AD _dlg_ListSelect_0  (Idle)
+03:0003A8DF _dlg_ListSelect_1 
+03:0003A911 _dlg_ListSelect_2 
+03:0003AA02 _xPDC_LIST_DlgProc@16 
+03:0003ACD6 _dlg_ChooseColor_0  (Idle)
+03:0003ACF8 _dlg_ChooseColor_1 
+--- From 'VPITIMER.OBJ'
+03:0003ADD0 _win_IsOwn  (Idle)
+03:0003ADF9 _win_IsOwn_Bool 
+03:0003AE75 _vpi_Accelerators_0  (Idle)
+03:0003B1AF _vpi_Accelerators_1  (Idle)
+03:0003B525 _vpi_Alarm 
+03:0003B5B6 _timer_Kill  (Idle)
+03:0003B667 _timer_Set  (Idle)
+03:0003B733 _vpi_CallEventHandler 
+--- From 'VPIAPPLD.OBJ'
+03:0003B9D0 _win_SetData  (Idle)
+03:0003BA78 _win_GetData  (Idle)
+03:0003BB24 _vpi_BeforeMessage 
+03:0003BB2F _vpi_AfterMessage 
+03:0003BB3A _vpi_CheckExistDialog  (Idle)
+03:0003BB70 _vpi_CheckExistString  (Idle)
+03:0003BBA6 _vpi_GetResStr  (Idle)
+03:0003BC0D _vpi_ComposeRGB  (Idle)
+03:0003BC34 _vpi_GetBaseUnits  (Idle)
+03:0003BC68 _vpi_ProcessEvents_2  (Idle)
+03:0003BC82 _vpi_ProcessEvents_0 
+03:0003BCA0 _vpi_ProcessEvents_1 
+03:0003BE4C _win_SetSubClassHandler  (Idle)
+--- From 'VPIFONT.OBJ'
+03:0003C0B4 _XPDC_FontControlSubclass 
+--- From 'VPIWIN.OBJ'
+03:0003C148 _XPDC_GetSubClassHandler 
+--- From 'VPIAPPLD.OBJ'
+03:0003C2C1 _class_Create  (Idle)
+03:0003C373 _class_Destroy  (Idle)
+03:0003C39A _win_GetClassName  (Idle)
+--- From 'VPIWIN.OBJ'
+03:0003C430 _XPDC_CheckClass 
+--- From 'VPIAPPLD.OBJ'
+03:0003C4A3 _xPDC_GetClassHandler 
+03:0003C524 _vpi_LoadDll  (Idle)
+03:0003C565 _vpi_FreeDll  (Idle)
+03:0003C57A _vpi_GetDllProc  (Idle)
+03:0003C5B8 _vpi_InitDll  (Idle)
+03:0003C5C3 _vpi_CreateProcess  (Idle)
+03:0003C853 _vpi_CloseProcess  (Idle)
+03:0003C8DE _vpi_GetProcessWindow  (Idle)
+03:0003C94D _XPDC_SendTerminateMsg 
+03:0003C9CA _EnumWndProc@8 
+03:0003CA5B _PDCExecAppProc@16 
+--- From 'VPICREAT.OBJ'
+03:0003CCA0 _XPDC_ConvertChar 
+--- From 'VPIMENU.OBJ'
+03:0003CF26 _menu_Check_1  (Idle)
+03:0003D09E _menu_Check_0  (Idle)
+03:0003D167 _menu_Enable_1  (Idle)
+03:0003D2DD _menu_Enable_0  (Idle)
+03:0003D39F _menu_SetText_1  (Idle)
+03:0003D528 _menu_SetText_0  (Idle)
+03:0003D5EB _menu_Update  (Idle)
+03:0003D67D _menu_Get  (Idle)
+03:0003D8E8 _menu_GetRes 
+03:0003D9CD _xPDC_Create_MENU_list 
+03:0003E0CA _menu_Set  (Idle)
+--- From 'VPICREAT.OBJ'
+03:0003E5B7 _xPDC_Create_MENU_by_list 
+--- From 'VPIMENU.OBJ'
+03:0003E9F9 _menu_PopUp  (Idle)
+--- From 'VPICREAT.OBJ'
+03:0003EB73 _XPDC_LoadMenu 
+--- From 'VPICURS.OBJ'
+03:0003ED80 _cursor_SetWait  (Idle)
+03:0003ED9F _cursor_Get  (Idle)
+03:0003EE27 _cursor_Hide  (Idle)
+03:0003EE5E _cursor_Set_0  (Idle)
+03:0003EE7B _cursor_Set_1 
+03:0003EFB1 _cursor_GetPos  (Idle)
+03:0003F04B _win_SetIcon  (Idle)
+03:0003F0C9 _caret_Off 
+03:0003F12A _caret_Set_0  (Idle)
+03:0003F1D1 _caret_Set_1 
+03:0003F27A _caret_Size  (Idle)
+03:0003F334 _win_DialogRatio  (Idle)
+03:0003F434 _xPDC_PDC2WINCursor 
+--- From 'VPIWIN.OBJ'
+03:0003F510 _win_GetChildWindows  (Idle)
+03:0003F5D9 _EnumWndCountChild@8 
+03:0003F608 _EnumWndSaveChild@8 
+03:0003F645 _win_GetListDialogs  (Idle)
+03:0003F897 _win_GetDefaultDrawTools 
+03:0003F957 _win_GetClientRect 
+03:0003F9D7 _win_GetOuterRect  (Idle)
+03:0003FB44 _win_GetParent 
+03:0003FBE2 _win_GetText  (Idle)
+03:0003FC77 _win_GetCtlHandle  (Idle)
+03:0003FCE1 _win_GetCtlId  (Idle)
+03:0003FD47 _win_SetHandler  (Idle)
+03:0003FDB0 _win_GetHandler  (Idle)
+03:0003FE15 _win_SetScrollPos  (Idle)
+03:0003FED4 _win_SetScrollRange  (Idle)
+03:0003FF97 _win_GetScrollPos  (Idle)
+03:0004005B _win_GetScrollRange  (Idle)
+03:0004011C _win_SetScrollProportion  (Idle)
+03:000401EF _win_GetScrollProportion  (Idle)
+03:000402C8 _win_IsChecked  (Idle)
+03:00040329 _XPDC_CheckVPIClass 
+03:00040400 _XPDC_GetWinType 
+--- From 'VPICREAT.OBJ'
+03:00040624 _win_GetType 
+--- From 'VPIWIN.OBJ'
+03:0004067B _vpi_GetTaskWin  (Idle)
+03:00040695 _vpi_GetAttrVal  (Idle)
+03:000406B3 _win_GetAttrVal 
+03:00040EE6 _win_GetNativeGraphicContext  (Idle)
+03:00040F74 _win_ReleaseNativeGraphicContext  (Idle)
+03:0004103C _win_GetFocus  (Idle)
+03:0004106A _win_SetFocus  (Idle)
+03:00041143 _win_SetActiveWindow  (Idle)
+03:00041184 _win_GetActiveWindow  (Idle)
+03:00041235 _win_Invalidate_0  (Idle)
+03:0004127A _win_Invalidate_1  (Idle)
+03:000412C1 _rect_GetClient  (Idle)
+03:00041497 _rect_IsEmpty  (Idle)
+03:000414CA _win_Move  (Idle)
+03:000415FC _win_NeedsUpdate  (Idle)
+03:000416B6 _rect_Offset  (Idle)
+03:00041713 _rect_Inflate  (Idle)
+03:00041770 _rect_PntInside  (Idle)
+03:000417C5 _rect_Union  (Idle)
+03:00041878 _rect_Intersect  (Idle)
+03:0004199D _win_BringToTop  (Idle)
+03:00041A31 _win_ValidateRect  (Idle)
+03:00041A76 _win_GetInvalidRect  (Idle)
+03:00041AFB _win_SetText  (Idle)
+03:00041BCE _vpi_SetAttrVal  (Idle)
+03:00041F46 _win_ReleaseMouse  (Idle)
+03:00041F57 _win_CaptureMouse  (Idle)
+03:00041F98 _win_MapPoints  (Idle)
+03:00042169 _win_Update  (Idle)
+03:000421AA _win_Check  (Idle)
+03:0004223B _win_GetTextSelection  (Idle)
+03:00042300 _win_SelectText  (Idle)
+03:000423DD _win_GetTextExtent  (Idle)
+03:00042542 _win_Scroll  (Idle)
+03:000425C7 _win_SetBackColor 
+03:0004269F _win_SetForeColor 
+03:00042777 _win_SetDrawTools 
+03:00042866 _win_GetDrawTools  (Idle)
+03:000429DF _win_CheckRadioButton  (Idle)
+03:00042A94 _win_SetBackMode 
+03:00042B85 _win_DPtoLP 
+03:00042BF3 _win_LPtoDP  (Idle)
+03:00042C61 _EnumProcDefPb@8 
+--- From 'VPIPICT.OBJ'
+03:00042CBC _win_SetState 
+--- From 'VPIWIN.OBJ'
+03:00042F92 _win_GetState  (Idle)
+03:00043439 _win_SetEditCtlReadOnly  (Idle)
+03:00043488 _win_Clear_1 
+03:0004357C _win_Clear_0  (Idle)
+03:00043697 _win_Destroy  (Idle)
+03:00043805 _win_SendEvent  (Idle)
+03:00043949 _win_PostEvent  (Idle)
+03:00043E50 _vpi_ArgValidation  (Idle)
+03:00043E63 _vpi_SetErrorHandler  (Idle)
+03:00043E9D _win_EnableHook  (Idle)
+03:00043F2A _vpi_MoveMDIWindowsTile  (Idle)
+03:00043FE4 _vpi_MoveMDIWindowsCascade  (Idle)
+03:0004409E _vpi_ArrangeMDIIcons  (Idle)
+--- From 'VPIPICT.OBJ'
+03:0004420D _Pict_eh 
+--- From 'VPIMETA.OBJ'
+03:00044272 _xPDC_CreateDummyWindow 
+--- From 'VPIPICT.OBJ'
+03:00044301 _pict_Open  (Idle)
+03:000445A0 _pict_Close  (Idle)
+03:000446D9 _xPDC_any_PICT 
+03:00044F59 _pict_Rotate  (Idle)
+03:000459E5 _pict_Draw_0  (Idle)
+03:00045A0A _pict_DrawEx_0 
+03:00045D22 _pict_Draw_1  (Idle)
+03:00045D4B _pict_DrawEx_1 
+03:00046058 _pict_Destroy  (Idle)
+03:0004606D _pict_ToBin  (Idle)
+03:00046100 _pict_FromBin  (Idle)
+03:000461A4 _pict_GetSize  (Idle)
+03:00046211 _pict_GetFromRes  (Idle)
+03:000462FB _pict_GetFromWin  (Idle)
+03:00046586 _pict_Save  (Idle)
+03:000465A1 _pict_Load  (Idle)
+03:000469B5 _xPDC_PaletteSize 
+03:00046A03 _xPDC_DIBNumColors 
+03:00046ABB _xPDC_DIBHeight 
+03:00046B02 _xPDC_DIBWidth 
+03:00046BD4 _labs 
+03:00046BEC _DIBHeight  (Idle)
+--- From 'VPIMETA.OBJ'
+03:00047230 _mf_Open  (Idle)
+03:00047311 _mf_Close  (Idle)
+--- From 'VPIDRAW.OBJ'
+03:000474BE _xPDC_any_META 
+--- From 'VPIMETA.OBJ'
+03:0004753C _mf_Destroy  (Idle)
+03:000475D4 _mf_Play_0  (Idle)
+03:00047612 _mf_Play_1 
+03:00047878 _mf_Load_0  (Idle)
+03:0004789F _mf_Load_1 
+03:00047D91 _mf_Save  (Idle)
+--- From 'VPIDRAW.OBJ'
+03:00048540 _xPDC_SetMapMode 
+03:000486CE _xPDC_SetClipReg 
+03:0004891F _draw_Pixel  (Idle)
+03:00048A5F _draw_Icon  (Idle)
+03:00048BA4 _draw_Arc  (Idle)
+03:00048D01 _draw_Line  (Idle)
+03:00048E59 _draw_Ellipse  (Idle)
+03:00048FBE _draw_Pie  (Idle)
+03:00049133 _draw_Polygon  (Idle)
+03:00049348 _draw_Polyline  (Idle)
+03:00049545 _draw_Rect 
+03:000497D0 _draw_RoundRect  (Idle)
+03:0004993D _draw_Text_0  (Idle)
+03:00049962 _draw_Text_1 
+03:00049B51 _draw_TextInRect  (Idle)
+03:00049E5B _draw_FloodFill  (Idle)
+03:00049FB6 _win_SetMapMode  (Idle)
+03:0004A0AB _win_GetMapMode  (Idle)
+03:0004A16B _win_SetMapScale  (Idle)
+03:0004A335 _win_GetMapScale  (Idle)
+03:0004A5E3 _win_SetClip  (Idle)
+03:0004AA10 _win_GetClip  (Idle)
+03:0004AB6E _win_SetPen 
+03:0004AD0B _win_GetPen 
+03:0004AE12 _win_SetBrush 
+03:0004AFAF _win_GetBrush 
+03:0004B08A _win_SetDrawMode 
+03:0004B163 _win_GetDrawMode 
+03:0004B236 _win_GetPixel  (Idle)
+--- From 'VPIFONT.OBJ'
+03:0004B4B7 _win_SetFont 
+03:0004B8DE _win_GetFont 
+03:0004BA47 _font_Create 
+03:0004BA6B _font_SetAttrs  (Idle)
+03:0004BB98 _font_GetAttrs  (Idle)
+03:0004BD79 _win_GetFontMetrics  (Idle)
+03:0004BEC6 _dlg_ChooseFont_0  (Idle)
+03:0004BFF5 _dlg_ChooseFont_1  (Idle)
+--- From 'VPICREAT.OBJ'
+03:0004C170 _PDCListBoxProc@16 
+03:0004C24B _PDCComboBoxProc@16 
+03:0004C2E0 _PDCStaticProc@16 
+03:0004C375 _PDCButtonProc@16 
+03:0004C40A _PDCScrollProc@16 
+03:0004C49F _PDCEditProc@16 
+03:0004C5CD _XPDC_ConvertPixels2Dlg 
+03:0004C654 _XPDC_ConvertDlgWin2Dlg  (Idle)
+03:0004D07C _win_CreateDyn  (Idle)
+03:0004D27B _win_Create 
+03:0004D343 _win_CreateDynDialog  (Idle)
+03:0004D5DF _win_CreateResDialog 
+03:0004D8AF _win_GetResDialog  (Idle)
+03:0004DA08 _win_CreateControl 
+03:0004DD45 _win_CreateDynControl 
+03:0004E201 _XPDC_MakeDlgTemplate 
+03:0004EDCA _XPDC_GetWindefFromTemplate 
+03:0004FEE9 _XPDC_RemoveDlgByNum 
+--- From 'errfatal.obj'
+03:0004FFA0 _RUN_FatalExit 
+--- From 'runinit.obj'
+03:0004FFB8 _RUN_InstallModule  (Idle)
+03:00050028 _RUN_SetDllMode  (Idle)
+--- From 'memgstk.obj'
+03:0005003A _RUN_GetRunTimeVars 
+--- From 'runinit.obj'
+03:000505EF _RUN_Init 
+03:00050713 _RUN_End 
+03:0005075B _RUN_Main  (Idle)
+03:000508A4 _RUN_GetErrorFlag 
+03:000508B9 _RUN_GetExitCode 
+03:000508CE _RUN_SetExitCode  (Idle)
+03:000508E1 _RUN_GetPTD_ptr  (Idle)
+03:000508F6 _RUN_SetPTD_ptr  (Idle)
+03:00050909 _RUN_GetBTop  (Idle)
+03:0005091E _RUN_SetBTop  (Idle)
+03:00050931 _RUN_GetTrapTop  (Idle)
+03:00050946 _RUN_SetTrapTop  (Idle)
+03:00050959 _RUN_GetGTop  (Idle)
+03:0005096E _RUN_SetGTop  (Idle)
+03:00050981 _RUN_SetUC0  (Idle)
+03:00050996 _RUN_SetUC1  (Idle)
+03:000509AB _PDC_GetLibraryVersion  (Idle)
+--- From 'errinit.obj'
+03:000509D0 _Reduce 
+03:00050A5E _LookForErrDir 
+03:00050BAE _ERR_Init 
+03:00050C24 _ERR_InstallUserRepFns 
+--- From 'runflags.obj'
+03:00050C40 _RUN_VpiPresent 
+03:00050C52 _RUN_EasyWinPresent  (Idle)
+03:00050C64 _RUN_EasyWinBreaked  (Idle)
+--- From 'rntconv.obj'
+03:00050C90 _RUN_ErrorCont 
+03:00050CE3 _RUN_Error 
+--- From 'osflush.obj'
+03:00050D1B _RUN_OsError 
+--- From 'runerr.obj'
+03:00050D95 _RUN_ErrorExit  (Idle)
+03:00050DAD _RUN_UnresolvedRefError  (Idle)
+--- From 'osinit.obj'
+03:00050DD0 _OS_Init 
+--- From 'errputms.obj'
+03:00050E00 _ERR_UseMessageBox 
+--- From 'errrep1.obj'
+03:00050E30 _ERR_ReportLevel1 
+--- From 'runexit1.obj'
+03:00050F60 _RUN_Exit 
+--- From 'brksimp.obj'
+03:00050F89 _RUN_ExitZero 
+--- From 'runexcpt.obj'
+03:0005116D _RUN_Error_From_Exception 
+03:0005161B _RUN_ExceptionsHandling_i 
+03:0005163F _RUN_ExceptionsHandling_o  (Idle)
+--- From 'meminit.obj'
+03:00051660 __MEM_HeapInit 
+--- From 'memcopyh.obj'
+03:00051CFE _MEM_AllocHeap@4 
+--- From 'rntconv.obj'
+03:00051EE0 _MEM_ReleaseHeap@8 
+--- From 'memheapn.obj'
+03:00052151 _MEM_ResizeHeap@8  (Idle)
+--- From 'meminit.obj'
+03:0005247C _MEM_HeapTerminate 
+--- From 'memheapn.obj'
+03:00052530 _MEM_HStat  (Idle)
+--- From 'fnmsrch.obj'
+03:00052580 _STR_StrCat0 
+--- From 'osfmatch.obj'
+03:000525B0 _STR_StrCat 
+--- From 'conv_fs.obj'
+03:000525F0 _MEM_SetMem 
+--- From 'memsetc.obj'
+03:0005261D _MEM_SetMemW  (Idle)
+--- From 'meminit.obj'
+03:000526D8 _MEM_GStackInit 
+--- From 'memgstk.obj'
+03:000527C7 _MEM_SystemFreeGStack 
+--- From 'memcopyg.obj'
+03:0005284C _MEM_AllocGStack 
+--- From 'rntconv.obj'
+03:00052911 _MEM_GetMaxGStack 
+--- From 'erracces.obj'
+03:00052966 _MEM_GetBigGStack 
+--- From 'rntconv.obj'
+03:00052981 _MEM_FreeGStack 
+--- From 'meminit.obj'
+03:00052991 _MEM_GStackTerm 
+--- From 'memgstk.obj'
+03:000529CC _MEM_MarkGStack 
+03:000529E1 _MEM_ReleaseGStack 
+03:000529F4 _MEM_GStat  (Idle)
+--- From 'osfmatch.obj'
+03:00052A40 _STR_StrCmp 
+--- From 'memcopyg.obj'
+03:00052A70 _MEM_MovMem 
+--- From 'errfatal.obj'
+03:00052C5A _OS_AbendMessage_2 
+--- From 'osabort.obj'
+03:00052D12 _OS_AbendMessage 
+03:00052D30 _OS_AbortApp 
+03:00052E16 _OS_PressAnyKey 
+03:00052E41 _OS_IsConsoleApp 
+--- From 'chinit.obj'
+03:00052E80 _CH_Init 
+--- From 'iowritef.obj'
+03:0005308A _Get_CH_ClassTab 
+--- From 'strcmpi.obj'
+03:0005309F _Get_CH_UpperTab 
+--- From 'strlower.obj'
+03:000530B4 _Get_CH_LowerTab 
+--- From 'hashinit.obj'
+03:000530D0 _Get_HASH_GlobSymbPtr  (Idle)
+03:000530E5 _HASH_Init 
+--- From 'dbmin.obj'
+03:00053110 _DB_Init 
+03:00053178 _DB_End 
+--- From 'iomin.obj'
+03:000532B0 _IO_Init 
+03:00053311 _IO_IsConsoleInput  (Idle)
+--- From 'rntinit.obj'
+03:000533FC _GetMainSymTab 
+03:00053434 _RNT_GetUserDomDef  (Idle)
+03:00053449 _RNT_GetNoOfUserDoms  (Idle)
+03:0005345F _RNT_Init 
+03:000534C5 _RNT_End 
+--- From 'iobuff.obj'
+03:000534F0 _IO_BuffInit 
+03:0005350F _IO_BuffSize_ii  (Idle)
+03:00053576 _IO_BuffSize_oo  (Idle)
+--- From 'errsys.obj'
+03:000535A0 _OS_SysPath 
+--- From 'meminit.obj'
+03:00053610 _MEM_Init 
+03:00053684 _MEM_Terminate 
+--- From 'pfpbindc.obj'
+03:00053748 _PFP_Round@8  (Idle)
+03:00053773 _PFP_Trunc@8  (Idle)
+03:00053797 _PFP_Abs@8  (Idle)
+03:000537AE _PFP_RealLong@8 
+03:00053841 _PFP_RealUChar@8  (Idle)
+03:000538C0 _PFP_RealChar@8  (Idle)
+03:00053953 _PFP_RealInt@8  (Idle)
+03:000539E6 _PFP_RealUnsigned@8  (Idle)
+03:00053A65 _PFP_RealULong@8  (Idle)
+03:00053AE4 _PFP_ULongReal@4  (Idle)
+03:00053B09 _PFP_LongReal@4  (Idle)
+03:00053B27 _PFP_UnsReal@4  (Idle)
+03:00053B4C _PFP_IntReal@4  (Idle)
+03:00053B6A _LONG_Mod@8  (Idle)
+03:00053B85 _LONG_UMod@8  (Idle)
+03:00053BA1 _LONG_Div@8  (Idle)
+03:00053BBA _LONG_UDiv@8  (Idle)
+03:00053BD4 _LONG_Mul@8  (Idle)
+03:00053BED _LONG_UMul@8  (Idle)
+03:00053C06 _PFP_Add@16  (Idle)
+03:00053C1E _PFP_Sub@16  (Idle)
+03:00053C36 _PFP_Mult@16  (Idle)
+03:00053C4E _PFP_Div@16  (Idle)
+03:00053C66 _PFP_RealRound@8  (Idle)
+03:00053C8F _PFP_Sin@8  (Idle)
+03:00053CB3 _PFP_Cos@8  (Idle)
+03:00053CD7 _PFP_Tan@8  (Idle)
+03:00053CFB _PFP_Atan@8  (Idle)
+03:00053D1F _PFP_Ln@8  (Idle)
+03:00053D43 _PFP_Log@8  (Idle)
+03:00053D67 _PFP_Exp@8  (Idle)
+03:00053D8B _PFP_Sqrt@8  (Idle)
+03:00053DAD _PFP_InitRestoreFpu 
+03:00053E5F _PFP_TrigFunction 
+03:00053FC1 _PFP_SqrtFunction 
+03:00054044 _PFP_LogFunction 
+03:00054110 _PFP_ExpFunction 
+03:00054328 _PFP_RoundFunction 
+03:00054489 _PFP_FloatToLong 
+03:000544C1 _PFP_FloatToInt 
+03:000544F9 _PFP_CheckOverflow  (Idle)
+03:0005452D _PFP_Error 
+03:0005454E _PFP_FPUReset 
+--- From 'rnthread.obj'
+03:00054570 _RNT_GetThreadsList  (Idle)
+03:00054585 _RNT_SetThreadsList  (Idle)
+03:000545AB _RNT_GetAllocThreadFNS  (Idle)
+03:000545C0 _RNT_SetAllocThreadFNS  (Idle)
+03:000545E6 _RNT_InitThreads 
+--- From 'memsetc0.obj'
+03:00054670 _MEM_SetMem0 
+03:00054691 _MEM_SetMemW0  (Idle)
+--- From 'erracces.obj'
+03:000546C0 _CONV_IntToStr 
+03:00054769 _CONV_UnsignedToStr 
+--- From 'osgdir.obj'
+03:000547D0 _STR_StrCat0Max 
+--- From 'rntcpyg4.obj'
+03:00054840 _MEM_SaveBinaryGStack 
+--- From 'memsave.obj'
+03:00054888 _MEM_SaveBinaryHeap  (Idle)
+--- From 'rntcpyg4.obj'
+03:000548CD _MEM_SaveStringGStack 
+--- From 'memsave.obj'
+03:00054916 _MEM_SaveStringHeap  (Idle)
+03:0005495C _MEM_ReleaseStringHeap  (Idle)
+--- From 'errfatal.obj'
+03:00054980 _ERR_Fatal 
+--- From 'fnmfns.obj'
+03:000549B0 _FNM_AddSlash 
+03:00054A22 _FNM_RemoveSlash  (Idle)
+03:00054A7D _FNM_ReducePath 
+03:00054C90 _FNM_ReduceCD  (Idle)
+03:00054CCC _FNM_Reduce 
+--- From 'fnmsrch.obj'
+03:00054F0A _FNM_BuildExtFName 
+03:00055290 _FNM_BuildFullFName 
+--- From 'osfmatch.obj'
+03:000552B0 _FNM_SplitCatSpec 
+--- From 'fnmfns.obj'
+03:00055374 _FNM_RemoveFileMask 
+03:0005539C _FNM_RemovePath 
+03:000554A1 _FNM_RemoveExt 
+03:000554CF _FNM_NewFileExt 
+03:0005552B _FNM_SeeExt 
+03:00055569 _FNM_DefExt  (Idle)
+03:00055618 _FNM_RemovePathAndExt  (Idle)
+03:00055685 _FNM_GetExt  (Idle)
+--- From 'fnmsrch.obj'
+03:000556E0 _OS_Exist 
+--- From 'erracces.obj'
+03:00056765 _ERR_ReadInitiate 
+--- From 'errsys.obj'
+03:000568DA _ERR_ReadErrorMsg 
+--- From 'erracces.obj'
+03:000569CA _ERR_SetAdditiveInfo  (Idle)
+--- From 'errsave.obj'
+03:000569E0 _ERR_SaveLastError 
+--- From 'errputms.obj'
+03:00056A10 _ERR_OutputMessage 
+--- From 'ioout.obj'
+03:00056B31 _IO_WrCh  (Idle)
+--- From 'iowritef.obj'
+03:00056BD3 _IO_WrStr 
+03:00057D7D _IO_WritefInit  (Idle)
+03:00057DBA _IO_WritefDom  (Idle)
+03:00057EF1 _IO_FormatInit  (Idle)
+03:00057F23 _IO_Format  (Idle)
+03:00058052 _IO_FormatEnd  (Idle)
+03:000580B4 _IO_WritefDisplaced 
+--- From 'memobj.obj'
+03:0005827E _IO_Writef 
+--- From 'iowritef.obj'
+03:000582A2 _IO_VSPrintf 
+03:000583B8 _IO_SPrintf 
+--- From 'errsys.obj'
+03:000583F0 _ERR_GetSysErrorMsg 
+--- From 'errlast.obj'
+03:00058500 _ERR_LastError 
+--- From 'conv_ls.obj'
+03:000585C0 _CONV_LongHexToStr 
+--- From 'emmend.obj'
+03:00058640 _EMM_End 
+--- From 'ioclose.obj'
+03:00058670 _OS_Close 
+--- From 'osflock.obj'
+03:000586B0 _OS_FLock  (Idle)
+03:00058713 _OS_FUnlock 
+--- From 'ioflush.obj'
+03:00058780 _IO_init_pr_files 
+--- From 'ioinit.obj'
+03:000589D3 _IO_End  (Idle)
+--- From 'rntsynch.obj'
+03:00058A90 _RNT_EnterPredefCriticalSection  (Idle)
+03:00058AA8 _RNT_LeavePredefCriticalSection  (Idle)
+03:00058AC0 _RNT_SynchInit 
+03:00058AD8 _RNT_SynchTerm 
+--- From 'rntcfact.obj'
+03:00058AF0 _RNT_GatherModTab 
+03:00058BCF _RNT_InitFactsShadowTable 
+03:00058BE4 _RNT_TermFactsShadowTable 
+03:00058D37 _RNT_CopyFacts 
+03:00058E5D _RNT_CopyObjectFacts  (Idle)
+--- From 'rntassz.obj'
+03:00058F00 _RNT_Assertz  (Idle)
+03:00059028 _RNT_AssertzIniTime 
+03:000590FC _RNT_FC_Get 
+03:000591BD _RNT_FC_Free  (Idle)
+03:000591F7 _RNT_FC_Terminate 
+--- From 'memobj.obj'
+03:00059260 _MEM_AllocObject  (Idle)
+03:000592F4 _MEM_TestingObject  (Idle)
+03:00059384 _MEM_ReleaseObject  (Idle)
+03:0005948D _MEM_InitiateObjects 
+03:000594F0 _MEM_TerminateObjects 
+03:00059559 _MEM_ObjectsDiag  (Idle)
+--- From 'osthread.obj'
+03:00059740 _OS_CreateCriticalUnChecked 
+03:0005975C _OS_CreateCriticalSection 
+03:00059796 _OS_DeleteCriticalSection 
+03:000597AB _OS_EnterCriticalSection 
+03:000597C0 _OS_LeaveCriticalSection 
+03:000597D5 _OS_DuplicateHandle  (Idle)
+03:0005982C _OS_GetCurrentThreadID 
+--- From 'memreall.obj'
+03:00059850 _MEM_ReAllocHeap 
+--- From 'rntcpyg3.obj'
+03:000598A0 _RNT_CopyUnify 
+--- From 'memgsptr.obj'
+03:000598F0 _MEM_PtrOlder  (Idle)
+03:0005990F _MEM_PtrPtrOlder  (Idle)
+--- From 'iogpath.obj'
+03:00059940 _IO_GetPath 
+--- From 'osgdisk.obj'
+03:000599E0 _OS_GetDisk 
+--- From 'osgdir.obj'
+03:00059A30 _OS_GetDir 
+--- From 'osfmatch.obj'
+03:0005A1E4 _OS_FindFirst 
+03:0005A2EE _OS_FindNext  (Idle)
+03:0005A3FB _OS_FindClose 
+--- From 'osrdtext.obj'
+03:0005A430 _OS_ReadText 
+--- From 'scanint.obj'
+03:0005A591 _SCAN_Intg 
+--- From 'osseek.obj'
+03:0005A810 _OS_Seek 
+--- From 'osopen.obj'
+03:0005A860 _OS_Open 
+--- From 'strcatm.obj'
+03:0005AAB0 _STR_StrCatMax 
+--- From 'osseekrd.obj'
+03:0005AB50 _OS_SeekRdBin 
+--- From 'strcmpi.obj'
+03:0005ABC0 _STR_StrCmpi 
+--- From 'ioflush.obj'
+03:0005AC70 _OS_WriteBin 
+03:0005ACE0 _OS_WriteText 
+--- From 'ioconsol.obj'
+03:0005AD80 _IO_SetWrStrConFNS  (Idle)
+03:0005ADA6 _IO_SetWrChConFNS  (Idle)
+03:0005ADCC _IO_WrStrCon 
+03:0005AE43 _IO_WrChCon 
+--- From 'conv_fs.obj'
+03:0005B233 _pow10  (Idle)
+03:0005B774 _CONV_DoubleToString 
+--- From 'conv_bs.obj'
+03:0005BC00 _CONV_BinToStr 
+03:0005BD4D _CONV_Bin_To_StrList  (Idle)
+--- From 'rntconv.obj'
+03:0005BE40 _MEM_AdjustGStackAlloc 
+--- From 'fnmsrch.obj'
+03:0005BE90 _FNM_SearchFile 
+03:0005C0B0 _FNM_SearchFile_iio  (Idle)
+--- From 'osgenvs.obj'
+03:0005C110 _OS_GetEnvSymb 
+--- From 'ioclose.obj'
+03:0005C170 _IO_CloseFile 
+03:0005C29D _IO_Close  (Idle)
+--- From 'ioflush.obj'
+03:0005C370 _IO_FlushBuf 
+03:0005C3D5 _IO_Flush  (Idle)
+--- From 'strncmp.obj'
+03:0005C460 _STR_StrNCmp 
+--- From 'rntconv.obj'
+03:0005D084 _RNT_CopyToHeap 
+03:0005D17F _RNT_DBTermToBin  (Idle)
+03:0005D4A9 _RNT_CopyComplxToHeap  (Idle)
+--- From 'rntcpyg4.obj'
+03:0005D5A0 _RNT_CopyComplxToGStack 
+03:0005D650 _RNT_CopyTermToGStack 
+--- From 'strsstr.obj'
+03:0005D9C0 _STR_SearchChar  (Idle)
+03:0005DAA8 _STR_SearchStr 
+--- From 'strlower.obj'
+03:0005DB80 _STR_ToLower 
+--- From 'convbntx.obj'
+03:0005DBC0 _CONV_BinText 
+--- From 'osrdbin.obj'
+03:0005DC40 _OS_ReadBin 
+--- From 'convtxbn.obj'
+03:0005DCF0 _CONV_TextBin 
+--- From 'osflush.obj'
+03:0005DDA0 _OS_Flush 
+--- From 'rntfixup.obj'
+03:0005DDE0 _RNT_FixUpBinChunk 
+--- From 'memcopyh.obj'
+03:0005DE30 _MEM_NewCopyHeap 
+--- From 'memcopyg.obj'
+03:0005DE70 _MEM_NewCopyGStack 
+--- From 'brksimp.obj'
+03:0005DEB0 _BRK_CheckBreak 
+03:0005DEC4 _BRK_Init  (Idle)
+03:0005DECF _BRK_End  (Idle)
+03:0005DEDA _BRK_Clear  (Idle)
+030000:02DEF0 000378   RUNBTRAK_TEXT::CODE::<no group> F=4
+--- From 'runbtrak.obj'
+03:0005DEF0 _RUN_stkb1  (Idle)
+03:0005DF18 _RUN_stkb2  (Idle)
+03:0005DF40 _RUN_stkb3  (Idle)
+03:0005DF68 _RUN_stktrap  (Idle)
+03:0005DF90 _RUN_StackBTrack 
+03:0005DF9C _RUN_StackBTrack3@4  (Idle)
+--- From 'rntconv.obj'
+03:0005DFD4 _RUN_StackTrap 
+--- From 'runbtrak.obj'
+03:0005E014 _RUN_JmpReturn  (Idle)
+--- From 'rntconv.obj'
+03:0005E020 _RUN_JmpReturn1 
+--- From 'fnmsrch.obj'
+03:0005E02C _RUN_Fail 
+--- From 'runbtrak.obj'
+03:0005E084 _RUN_True  (Idle)
+03:0005E088 _RUN_ChkRetract  (Idle)
+03:0005E0CC _RUN_ChkTrail  (Idle)
+03:0005E110 _RUN_Cut_ 
+03:0005E144 _RUN_Cut  (Idle)
+--- From 'rntconv.obj'
+03:0005E194 _RUN_RemoveTrap 
+--- From 'runbtrak.obj'
+03:0005E1D4 _RUN_BTop_o  (Idle)
+03:0005E1E0 _RUN_BTop_i  (Idle)
+03:0005E220 _RUN_get_trailsize  (Idle)
+03:0005E22C _RUN_BPoints  (Idle)
+03:0005E250 _RUN_Cursor  (Idle)
+030000:02E268 000008   RUNSTK_TEXT::CODE::<no group> F=4
+--- From 'rntconv.obj'
+03:0005E268 _RUN_GetSP 
+030000:02E270 000018   STRSTRLEN_TEXT::CODE::<no group> F=4
+--- From 'rntconv.obj'
+03:0005E270 _STR_StrLen 
+030000:02E288 0002EC   RUNUNIFY_TEXT::CODE::<no group> F=4
+--- From 'rununify.obj'
+03:0005E288 _RUN_allocrefterm_si  (Idle)
+03:0005E2CC _RUN_allocrefterm_di  (Idle)
+03:0005E2D8 _RUN_allocrefterm_ax  (Idle)
+03:0005E2E4 _RUN_allocrefterm_bx  (Idle)
+03:0005E2F0 _RUN_allocrefterm_cx  (Idle)
+03:0005E2FC _RUN_allocrefterm_dx  (Idle)
+03:0005E308 _RUN_allocref_di  (Idle)
+03:0005E31C _RUN_allocref_si  (Idle)
+03:0005E330 _RUN_allocref_ax  (Idle)
+03:0005E344 _RUN_allocref_bx  (Idle)
+03:0005E358 _RUN_allocref_cx  (Idle)
+03:0005E36C _RUN_allocref_dx  (Idle)
+03:0005E380 _RUN_coerse_di  (Idle)
+03:0005E394 _RUN_coerse_si  (Idle)
+03:0005E3A8 _RUN_coerse_ax  (Idle)
+03:0005E3BC _RUN_coerse_bx  (Idle)
+03:0005E3D0 _RUN_coerse_cx  (Idle)
+03:0005E3E4 _RUN_coerse_dx  (Idle)
+03:0005E3F8 _RUN_trail_di  (Idle)
+03:0005E460 _RUN_trail_si  (Idle)
+03:0005E46C _RUN_trail_ax  (Idle)
+03:0005E478 _RUN_trail_bx  (Idle)
+03:0005E484 _RUN_trail_cx  (Idle)
+03:0005E490 _RUN_trail_dx  (Idle)
+03:0005E49C _RUN_trail_ptr  (Idle)
+03:0005E4A8 _RUN_Unify  (Idle)
+030000:02E574 0001F4   PFPMATH_TEXT::CODE::<no group> F=4
+--- From 'pfpmath.obj'
+03:0005E574 _PFP_GetTypeArgument 
+03:0005E596 _PFP_FInit 
+03:0005E59B _PFP_GetControlWord 
+03:0005E5AA _PFP_GetStatusWord 
+03:0005E5AE _PFP_SetControlWord 
+03:0005E5B7 _PFP_GetExponent 
+03:0005E5E8 _PFP_MakeRange 
+03:0005E604 _PFP_CalcSin 
+03:0005E60B _PFP_CalcCos 
+03:0005E612 _PFP_CalcTan 
+03:0005E63F _PFP_CalcArcTan 
+03:0005E648 _PFP_CalcSqrtFunction 
+03:0005E64F _PFP_CalcLog10 
+03:0005E65A _PFP_CalcLn 
+03:0005E665 _PFP_CalcExpFunction 
+03:0005E685 _PFP_CalcRound 
+03:0005E68C _PFP_GetLog2_E 
+03:0005E68F _PFP_GetLog2_10 
+03:0005E692 _PFP_GetLog10_2  (Idle)
+03:0005E695 _PFP_CalcFloatToLong 
+03:0005E6A6 _PFP_DoubleToBCD  (Idle)
+03:0005E6B6 _PFP_CheckInteger  (Idle)
+03:0005E6E1 _PFP_ClearExceptionFlags 
+03:0005E6F1 _PFP_ClearFPUStack 
+--- From 'conv_fs.obj'
+03:0005E70A __fuistq 
+03:0005E72F __qdiv10 
+03:0005E755 __fxam 
+030000:02E768 000124   MEMSIDI_TEXT::CODE::<no group> F=4
+--- From 'memsidi.obj'
+03:0005E768 _MEM_alloc_ax 
+03:0005E798 _MEM_alloc_bx 
+03:0005E7C8 _MEM_alloc_cx 
+03:0005E7F8 _MEM_alloc_dx 
+03:0005E82C _MEM_alloc_si 
+03:0005E85C _MEM_alloc_di 
+030000:02E88C 000008   RNTCFCI_TEXT::CODE::<no group> F=4
+--- From 'rntcfci.obj'
+03:0005E88C _RNT_InitEndData 
+Frame 060000   Size 000550.  Name=<  PRODBG>, 	Chars=C0000040h. [IRW]
+060000:000000 000550   PRODBG::PRODBG::PRODBG F=4
+Frame 070000   Size 000650.  Name=<    .bss>, 	Chars=C0000080h. [URW]
+070000:000000 000644   *** Comm1 ***::BSS::<no group> F=0
+--- From 'C:\VIP52\Vpi\Lib\Win32\MSC\CMain.obj'
+05:00070000 _INIT_hInstance 
+--- From 'VPICREAT.OBJ'
+05:00070004 _xPDC_WIN_INSTANCE 
+05:00070008 _xPDC_dlgParam 
+--- From 'VPISYS.OBJ'
+05:00070018 _twdDLL 
+05:000700E0 _xPDC_PrintData 
+--- From 'runinit.obj'
+05:00070124 __MEM_DecommitSize 
+05:00070128 __MEM_SysBlockSize 
+05:0007012C _RUN_ApplicationName 
+--- From 'memobj.obj'
+05:0007022C _ERR_Cursor 
+--- From 'errlast.obj'
+05:00070230 _ERR_SaveCursor 
+--- From 'errrep1.obj'
+05:00070234 _ERR_String 
+--- From 'osinit.obj'
+05:00070634 _OS_Ver 
+--- From 'meminit.obj'
+05:00070638 __MEM_Granularity 
+05:0007063C __MEM_PageSize 
+--- From 'rntinit.obj'
+05:00070640 _RNT_Counter 
+--- Total Cnt   =   833 --------
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__GetMenuItemCount@4 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__GetMenuState@12 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__DefMDIChildProcA@16 
+[import] 'VPICREAT.OBJ' KERNEL32.DLL. __imp__lstrcmpA@8 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__GetClientRect@8 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__MoveWindow@24 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__IsIconic@4 
+[import] 'VPIMISC.OBJ' USER32.DLL. __imp__EndPaint@8 
+[import] 'VPIMISC.OBJ' USER32.DLL. __imp__GetAsyncKeyState@4 
+[import] 'VPISYS.OBJ' USER32.DLL. __imp__GetWindow@8 
+[import] 'VPISYS.OBJ' USER32.DLL. __imp__DefFrameProcA@20 
+[import] 'VPIMISC.OBJ' USER32.DLL. __imp__BeginPaint@8 
+[import] 'erracces.obj' KERNEL32.DLL. __imp__FormatMessageA@28 
+[import] 'erracces.obj' KERNEL32.DLL. __imp__LocalFree@4 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__IsWindow@4 
+[import] 'VPIDRAW.OBJ' USER32.DLL. __imp__DrawIcon@16 
+[import] 'VPIFONT.OBJ' KERNEL32.DLL. __imp__lstrcmpiA@8 
+[import] 'VPIPICT.OBJ' GDI32.DLL. __imp__RealizePalette@4 
+[import] 'VPIPICT.OBJ' GDI32.DLL. __imp__SelectPalette@12 
+[import] 'VPIFONT.OBJ' USER32.DLL. __imp__GetDC@4 
+[import] 'VPIFONT.OBJ' USER32.DLL. __imp__ReleaseDC@8 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__InvalidateRect@12 
+[import] 'VPICURS.OBJ' USER32.DLL. __imp__ShowCursor@4 
+[import] 'VPICURS.OBJ' USER32.DLL. __imp__DestroyCursor@4 
+[import] 'VPIFONT.OBJ' GDI32.DLL. __imp__GetObjectA@12 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__GetDlgItem@8 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__EndDialog@8 
+[import] 'VPISYS.OBJ' USER32.DLL. __imp__SystemParametersInfoA@16 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__CallWindowProcA@20 
+[import] 'VPICURS.OBJ' USER32.DLL. __imp__DestroyCaret@0 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__ReleaseCapture@0 
+[import] 'VPIFONT.OBJ' GDI32.DLL. __imp__SelectObject@8 
+[import] 'VPIFONT.OBJ' GDI32.DLL. __imp__CreateFontIndirectA@4 
+[import] 'VPISYS.OBJ' KERNEL32.DLL. __imp__lstrcatA@8 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__ShowWindow@8 
+[import] 'osgdir.obj' KERNEL32.DLL. __imp__SetCurrentDirectoryA@4 
+[import] 'osgdir.obj' KERNEL32.DLL. __imp__GetCurrentDirectoryA@8 
+[import] 'osthread.obj' KERNEL32.DLL. __imp__GetCurrentProcess@0 
+[import] 'osfmatch.obj' KERNEL32.DLL. __imp__FileTimeToLocalFileTime@8 
+[import] 'osfmatch.obj' KERNEL32.DLL. __imp__FindNextFileA@8 
+[import] 'VPITIMER.OBJ' USER32.DLL. __imp__DestroyAcceleratorTable@4 
+[import] 'osfmatch.obj' KERNEL32.DLL. __imp__FileTimeToSystemTime@8 
+[import] 'osthread.obj' KERNEL32.DLL. __imp__DuplicateHandle@28 
+[import] 'osfmatch.obj' KERNEL32.DLL. __imp__SetLastError@4 
+[import] 'VPIAPPLD.OBJ' USER32.DLL. __imp__TranslateAcceleratorA@12 
+[import] 'VPIAPPLD.OBJ' USER32.DLL. __imp__TranslateMessage@4 
+[import] 'VPIMENU.OBJ' USER32.DLL. __imp__DestroyMenu@4 
+[import] 'VPIAPPLD.OBJ' USER32.DLL. __imp__DispatchMessageA@4 
+[import] 'osfmatch.obj' KERNEL32.DLL. __imp__FindClose@4 
+[import] 'osthread.obj' KERNEL32.DLL. __imp__DeleteCriticalSection@4 
+[import] 'osthread.obj' KERNEL32.DLL. __imp__EnterCriticalSection@4 
+[import] 'osthread.obj' KERNEL32.DLL. __imp__LeaveCriticalSection@4 
+[import] 'osthread.obj' KERNEL32.DLL. __imp__InitializeCriticalSection@4 
+[import] 'osfmatch.obj' KERNEL32.DLL. __imp__FindFirstFileA@8 
+[import] 'VPIAPPLD.OBJ' USER32.DLL. __imp__TranslateMDISysAccel@8 
+[import] 'C:\VIP52\Vpi\Lib\Win32\MSC\Init32.obj' KERNEL32.DLL. _GetCommandLineA@0 
+[import] 'osrdbin.obj' KERNEL32.DLL. __imp__Sleep@4 
+[import] 'osrdbin.obj' KERNEL32.DLL. __imp__GetFileType@4 
+[import] 'C:\VIP52\Vpi\Lib\Win32\MSC\Init32.obj' KERNEL32.DLL. _GetModuleHandleA@4 
+[import] 'osgenvs.obj' KERNEL32.DLL. __imp__GetEnvironmentVariableA@12 
+[import] 'C:\VIP52\Vpi\Lib\Win32\MSC\Init32.obj' KERNEL32.DLL. _GetStartupInfoA@4 
+[import] 'C:\VIP52\Vpi\Lib\Win32\MSC\Init32.obj' KERNEL32.DLL. _ExitProcess@4 
+[import] 'VPIERR.OBJ' USER32.DLL. __imp__SetClipboardData@8 
+[import] 'osflush.obj' KERNEL32.DLL. __imp__FlushFileBuffers@4 
+[import] 'VPIERR.OBJ' USER32.DLL. __imp__CloseClipboard@0 
+[import] 'VPIAPPLD.OBJ' USER32.DLL. __imp__GetMessageA@16 
+[import] 'VPICREAT.OBJ' KERNEL32.DLL. __imp__GlobalLock@4 
+[import] 'osseekrd.obj' KERNEL32.DLL. __imp__SetFilePointer@16 
+[import] 'osrdbin.obj' KERNEL32.DLL. __imp__ReadFile@20 
+[import] 'osopen.obj' KERNEL32.DLL. __imp__CreateFileA@28 
+[import] 'VPICREAT.OBJ' KERNEL32.DLL. __imp__GlobalAlloc@8 
+[import] 'VPICREAT.OBJ' KERNEL32.DLL. __imp__GlobalUnlock@4 
+[import] 'VPIERR.OBJ' USER32.DLL. __imp__OpenClipboard@4 
+[import] 'VPIERR.OBJ' USER32.DLL. __imp__EmptyClipboard@0 
+[import] 'VPICREAT.OBJ' KERNEL32.DLL. __imp__GlobalFree@4 
+[import] 'VPISYS.OBJ' USER32.DLL. __imp__IsDialogMessageA@8 
+[import] 'VPITIMER.OBJ' USER32.DLL. __imp__MessageBeep@4 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__ScreenToClient@8 
+[import] 'VPISYS.OBJ' USER32.DLL. __imp__ChildWindowFromPoint@12 
+[import] 'VPIAPPLD.OBJ' USER32.DLL. __imp__DefWindowProcA@16 
+[import] 'VPICURS.OBJ' USER32.DLL. __imp__SetCursor@4 
+[import] 'VPICURS.OBJ' USER32.DLL. __imp__GetCursorPos@4 
+[import] 'VPIFONT.OBJ' USER32.DLL. __imp__GetClassNameA@12 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__EnumChildWindows@12 
+[import] 'VPIAPPLD.OBJ' USER32.DLL. __imp__PostQuitMessage@4 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__GetWindowLongA@8 
+[import] 'VPIMETA.OBJ' USER32.DLL. __imp__DestroyWindow@4 
+[import] 'VPICREAT.OBJ' GDI32.DLL. __imp__DeleteObject@4 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__PostMessageA@16 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__SetWindowLongA@12 
+[import] 'VPIMENU.OBJ' USER32.DLL. __imp__DrawMenuBar@4 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__BringWindowToTop@4 
+[import] 'VPISYS.OBJ' KERNEL32.DLL. __imp__GetSystemDirectoryA@8 
+[import] 'VPIMENU.OBJ' USER32.DLL. __imp__SetMenu@8 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__SetFocus@4 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__GetDesktopWindow@0 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__SendMessageA@16 
+[import] 'runinit.obj' KERNEL32.DLL. __imp__FreeLibrary@4 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__GetParent@4 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__GetMenuStringA@20 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__GetSubMenu@8 
+[import] 'VPISYS.OBJ' USER32.DLL. __imp__LoadAcceleratorsA@8 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__InsertMenuA@20 
+[import] 'VPIMENU.OBJ' USER32.DLL. __imp__AppendMenuA@16 
+[import] 'VPISYS.OBJ' USER32.DLL. __imp__GetSystemMenu@8 
+[import] 'VPIMENU.OBJ' USER32.DLL. __imp__RemoveMenu@12 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__LoadMenuA@8 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__CreateWindowExA@48 
+[import] 'VPIMENU.OBJ' USER32.DLL. __imp__CreatePopupMenu@0 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__UpdateWindow@4 
+[import] 'runinit.obj' KERNEL32.DLL. __imp__LoadLibraryA@4 
+[import] 'osflock.obj' KERNEL32.DLL. __imp__LockFile@20 
+[import] 'runinit.obj' KERNEL32.DLL. __imp__GetProcAddress@8 
+[import] 'osflock.obj' KERNEL32.DLL. __imp__UnlockFile@20 
+[import] 'VPIPICT.OBJ' KERNEL32.DLL. __imp__OpenFile@12 
+[import] 'VPICURS.OBJ' USER32.DLL. __imp__LoadCursorA@8 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__GetClassInfoA@12 
+[import] 'VPIAPPLD.OBJ' USER32.DLL. __imp__RegisterClassA@4 
+[import] 'VPIDRAW.OBJ' USER32.DLL. __imp__LoadIconA@8 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__GetDlgCtrlID@4 
+[import] 'VPIPICT.OBJ' GDI32.DLL. __imp__GetSystemPaletteEntries@16 
+[import] 'osflush.obj' KERNEL32.DLL. __imp__GetLastError@0 
+[import] 'memgstk.obj' KERNEL32.DLL. __imp__VirtualFree@12 
+[import] 'VPIMETA.OBJ' GDI32.DLL. __imp__GetEnhMetaFileHeader@12 
+[import] 'memgstk.obj' KERNEL32.DLL. __imp__VirtualAlloc@16 
+[import] 'VPIMETA.OBJ' GDI32.DLL. __imp__CloseEnhMetaFile@4 
+[import] 'VPIPICT.OBJ' GDI32.DLL. __imp__CreatePalette@4 
+[import] 'VPIMETA.OBJ' GDI32.DLL. __imp__DeleteMetaFile@4 
+[import] 'VPIMETA.OBJ' GDI32.DLL. __imp__CreateEnhMetaFileA@16 
+[import] 'VPIMETA.OBJ' GDI32.DLL. __imp__DeleteEnhMetaFile@4 
+[import] 'memgstk.obj' KERNEL32.DLL. __imp__GlobalMemoryStatus@4 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__SetViewportOrgEx@16 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__SetViewportExtEx@16 
+[import] 'VPIMETA.OBJ' GDI32.DLL. __imp__PlayEnhMetaFile@12 
+[import] 'VPIMETA.OBJ' GDI32.DLL. __imp__PlayMetaFile@8 
+[import] 'VPIPICT.OBJ' GDI32.DLL. __imp__SetStretchBltMode@8 
+[import] 'runexcpt.obj' KERNEL32.DLL. __imp__SetUnhandledExceptionFilter@4 
+[import] 'runexcpt.obj' KERNEL32.DLL. __imp__SetConsoleCtrlHandler@8 
+[import] 'VPIMETA.OBJ' GDI32.DLL. __imp__RestoreDC@8 
+[import] 'runexcpt.obj' KERNEL32.DLL. __imp__VirtualProtect@16 
+[import] 'VPIPICT.OBJ' GDI32.DLL. __imp__GetDIBits@28 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__SetWindowExtEx@16 
+[import] 'osabort.obj' KERNEL32.DLL. __imp__GetConsoleMode@8 
+[import] 'VPIPICT.OBJ' KERNEL32.DLL. __imp__GlobalSize@4 
+[import] 'VPIPICT.OBJ' GDI32.DLL. __imp__CreateDIBitmap@24 
+[import] 'VPIPICT.OBJ' GDI32.DLL. __imp__CreateCompatibleDC@4 
+[import] 'osabort.obj' KERNEL32.DLL. __imp__ReadConsoleInputA@16 
+[import] 'chinit.obj' USER32.DLL. __imp__IsCharLowerA@4 
+[import] 'chinit.obj' USER32.DLL. __imp__IsCharUpperA@4 
+[import] 'osabort.obj' KERNEL32.DLL. __imp__ExitProcess@4 
+[import] 'VPIPICT.OBJ' GDI32.DLL. __imp__CreateCompatibleBitmap@12 
+[import] 'osabort.obj' KERNEL32.DLL. __imp__SetConsoleMode@8 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__SetMapMode@8 
+[import] 'VPIMETA.OBJ' KERNEL32.DLL. __imp___lread@12 
+[import] 'VPIMETA.OBJ' KERNEL32.DLL. __imp___llseek@12 
+[import] 'VPIMETA.OBJ' KERNEL32.DLL. __imp___lclose@4 
+[import] 'VPIMETA.OBJ' KERNEL32.DLL. __imp___lwrite@12 
+[import] 'VPIPICT.OBJ' GDI32.DLL. __imp__StretchDIBits@52 
+[import] 'oswrbin.obj' KERNEL32.DLL. __imp__WriteFile@20 
+[import] 'osabort.obj' KERNEL32.DLL. __imp__GetStdHandle@4 
+[import] 'VPIPICT.OBJ' GDI32.DLL. __imp__BitBlt@36 
+[import] 'VPIMETA.OBJ' KERNEL32.DLL. __imp___lopen@8 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__SetWindowOrgEx@16 
+[import] 'chinit.obj' USER32.DLL. __imp__CharLowerA@4 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__GetWindowExtEx@8 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__GetViewportOrgEx@8 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__GetMapMode@4 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__GetViewportExtEx@8 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__GetWindowOrgEx@8 
+[import] 'VPIDRAW.OBJ' USER32.DLL. __imp__DrawTextA@20 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__TextOutA@20 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__CreateRectRgn@16 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__FloodFill@16 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__SelectClipRgn@8 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__SetTextAlign@8 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__AdjustWindowRect@12 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__GetClassLongA@8 
+[import] 'VPIFONT.OBJ' GDI32.DLL. __imp__GetTextMetricsA@8 
+[import] 'VPIFONT.OBJ' COMDLG32.DLL. _ChooseFontA@4 
+[import] 'VPIDRAW.OBJ' KERNEL32.DLL. __imp__GetVersionExA@4 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__GetPixel@12 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__CreateBrushIndirect@4 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__CreatePenIndirect@4 
+[import] 'VPIFONT.OBJ' KERNEL32.DLL. __imp__MulDiv@12 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__RoundRect@28 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__IsChild@8 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__CombineRgn@16 
+[import] 'VPIMETA.OBJ' KERNEL32.DLL. __imp___lcreat@8 
+[import] 'VPIMETA.OBJ' GDI32.DLL. __imp__CopyEnhMetaFileA@8 
+[import] 'VPIMETA.OBJ' GDI32.DLL. __imp__GetMetaFileBitsEx@12 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__CreateRectRgnIndirect@4 
+[import] 'VPIMETA.OBJ' GDI32.DLL. __imp__SetMetaFileBitsEx@8 
+[import] 'runexcpt.obj' KERNEL32.DLL. __imp__GetVersion@0 
+[import] 'VPIDRAW.OBJ' USER32.DLL. __imp__DestroyIcon@4 
+[import] 'VPIMETA.OBJ' GDI32.DLL. __imp__GetEnhMetaFileA@4 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__SetPixel@16 
+[import] 'VPIMETA.OBJ' GDI32.DLL. __imp__SaveDC@4 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__Rectangle@20 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__Polyline@12 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__Pie@36 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__Polygon@12 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__GetROP2@4 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__MoveToEx@16 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__LineTo@12 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__Arc@36 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__Ellipse@20 
+[import] 'chinit.obj' USER32.DLL. __imp__CharUpperA@4 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__CreateDialogIndirectParamA@20 
+[import] 'VPIAPPLD.OBJ' KERNEL32.DLL. __imp__CreateProcessA@40 
+[import] 'osclose.obj' KERNEL32.DLL. __imp__CloseHandle@4 
+[import] 'VPIAPPLD.OBJ' USER32.DLL. __imp__PeekMessageA@20 
+[import] 'VPIAPPLD.OBJ' USER32.DLL. __imp__UnregisterClassA@8 
+[import] 'VPIAPPLD.OBJ' USER32.DLL. __imp__EnumWindows@8 
+[import] 'VPIAPPLD.OBJ' USER32.DLL. __imp__LoadStringA@16 
+[import] 'VPIAPPLD.OBJ' KERNEL32.DLL. __imp__MultiByteToWideChar@24 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__GetDialogBaseUnits@0 
+[import] 'VPIAPPLD.OBJ' KERNEL32.DLL. __imp__GetExitCodeProcess@8 
+[import] 'VPICREAT.OBJ' KERNEL32.DLL. __imp__FindResourceA@12 
+[import] 'VPIMENU.OBJ' USER32.DLL. __imp__LoadMenuIndirectA@4 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__ClientToScreen@8 
+[import] 'VPIMENU.OBJ' USER32.DLL. __imp__CreateMenu@0 
+[import] 'VPIMENU.OBJ' USER32.DLL. __imp__TrackPopupMenu@28 
+[import] 'VPIAPPLD.OBJ' USER32.DLL. __imp__KillTimer@8 
+[import] 'VPIMENU.OBJ' USER32.DLL. __imp__ModifyMenuA@20 
+[import] 'VPIMENU.OBJ' USER32.DLL. __imp__EnableMenuItem@12 
+[import] 'VPIMENU.OBJ' USER32.DLL. __imp__CheckMenuItem@12 
+[import] 'VPIMENU.OBJ' USER32.DLL. __imp__GetMenuItemID@8 
+[import] 'VPIAPPLD.OBJ' USER32.DLL. __imp__SetTimer@16 
+[import] 'VPICREAT.OBJ' KERNEL32.DLL. __imp__LockResource@4 
+[import] 'VPIMISC.OBJ' USER32.DLL. __imp__EnumThreadWindows@12 
+[import] 'VPIAPPLD.OBJ' USER32.DLL. __imp__GetWindowThreadProcessId@8 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__GetFocus@0 
+[import] 'osthread.obj' KERNEL32.DLL. __imp__GetCurrentThreadId@0 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__DialogBoxIndirectParamA@20 
+[import] 'VPIDRAW.OBJ' GDI32.DLL. __imp__SetROP2@8 
+[import] 'VPIFONT.OBJ' GDI32.DLL. __imp__SetBkMode@8 
+[import] 'VPIDIALS.OBJ' USER32.DLL. __imp__SetDlgItemTextA@12 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__CopyRect@8 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__IsWindowVisible@4 
+[import] 'VPICREAT.OBJ' KERNEL32.DLL. __imp__SizeofResource@8 
+[import] 'VPITIMER.OBJ' USER32.DLL. __imp__CreateAcceleratorTableA@8 
+[import] 'VPIDIALS.OBJ' COMDLG32.DLL. _ChooseColorA@4 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__SendDlgItemMessageA@20 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__GetWindowTextA@12 
+[import] 'VPITIMER.OBJ' USER32.DLL. __imp__CopyAcceleratorTableA@12 
+[import] 'errputms.obj' USER32.DLL. __imp__MessageBoxA@16 
+[import] 'runinit.obj' KERNEL32.DLL. __imp__GetCommandLineA@0 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__SetWindowTextA@8 
+[import] 'VPIDIALS.OBJ' USER32.DLL. __imp__GetDlgItemTextA@16 
+[import] 'VPICREAT.OBJ' KERNEL32.DLL. __imp__LoadResource@8 
+[import] 'VPIFONT.OBJ' GDI32.DLL. __imp__SetBkColor@8 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__GetMenu@4 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__AdjustWindowRectEx@16 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__SetForegroundWindow@4 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__GetForegroundWindow@0 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__IntersectRect@12 
+[import] 'VPIWIN.OBJ' COMDLG32.DLL. _PrintDlgA@4 
+[import] 'VPIWIN.OBJ' GDI32.DLL. __imp__CreateDCA@16 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__GetUpdateRect@12 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__GetSysColor@4 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__ValidateRect@8 
+[import] 'VPIFONT.OBJ' GDI32.DLL. __imp__GetDeviceCaps@8 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__IsZoomed@4 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__EnableWindow@8 
+[import] 'VPIWIN.OBJ' GDI32.DLL. __imp__GetBkColor@4 
+[import] 'VPIWIN.OBJ' GDI32.DLL. __imp__GetTextColor@4 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__GetSystemMetrics@4 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__ScrollWindowEx@32 
+[import] 'VPIWIN.OBJ' GDI32.DLL. __imp__GetTextExtentPointA@16 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__CheckDlgButton@12 
+[import] 'VPIWIN.OBJ' GDI32.DLL. __imp__GetBkMode@4 
+[import] 'VPIPICT.OBJ' GDI32.DLL. __imp__DeleteDC@4 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__IsWindowEnabled@4 
+[import] 'VPICURS.OBJ' USER32.DLL. __imp__GetCaretPos@4 
+[import] 'ossysp.obj' KERNEL32.DLL. __imp__GetModuleFileNameA@12 
+[import] 'meminit.obj' KERNEL32.DLL. __imp__GetSystemInfo@4 
+[import] 'VPICURS.OBJ' USER32.DLL. __imp__CreateCaret@16 
+[import] 'VPICREAT.OBJ' USER32.DLL. __imp__MapDialogRect@8 
+[import] 'VPICURS.OBJ' USER32.DLL. __imp__ShowCaret@4 
+[import] 'errputms.obj' USER32.DLL. __imp__GetActiveWindow@0 
+[import] 'VPIWIN.OBJ' GDI32.DLL. __imp__DPtoLP@12 
+[import] 'VPICURS.OBJ' USER32.DLL. __imp__SetCaretPos@8 
+[import] 'VPIWIN.OBJ' GDI32.DLL. __imp__LPtoDP@12 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__SetCapture@4 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__GetScrollInfo@12 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__SetScrollInfo@16 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__GetScrollPos@8 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__GetScrollRange@16 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__IsDlgButtonChecked@8 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__SetScrollPos@16 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__GetWindowTextLengthA@4 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__GetWindowRect@8 
+[import] 'VPIWIN.OBJ' USER32.DLL. __imp__SetScrollRange@20 
+[import] 'VPIFONT.OBJ' GDI32.DLL. __imp__SetTextColor@8 
+--- Total Names =  1128 --------
+--- Total Cnt   =  1127 --------
+--------------------------------
+
