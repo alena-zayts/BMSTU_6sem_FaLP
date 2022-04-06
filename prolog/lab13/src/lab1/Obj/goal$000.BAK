@@ -5,7 +5,7 @@ domains
 	phone = integer.
 
 predicates
-	nondeterm record(name, surname, address, phone).
+	record(name, surname, address, phone).
 
 clauses
 	record("Ivanov", "Ivan", "Moscow, Ivanovskay 5", 2294055).
@@ -15,6 +15,26 @@ clauses
 	record("Ivanov", "Ivan", "Ekaterinburg, Glavnaya 4", 6994566).
 
 goal
-	% record(Surname, _, _, Phone).
-	% record("Ivanov", "Ivan", "Moscow, Ivanovskay 5", Phone).
-	record("Petrov", "Petr", "Volgograd, Leninskaya 2", Phone).
+	% record("Ivanov", "Ivan", "Moscow, Ivanovskay 5", 2294055).
+	% yes
+	
+	% record(Surname, _, _, Phone). 
+	% Surname=Ivanov, Phone=2294055
+	% Surname=Petrov, Phone=8456372
+	% Surname=Sidorov, Phone=8994527
+	% Surname=Svidorov, Phone=8994558
+	% Surname=Ivanov, Phone=6994566
+	% 5 Solutions
+	
+	record("Ivanov", "Ivan", "Moscow, Ivanovskay 5", Phone).
+	% Phone=2294055
+	% 1 Solution
+	
+	% record("Petrov", "Petr", "Volgograd, Leninskaya 2", Phone). =>
+	% No Solution
+	
+	% record(Surname, "Ivan", _, _). =>
+	% Surname=Ivanov
+	% Surname=Sidorov
+	% Surname=Ivanov
+	% 3 Solutions

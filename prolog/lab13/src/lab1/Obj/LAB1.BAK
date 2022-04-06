@@ -1,0 +1,20 @@
+[OPTIONS]
+WARNING=3
+REPORT=ON
+ROOT=C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\lab1\Obj
+BMROOT=C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\lab1\Res\Win
+ERRORLOG=C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\lab1\Obj\HLPBUGS.TXT
+COPYRIGHT=Built using Visual Prolog Help Maker
+TITLE=lab1
+COMPRESS=false
+CONTENTS=idh_Contents
+
+[FILES]
+C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\lab1\Obj\LAB1.RTF
+[WINDOWS]
+main=,,0,(255,255,255),(192,192,192),0
+[CONFIG]
+
+
+[MAP]
+idh_Contents 1
