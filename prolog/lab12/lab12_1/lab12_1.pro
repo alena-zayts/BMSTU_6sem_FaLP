@@ -24,10 +24,12 @@ predicates
 	
 	f_1a(phone, surname, model, price).
 	f_1b(phone, model).
+	f_2(surname, city, street, bank, phone).
 
 clauses
 	phone_record("Rich", 7777771, address("London", "Green", 1, 10)).
 	phone_record("Rich", 7777772, address("London", "Green", 1, 10)).
+	phone_record("Rich", 1111111, address("Moscow", "Zelenaya", 2, 20)).
 	phone_record("Middle", 9999999, address("Moscow", "Ivanovskaya", 3, 2)).
 	phone_record("Poor", 3333331, address("Karaganda", "Pit", 23, 5)).
 	phone_record("Poor", 3333332, address("Perm", "Pit", 36, 7)).
@@ -46,6 +48,9 @@ clauses
 	
 	f_1a(Phone, Surname, Model, Price) :- phone_record(Surname, Phone, _), car(Surname, Model, _, Price, _).
 	f_1b(Phone, Model) :- f_1a(Phone, _, Model, _).
+	f_2(Surname, City, Street, Bank, Phone) :- 
+	phone_record(Surname, Phone, address(City, Street, _, _)), 
+	depositor(Surname, Bank, _, _).
 	
 goal
 	% f_1a(7777771, Surname, Model, Price).
@@ -57,5 +62,17 @@ goal
 	% f_1b(9999999, Model).
 	% Model=Coolmodel
 	% 1 Solution
+	
+	% f_2("Rich", "London", Street, Bank, Phone).
+	% Street=Green, Bank=Gosbank, Phone=7777771
+	% Street=Green, Bank=Mosbank, Phone=7777771
+	% Street=Green, Bank=Gosbank, Phone=7777772
+	% Street=Green, Bank=Mosbank, Phone=7777772
+	% 4 Solutions
+	
+	f_2("Rich", "Moscow", Street, Bank, Phone).
+	% Street=Zelenaya, Bank=Gosbank, Phone=1111111
+	% Street=Zelenaya, Bank=Mosbank, Phone=1111111
+	% 2 Solutions
 	
 	
