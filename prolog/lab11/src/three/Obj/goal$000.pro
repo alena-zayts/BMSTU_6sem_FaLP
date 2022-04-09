@@ -1,0 +1,55 @@
+domains
+	id = integer
+	surname = string.
+	name = string.
+	university = string.
+	phone = integer.
+
+predicates
+	student(id, surname, name, university).
+	phone_record(id, phone).
+	student_phone(id, phone).
+	students_phones(university, phone).
+
+clauses
+	student(0, "Ivanov", "Ivan", "BMSTU").
+	student(1, "Petrov", "Petr", "BMSTU").
+	student(2, "Sidorov", "Nikolay", "MIPT").
+	student(3, "Svidorov", "Ansrey", "MSU").
+	student(4, "Ivanov", "Pavel", "BMSTU").
+	
+	
+	phone_record(0, 2294055).
+	phone_record(1, 8456372).
+
+	phone_record(3, 8994558).
+	phone_record(4, 6994566).
+	phone_record(4, 6994567).
+	
+	phone_record(5, 5566442).
+	
+	
+	student_phone(Id, Phone) :- student(Id, _, _, _), phone_record(Id, Phone).
+	students_phones(University, Phone) :- student(Id, _, _, University), phone_record(Id, Phone).
+
+goal
+	% student_phone(0, Phone).
+	% Phone=2294055
+	% 1 Solution
+	
+	% student_phone(5, Phone).
+	% No Solution
+	
+	% student_phone(Id, 5566442).
+	% No Solution
+	
+	% students_phones("BMSTU", Phone).
+	% Phone=2294055
+	% Phone=8456372
+	% Phone=6994566
+	% Phone=6994567
+	% 4 Solutions
+	
+	students_phones("MSu", Phone).
+	
+	
