@@ -27,8 +27,8 @@ predicates
 	f_2(surname, city, street, bank, phone).
 
 clauses
-	phone_record("Rich", 7777771, address("London", "Green", 1, 10)).
 	phone_record("Rich", 7777772, address("London", "Green", 1, 10)).
+	phone_record("Rich", 7777771, address("London", "Green", 1, 10)).
 	phone_record("Rich", 1111111, address("Moscow", "Zelenaya", 2, 20)).
 	phone_record("Middle", 9999999, address("Moscow", "Ivanovskaya", 3, 2)).
 	phone_record("Poor", 3333331, address("Karaganda", "Pit", 23, 5)).

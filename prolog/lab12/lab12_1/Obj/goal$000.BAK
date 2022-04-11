@@ -27,8 +27,8 @@ predicates
 	f_2(surname, city, street, bank, phone).
 
 clauses
-	phone_record("Rich", 7777771, address("London", "Green", 1, 10)).
 	phone_record("Rich", 7777772, address("London", "Green", 1, 10)).
+	phone_record("Rich", 7777771, address("London", "Green", 1, 10)).
 	phone_record("Rich", 1111111, address("Moscow", "Zelenaya", 2, 20)).
 	phone_record("Middle", 9999999, address("Moscow", "Ivanovskaya", 3, 2)).
 	phone_record("Poor", 3333331, address("Karaganda", "Pit", 23, 5)).
@@ -59,10 +59,20 @@ goal
 	% Surname=Rich, Model=Coolestmodel, Price=5000000
 	% 3 Solutions
 	
-	% f_1b(9999999, Model).
+	f_1b(9999999, Model).
 	% Model=Coolmodel
 	% 1 Solution
 	
-	f_2("Rich", "London", Street, Bank, Phone).
+	% f_2("Rich", "London", Street, Bank, Phone).
+	% Street=Green, Bank=Gosbank, Phone=7777771
+	% Street=Green, Bank=Mosbank, Phone=7777771
+	% Street=Green, Bank=Gosbank, Phone=7777772
+	% Street=Green, Bank=Mosbank, Phone=7777772
+	% 4 Solutions
+	
+	% f_2("Rich", "Moscow", Street, Bank, Phone).
+	% Street=Zelenaya, Bank=Gosbank, Phone=1111111
+	% Street=Zelenaya, Bank=Mosbank, Phone=1111111
+	% 2 Solutions
 	
 	
