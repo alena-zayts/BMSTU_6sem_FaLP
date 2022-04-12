@@ -51,6 +51,9 @@ goal
 	% 2 Solutions
 	
 	f("Model_2", "Green", Surname, City, Phone, Bank).
-	
+	% Surname=Rich, City=London, Phone=7777772, Bank=Gosbank
+	% Surname=Rich, City=Moscow, Phone=1111111, Bank=Gosbank
+	% Surname=Middle, City=Moscow, Phone=9999999, Bank=Mosbank
+	% 3 Solutions
 	
 	

@@ -1,5 +1,5 @@
  PDC Linker 50.35 20000313.10.LINK55.
-  Module 'Obj\GOAL$000.EXE' Map. Mon Apr 11 22:58:01 2022
+  Module 'Obj\GOAL$000.EXE' Map. Tue Apr 12 19:19:21 2022
 
 Frame 010000   Size 0032A0.  Name=<   .data>, 	Chars=C0000040h. [IRW]
 Frame 020000   Size 000210.  Name=<  .rdata>, 	Chars=40000040h. [IR]
