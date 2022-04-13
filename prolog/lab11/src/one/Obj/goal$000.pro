@@ -15,7 +15,7 @@ clauses
 	phone_record("Ivanov", "Ivan", "Ekaterinburg, Glavnaya 4", 6994566).
 
 goal
-	phone_record("Ivanov", "Ivan", "Moscow, Ivanovskay 5", 2294055).
+	phone_record("Ivanov", "Ivan", "Moscow, Ivanovskay 5", "12").
 	% yes
 
 	% phone_record(Surname, _, _, Phone). 
@@ -26,15 +26,18 @@ goal
 	% Surname=Ivanov, Phone=6994566
 	% 5 Solutions
 	
-	% phone_record("Ivanov", "Ivan", "Moscow, Ivanovskay 5", Phone). => 
+	% phone_record("Ivanov", "Ivan", "Moscow, Ivanovskay 5", Phone). 
 	% Phone=2294055
 	% 1 Solution
 	
-	% phone_record("Petrov", "Petr", "Volgograd, Leninskaya 2", Phone). =>
+	% phone_record("Petrov", "Petr", "Volgograd, Leninskaya 2", Phone).
 	% No Solution
 	
-	% phone_record(Surname, "Ivan", _, _). =>
+	% phone_record(Surname, "Ivan", _, _).
 	% Surname=Ivanov
 	% Surname=Sidorov
 	% Surname=Ivanov
 	% 3 Solutions
+	
+	% phone_record(_, _, _, _).
+	% yes
