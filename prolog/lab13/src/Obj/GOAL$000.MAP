@@ -1,14 +1,14 @@
  PDC Linker 50.35 20000313.10.LINK55.
-  Module 'Obj\GOAL$000.EXE' Map. Wed Apr 13 13:25:21 2022
+  Module 'Obj\GOAL$000.EXE' Map. Sun Apr 17 10:47:26 2022
 
-Frame 010000   Size 003410.  Name=<   .data>, 	Chars=C0000040h. [IRW]
+Frame 010000   Size 0033F0.  Name=<   .data>, 	Chars=C0000040h. [IRW]
 Frame 020000   Size 000210.  Name=<  .rdata>, 	Chars=40000040h. [IR]
-Frame 030000   Size 010C70.  Name=<   .text>, 	Chars=60000020h. [CER]
+Frame 030000   Size 010C30.  Name=<   .text>, 	Chars=60000020h. [CER]
 Frame 050000   Size 000530.  Name=<    .bss>, 	Chars=C0000080h. [URW]
 
 	--- S e g m e n t s : ---
 
-Frame 010000   Size 003410.  Name=<   .data>, 	Chars=C0000040h. [IRW]
+Frame 010000   Size 0033F0.  Name=<   .data>, 	Chars=C0000040h. [IRW]
 010000:000000 0016E8   .bss::BSS::DGROUP F=4
    010000   Module 'C:\VIP52\VPI\LIB\WIN32\MSC\INIT32.OBJ'
    010000   Module 'C:\VIP52\LIB\WIN32\MSC\EASYWIN.OBJ'
@@ -26,54 +26,54 @@ Frame 010000   Size 003410.  Name=<   .data>, 	Chars=C0000040h. [IRW]
    011658   Module 'rntsynch.obj'
    0116A8   Module 'rntcfci.obj'
    0116A8   Module 'rntconv.obj'
-010000:0016E8 001D18   .data::DATA::DGROUP F=4
+010000:0016E8 001CF8   .data::DATA::DGROUP F=4
    0116E8   Module 'C:\VIP52\VPI\LIB\WIN32\MSC\INIT32.OBJ'
    011740   Module 'C:\VIP52\LIB\WIN32\MSC\EASYWIN.OBJ'
    0117A8   Module 'Obj\GOAL$000.OBJ'
-   011F48   Module 'C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\Obj\GOAL$000.SYM'
-   0122B8   Module 'iomin.obj'
-   0122E0   Module 'memheapn.obj'
-   012320   Module 'runflags.obj'
-   01232C   Module 'runbtrak.obj'
-   012448   Module 'convpred.obj'
-   012450   Module 'runinit.obj'
-   012628   Module 'errrep1.obj'
-   0126A4   Module 'osinit.obj'
-   0126A8   Module 'memsidi.obj'
-   0126A8   Module 'rntcount.obj'
-   0126BC   Module 'iobuff.obj'
-   0126C4   Module 'errinit.obj'
-   0126F4   Module 'errfatal.obj'
-   012724   Module 'conv_si.obj'
-   012730   Module 'chinit.obj'
-   012D30   Module 'iowritef.obj'
-   012D70   Module 'scanreal.obj'
-   012D78   Module 'osabort.obj'
-   012DDC   Module 'hashinit.obj'
-   012DE4   Module 'dbmin.obj'
-   012DF8   Module 'rntinit.obj'
-   012ED8   Module 'pfpbindc.obj'
-   013020   Module 'rnthread.obj'
-   013028   Module 'runexcpt.obj'
-   0130F0   Module 'rununify.obj'
-   0130F4   Module 'errputms.obj'
-   013104   Module 'errsys.obj'
-   01310C   Module 'errlast.obj'
-   013114   Module 'memobj.obj'
-   013210   Module 'fnmfns.obj'
-   013220   Module 'erracces.obj'
-   013358   Module 'convdata.obj'
-   013370   Module 'conv_fs.obj'
-   013390   Module 'pfpmath.obj'
-   01339C   Module 'emmend.obj'
-   0133A8   Module 'rntcfact.obj'
-   0133C8   Module 'rntassz.obj'
-   0133D0   Module 'osgenvs.obj'
-   0133D4   Module 'osgdir.obj'
-   0133D8   Module 'osfmatch.obj'
-   013400   Module 'rntcfci.obj'
-010000:003400 000010   PROMODE::DATA::DGROUP F=4
-   013400   Module 'C:\VIP52\VPI\LIB\WIN32\MSC\INIT32.OBJ'
+   011F28   Module 'C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\Obj\GOAL$000.SYM'
+   012298   Module 'iomin.obj'
+   0122C0   Module 'memheapn.obj'
+   012300   Module 'runflags.obj'
+   01230C   Module 'runbtrak.obj'
+   012428   Module 'convpred.obj'
+   012430   Module 'runinit.obj'
+   012608   Module 'errrep1.obj'
+   012684   Module 'osinit.obj'
+   012688   Module 'memsidi.obj'
+   012688   Module 'rntcount.obj'
+   01269C   Module 'iobuff.obj'
+   0126A4   Module 'errinit.obj'
+   0126D4   Module 'errfatal.obj'
+   012704   Module 'conv_si.obj'
+   012710   Module 'chinit.obj'
+   012D10   Module 'iowritef.obj'
+   012D50   Module 'scanreal.obj'
+   012D58   Module 'osabort.obj'
+   012DBC   Module 'hashinit.obj'
+   012DC4   Module 'dbmin.obj'
+   012DD8   Module 'rntinit.obj'
+   012EB8   Module 'pfpbindc.obj'
+   013000   Module 'rnthread.obj'
+   013008   Module 'runexcpt.obj'
+   0130D0   Module 'rununify.obj'
+   0130D4   Module 'errputms.obj'
+   0130E4   Module 'errsys.obj'
+   0130EC   Module 'errlast.obj'
+   0130F4   Module 'memobj.obj'
+   0131F0   Module 'fnmfns.obj'
+   013200   Module 'erracces.obj'
+   013338   Module 'convdata.obj'
+   013350   Module 'conv_fs.obj'
+   013370   Module 'pfpmath.obj'
+   01337C   Module 'emmend.obj'
+   013388   Module 'rntcfact.obj'
+   0133A8   Module 'rntassz.obj'
+   0133B0   Module 'osgenvs.obj'
+   0133B4   Module 'osgdir.obj'
+   0133B8   Module 'osfmatch.obj'
+   0133E0   Module 'rntcfci.obj'
+010000:0033E0 000010   PROMODE::DATA::DGROUP F=4
+   0133E0   Module 'C:\VIP52\VPI\LIB\WIN32\MSC\INIT32.OBJ'
 
 Frame 020000   Size 000210.  Name=<  .rdata>, 	Chars=40000040h. [IR]
 020000:000000 000208   .rdata::.rdata::.rdata F=4
@@ -88,129 +88,129 @@ Frame 020000   Size 000210.  Name=<  .rdata>, 	Chars=40000040h. [IR]
    0201F0   Module 'rntcfci.obj'
    0201F0   Module 'rntconv.obj'
 
-Frame 030000   Size 010C70.  Name=<   .text>, 	Chars=60000020h. [CER]
-030000:000000 0102C0   .text::CODE::<no group> F=4
+Frame 030000   Size 010C30.  Name=<   .text>, 	Chars=60000020h. [CER]
+030000:000000 010280   .text::CODE::<no group> F=4
    030000   Module 'C:\VIP52\VPI\LIB\WIN32\MSC\INIT32.OBJ'
    0300A0   Module 'C:\VIP52\LIB\WIN32\MSC\EASYWIN.OBJ'
    030B60   Module 'Obj\GOAL$000.OBJ'
-   030FC0   Module 'C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\Obj\GOAL$000.SYM'
-   030FC0   Module 'runerr.obj'
-   031100   Module 'iogetln.obj'
-   0312C0   Module 'strcat0.obj'
-   0312F0   Module 'memgstk.obj'
-   0316E0   Module 'memsetc.obj'
-   031740   Module 'iomin.obj'
-   0317C0   Module 'memheapn.obj'
-   0326E0   Module 'brksimp.obj'
-   032720   Module 'runflags.obj'
-   032770   Module 'memmov.obj'
-   032840   Module 'convpred.obj'
-   0331D0   Module 'ioin.obj'
-   033340   Module 'runinit.obj'
-   033D70   Module 'strcat.obj'
-   033DB0   Module 'errrep1.obj'
-   033F10   Module 'osinit.obj'
-   033F40   Module 'ioout.obj'
-   034130   Module 'iowlong.obj'
-   034170   Module 'rntcount.obj'
-   0341E0   Module 'runexit1.obj'
-   034220   Module 'errsave.obj'
-   034250   Module 'memadjst.obj'
-   0342A0   Module 'iobuff.obj'
-   034350   Module 'ioflush.obj'
-   034440   Module 'meminit.obj'
-   0344D0   Module 'ioinit.obj'
-   0347E0   Module 'memsetc0.obj'
-   034830   Module 'errinit.obj'
-   034AA0   Module 'errfatal.obj'
-   034AD0   Module 'memsave.obj'
-   034C10   Module 'conv_si.obj'
-   034D20   Module 'scanint.obj'
-   0350C0   Module 'chinit.obj'
-   035310   Module 'iowritef.obj'
-   036A30   Module 'scanreal.obj'
-   037050   Module 'scanref.obj'
-   037160   Module 'conv_ls.obj'
-   0371E0   Module 'strcmp.obj'
-   037210   Module 'osrdbin.obj'
-   0372C0   Module 'convbntx.obj'
-   037340   Module 'osabort.obj'
-   037680   Module 'hashinit.obj'
-   0376C0   Module 'dbmin.obj'
-   037860   Module 'rntinit.obj'
-   037A20   Module 'ossysp.obj'
-   037A90   Module 'pfpbindc.obj'
-   038960   Module 'rnthread.obj'
-   038A60   Module 'runexcpt.obj'
-   039120   Module 'strcat0m.obj'
-   039190   Module 'errputms.obj'
-   039260   Module 'errsys.obj'
-   039370   Module 'errlast.obj'
-   039430   Module 'oswrbin.obj'
-   0394A0   Module 'oswrtext.obj'
-   039540   Module 'osflush.obj'
-   039580   Module 'memobj.obj'
-   039A60   Module 'ioclose.obj'
-   039C60   Module 'fnmfns.obj'
-   03A990   Module 'osexist.obj'
-   03AA50   Module 'erracces.obj'
-   03BC90   Module 'memreall.obj'
-   03BCE0   Module 'conv_fs.obj'
-   03CA30   Module 'conv_bs.obj'
-   03CC70   Module 'strupper.obj'
-   03CCB0   Module 'emmend.obj'
-   03CCE0   Module 'osclose.obj'
-   03CD20   Module 'osflock.obj'
-   03CDF0   Module 'rntsynch.obj'
-   03CE50   Module 'rntcfact.obj'
-   03D260   Module 'rntassz.obj'
-   03D5C0   Module 'osthread.obj'
-   03D6D0   Module 'rntcpyg3.obj'
-   03D720   Module 'memgsptr.obj'
-   03D770   Module 'fnmsrch.obj'
-   03D9F0   Module 'osgenvs.obj'
-   03DA50   Module 'convtxbn.obj'
-   03DB00   Module 'iogpath.obj'
-   03DBA0   Module 'osgdisk.obj'
-   03DBF0   Module 'osgdir.obj'
-   03DDA0   Module 'osfmatch.obj'
-   03E5F0   Module 'osrdtext.obj'
-   03E630   Module 'osseek.obj'
-   03E680   Module 'osopen.obj'
-   03E8D0   Module 'strcatm.obj'
-   03E970   Module 'osseekrd.obj'
-   03E9E0   Module 'strcmpi.obj'
-   03EA90   Module 'strncmp.obj'
-   03EAD0   Module 'rntconv.obj'
-   03FBD0   Module 'rntcpyg2.obj'
-   03FC80   Module 'rntcpyg4.obj'
-   03FFF0   Module 'strsstr.obj'
-   0401B0   Module 'strlower.obj'
-   0401F0   Module 'rntfixup.obj'
-   040240   Module 'memcopyh.obj'
-   040280   Module 'memcopyg.obj'
-030000:0102C0 000018   STRSTRLEN_TEXT::CODE::<no group> F=4
-   0402C0   Module 'strlen.obj'
-030000:0102D8 000378   RUNBTRAK_TEXT::CODE::<no group> F=4
-   0402D8   Module 'runbtrak.obj'
-030000:010650 000008   RUNSTK_TEXT::CODE::<no group> F=4
-   040650   Module 'runstk.obj'
-030000:010658 000124   MEMSIDI_TEXT::CODE::<no group> F=4
-   040658   Module 'memsidi.obj'
-030000:01077C 0002EC   RUNUNIFY_TEXT::CODE::<no group> F=4
-   04077C   Module 'rununify.obj'
-030000:010A68 0001F4   PFPMATH_TEXT::CODE::<no group> F=4
-   040A68   Module 'pfpmath.obj'
-030000:010C5C 000008   RNTCFCI_TEXT::CODE::<no group> F=4
-   040C5C   Module 'rntcfci.obj'
+   030F80   Module 'C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\Obj\GOAL$000.SYM'
+   030F80   Module 'runerr.obj'
+   0310C0   Module 'iogetln.obj'
+   031280   Module 'strcat0.obj'
+   0312B0   Module 'memgstk.obj'
+   0316A0   Module 'memsetc.obj'
+   031700   Module 'iomin.obj'
+   031780   Module 'memheapn.obj'
+   0326A0   Module 'brksimp.obj'
+   0326E0   Module 'runflags.obj'
+   032730   Module 'memmov.obj'
+   032800   Module 'convpred.obj'
+   033190   Module 'ioin.obj'
+   033300   Module 'runinit.obj'
+   033D30   Module 'strcat.obj'
+   033D70   Module 'errrep1.obj'
+   033ED0   Module 'osinit.obj'
+   033F00   Module 'ioout.obj'
+   0340F0   Module 'iowlong.obj'
+   034130   Module 'rntcount.obj'
+   0341A0   Module 'runexit1.obj'
+   0341E0   Module 'errsave.obj'
+   034210   Module 'memadjst.obj'
+   034260   Module 'iobuff.obj'
+   034310   Module 'ioflush.obj'
+   034400   Module 'meminit.obj'
+   034490   Module 'ioinit.obj'
+   0347A0   Module 'memsetc0.obj'
+   0347F0   Module 'errinit.obj'
+   034A60   Module 'errfatal.obj'
+   034A90   Module 'memsave.obj'
+   034BD0   Module 'conv_si.obj'
+   034CE0   Module 'scanint.obj'
+   035080   Module 'chinit.obj'
+   0352D0   Module 'iowritef.obj'
+   0369F0   Module 'scanreal.obj'
+   037010   Module 'scanref.obj'
+   037120   Module 'conv_ls.obj'
+   0371A0   Module 'strcmp.obj'
+   0371D0   Module 'osrdbin.obj'
+   037280   Module 'convbntx.obj'
+   037300   Module 'osabort.obj'
+   037640   Module 'hashinit.obj'
+   037680   Module 'dbmin.obj'
+   037820   Module 'rntinit.obj'
+   0379E0   Module 'ossysp.obj'
+   037A50   Module 'pfpbindc.obj'
+   038920   Module 'rnthread.obj'
+   038A20   Module 'runexcpt.obj'
+   0390E0   Module 'strcat0m.obj'
+   039150   Module 'errputms.obj'
+   039220   Module 'errsys.obj'
+   039330   Module 'errlast.obj'
+   0393F0   Module 'oswrbin.obj'
+   039460   Module 'oswrtext.obj'
+   039500   Module 'osflush.obj'
+   039540   Module 'memobj.obj'
+   039A20   Module 'ioclose.obj'
+   039C20   Module 'fnmfns.obj'
+   03A950   Module 'osexist.obj'
+   03AA10   Module 'erracces.obj'
+   03BC50   Module 'memreall.obj'
+   03BCA0   Module 'conv_fs.obj'
+   03C9F0   Module 'conv_bs.obj'
+   03CC30   Module 'strupper.obj'
+   03CC70   Module 'emmend.obj'
+   03CCA0   Module 'osclose.obj'
+   03CCE0   Module 'osflock.obj'
+   03CDB0   Module 'rntsynch.obj'
+   03CE10   Module 'rntcfact.obj'
+   03D220   Module 'rntassz.obj'
+   03D580   Module 'osthread.obj'
+   03D690   Module 'rntcpyg3.obj'
+   03D6E0   Module 'memgsptr.obj'
+   03D730   Module 'fnmsrch.obj'
+   03D9B0   Module 'osgenvs.obj'
+   03DA10   Module 'convtxbn.obj'
+   03DAC0   Module 'iogpath.obj'
+   03DB60   Module 'osgdisk.obj'
+   03DBB0   Module 'osgdir.obj'
+   03DD60   Module 'osfmatch.obj'
+   03E5B0   Module 'osrdtext.obj'
+   03E5F0   Module 'osseek.obj'
+   03E640   Module 'osopen.obj'
+   03E890   Module 'strcatm.obj'
+   03E930   Module 'osseekrd.obj'
+   03E9A0   Module 'strcmpi.obj'
+   03EA50   Module 'strncmp.obj'
+   03EA90   Module 'rntconv.obj'
+   03FB90   Module 'rntcpyg2.obj'
+   03FC40   Module 'rntcpyg4.obj'
+   03FFB0   Module 'strsstr.obj'
+   040170   Module 'strlower.obj'
+   0401B0   Module 'rntfixup.obj'
+   040200   Module 'memcopyh.obj'
+   040240   Module 'memcopyg.obj'
+030000:010280 000018   STRSTRLEN_TEXT::CODE::<no group> F=4
+   040280   Module 'strlen.obj'
+030000:010298 000378   RUNBTRAK_TEXT::CODE::<no group> F=4
+   040298   Module 'runbtrak.obj'
+030000:010610 000008   RUNSTK_TEXT::CODE::<no group> F=4
+   040610   Module 'runstk.obj'
+030000:010618 000124   MEMSIDI_TEXT::CODE::<no group> F=4
+   040618   Module 'memsidi.obj'
+030000:01073C 0002EC   RUNUNIFY_TEXT::CODE::<no group> F=4
+   04073C   Module 'rununify.obj'
+030000:010A28 0001F4   PFPMATH_TEXT::CODE::<no group> F=4
+   040A28   Module 'pfpmath.obj'
+030000:010C1C 000008   RNTCFCI_TEXT::CODE::<no group> F=4
+   040C1C   Module 'rntcfci.obj'
 
 Frame 050000   Size 000530.  Name=<    .bss>, 	Chars=C0000080h. [URW]
 050000:000000 000524   *** Comm1 ***::BSS::<no group> F=0
 
 	     ------- Names by value Map ---------
-Frame 010000   Size 003410.  Name=<   .data>, 	Chars=C0000040h. [IRW]
+Frame 010000   Size 0033F0.  Name=<   .data>, 	Chars=C0000040h. [IRW]
 010000:000000 0016E8   .bss::BSS::DGROUP F=4
-010000:0016E8 001D18   .data::DATA::DGROUP F=4
+010000:0016E8 001CF8   .data::DATA::DGROUP F=4
 --- From 'rntconv.obj'
 01:000116EA __fltused  (Idle)
 --- From 'rntcfact.obj'
@@ -257,114 +257,114 @@ Frame 010000   Size 003410.  Name=<   .data>, 	Chars=C0000040h. [IRW]
 01:00011B08 $global$dom$accessmode 
 01:00011B20 $global$dom$denymode 
 01:00011B38 $global$dom$bgi_ilist 
-01:00011EE7 _PROLOG_Vars 
+01:00011ECC _PROLOG_Vars 
 --- From 'C:\VIP52\BIN\WIN\32\BMSTU_6sem_FaLP\prolog\lab13\src\Obj\GOAL$000.SYM'
-01:00011F48 _PROLOG_SymbolTable 
+01:00011F28 _PROLOG_SymbolTable 
 --- From 'ioclose.obj'
-01:000122B8 _IO_Vars 
+01:00012298 _IO_Vars 
 --- From 'iomin.obj'
-01:000122D8 _IO_SystemPF 
+01:000122B8 _IO_SystemPF 
 --- From 'memheapn.obj'
-01:000122E0 _MemManagerDescr 
-01:00012310 _MEM_HStat_CB 
+01:000122C0 _MemManagerDescr 
+01:000122F0 _MEM_HStat_CB 
 --- From 'errrep1.obj'
-01:00012320 _RUN_IsVpi 
+01:00012300 _RUN_IsVpi 
 --- From 'errputms.obj'
-01:00012324 _RUN_IsEasyWin 
+01:00012304 _RUN_IsEasyWin 
 --- From 'runexcpt.obj'
-01:00012328 _RUN_IsEasyWinBreaked 
+01:00012308 _RUN_IsEasyWinBreaked 
 --- From 'rntcfci.obj'
-01:0001232C ___MainThreadDescr__ 
-01:00012374 ___PTD__ 
+01:0001230C ___MainThreadDescr__ 
+01:00012354 ___PTD__ 
 --- From 'runexit1.obj'
-01:00012374 _RUN_BTop 
+01:00012354 _RUN_BTop 
 --- From 'runexcpt.obj'
-01:00012378 _RUN_TrapTop 
+01:00012358 _RUN_TrapTop 
 --- From 'runinit.obj'
-01:0001237C _RUN_Trail 
-01:00012380 _RUN_TTop 
-01:00012384 _RUN_MaxTTop 
+01:0001235C _RUN_Trail 
+01:00012360 _RUN_TTop 
+01:00012364 _RUN_MaxTTop 
 --- From 'rntconv.obj'
-01:00012388 _RUN_ExitCode 
+01:00012368 _RUN_ExitCode 
 --- From 'runexit1.obj'
-01:0001238C _RUN_ErrorFlag 
+01:0001236C _RUN_ErrorFlag 
 --- From 'runinit.obj'
-01:00012390 _RUN_SaveStack 
+01:00012370 _RUN_SaveStack 
 --- From 'errlast.obj'
-01:00012394 _ERR_SaveErrorNo 
+01:00012374 _ERR_SaveErrorNo 
 --- From 'runbtrak.obj'
-01:00012398 _ERR_SaveSourceOffset  (Idle)
-01:0001239C _ERR_SaveIncludeNo  (Idle)
-01:000123A0 _MEM_CommitTop 
+01:00012378 _ERR_SaveSourceOffset  (Idle)
+01:0001237C _ERR_SaveIncludeNo  (Idle)
+01:00012380 _MEM_CommitTop 
 --- From 'rntconv.obj'
-01:000123A4 _MEM_GTop 
+01:00012384 _MEM_GTop 
 --- From 'runbtrak.obj'
-01:000123A8 _MEM_GBase 
-01:000123AC _MEM_GMax 
-01:000123B0 _User_Data  (Idle)
-01:000123B4 _ErrorCursor_Ptr  (Idle)
+01:00012388 _MEM_GBase 
+01:0001238C _MEM_GMax 
+01:00012390 _User_Data  (Idle)
+01:00012394 _ErrorCursor_Ptr  (Idle)
 --- From 'erracces.obj'
-01:000123B8 _ERR_NativeOsErrorCode 
-01:000123BC _RUN_ExceptionCode 
+01:00012398 _ERR_NativeOsErrorCode 
+01:0001239C _RUN_ExceptionCode 
 --- From 'runexcpt.obj'
-01:000123C0 _RUN_ExceptionInProgress 
+01:000123A0 _RUN_ExceptionInProgress 
 --- From 'erracces.obj'
-01:000123C4 _ERR_AdditiveInfo 
+01:000123A4 _ERR_AdditiveInfo 
 --- From 'runinit.obj'
-01:00012484 _PTD_ptr 
+01:00012464 _PTD_ptr 
 --- From 'osinit.obj'
-01:000126A4 _NT_LibraryNeeded_v52 
+01:00012684 _NT_LibraryNeeded_v52 
 --- From 'iowritef.obj'
-01:000126BC _IOBUFF_Size 
-01:000126C0 _IOBUFF_Rate 
+01:0001269C _IOBUFF_Size 
+01:000126A0 _IOBUFF_Rate 
 --- From 'errinit.obj'
-01:000126C4 _ERR_SourceOffset  (Idle)
-01:000126C8 _ERR_IncludeNo  (Idle)
+01:000126A4 _ERR_SourceOffset  (Idle)
+01:000126A8 _ERR_IncludeNo  (Idle)
 --- From 'memobj.obj'
-01:000126CC _ERR_FileTable 
+01:000126AC _ERR_FileTable 
 --- From 'errlast.obj'
-01:000126D0 _ERR_SaveFileTable 
+01:000126B0 _ERR_SaveFileTable 
 --- From 'errsys.obj'
-01:000126E0 _ERR_FileName 
-01:000126E8 _ERR_FileDir 
-01:000126EC _ERR_File 
+01:000126C0 _ERR_FileName 
+01:000126C8 _ERR_FileDir 
+01:000126CC _ERR_File 
 --- From 'errputms.obj'
-01:000126F0 _ERR_UserErrRepFns 
+01:000126D0 _ERR_UserErrRepFns 
 --- From 'chinit.obj'
-01:00012730 _CH_LowerTab 
-01:00012830 _CH_UpperTab 
-01:00012930 _CH_ClassTab 
+01:00012710 _CH_LowerTab 
+01:00012810 _CH_UpperTab 
+01:00012910 _CH_ClassTab 
 --- From 'hashinit.obj'
-01:00012DDC _HASH_GlobSymbPtr 
-01:00012DE0 _HASH_SymbRoot 
+01:00012DBC _HASH_GlobSymbPtr 
+01:00012DC0 _HASH_SymbRoot 
 --- From 'dbmin.obj'
-01:00012DE4 _DB_FDesArr 
-01:00012DE8 _DB_Initialized 
-01:00012DEC _DB_MemBases 
-01:00012DF0 _DB_NoOfDbSel 
+01:00012DC4 _DB_FDesArr 
+01:00012DC8 _DB_Initialized 
+01:00012DCC _DB_MemBases 
+01:00012DD0 _DB_NoOfDbSel 
 --- From 'rntinit.obj'
-01:00012DF8 _RNT_iiii  (Idle)
-01:00012E0C _RNT_ReadTermErrorOccured 
-01:00012E10 _RNT_ReadTermErrorLinePos  (Idle)
+01:00012DD8 _RNT_iiii  (Idle)
+01:00012DEC _RNT_ReadTermErrorOccured 
+01:00012DF0 _RNT_ReadTermErrorLinePos  (Idle)
 --- From 'rununify.obj'
-01:000130F0 _RUN_uc 
+01:000130D0 _RUN_uc 
 --- From 'memobj.obj'
-01:00013114 _MEM_ObjectsListHead 
+01:000130F4 _MEM_ObjectsListHead 
 --- From 'conv_bs.obj'
-01:00013358 _CONV_HexChar 
+01:00013338 _CONV_HexChar 
 --- From 'emmend.obj'
-01:0001339C _EMM_Active 
-01:000133A0 _EMM_Frame  (Idle)
-01:000133A4 _EMM_Pages  (Idle)
+01:0001337C _EMM_Active 
+01:00013380 _EMM_Frame  (Idle)
+01:00013384 _EMM_Pages  (Idle)
 --- From 'rntcfact.obj'
-01:000133A8 ___  (Idle)
-010000:003400 000010   PROMODE::DATA::DGROUP F=4
+01:00013388 ___  (Idle)
+010000:0033E0 000010   PROMODE::DATA::DGROUP F=4
 --- From 'rntcfci.obj'
-01:00013400 endbyt 
+01:000133E0 endbyt 
 Frame 020000   Size 000210.  Name=<  .rdata>, 	Chars=40000040h. [IR]
 020000:000000 000208   .rdata::.rdata::.rdata F=4
-Frame 030000   Size 010C70.  Name=<   .text>, 	Chars=60000020h. [CER]
-030000:000000 0102C0   .text::CODE::<no group> F=4
+Frame 030000   Size 010C30.  Name=<   .text>, 	Chars=60000020h. [CER]
+030000:000000 010280   .text::CODE::<no group> F=4
 --- From 'erracces.obj'
 03:00030000 __chkstk 
 --- From 'C:\VIP52\VPI\LIB\WIN32\MSC\INIT32.OBJ'
@@ -386,556 +386,556 @@ Frame 030000   Size 010C70.  Name=<   .text>, 	Chars=60000020h. [CER]
 03:00030B60 _PROLOG_ErrReport 
 03:00030B65 _CFG_Load  (Idle)
 03:00030B7C goal$000$own$3  (Idle)
-03:00030BF0 goal$000$sumcostinner$6  (Idle)
-03:00030D68 goal$000$sumcost$7  (Idle)
-03:00030E1C goal$000$own$9  (Idle)
-03:00030E5C goal$000$own$10  (Idle)
-03:00030E9C goal$000$own$11  (Idle)
-03:00030F20 _PROLOG_Goal 
+03:00030BD8 goal$000$sumcostinner$5  (Idle)
+03:00030D50 goal$000$sumcost$6  (Idle)
+03:00030E04 goal$000$own$8  (Idle)
+03:00030E38 goal$000$own$9  (Idle)
+03:00030E6C goal$000$own$10  (Idle)
+03:00030ED8 _PROLOG_Goal 
 --- From 'rntconv.obj'
-03:00030FC0 _RUN_ErrorCont 
-03:00031013 _RUN_Error 
+03:00030F80 _RUN_ErrorCont 
+03:00030FD3 _RUN_Error 
 --- From 'osseekrd.obj'
-03:0003104B _RUN_OsError 
+03:0003100B _RUN_OsError 
 --- From 'runerr.obj'
-03:000310C5 _RUN_ErrorExit  (Idle)
-03:000310DD _RUN_UnresolvedRefError  (Idle)
+03:00031085 _RUN_ErrorExit  (Idle)
+03:0003109D _RUN_UnresolvedRefError  (Idle)
 --- From 'iogetln.obj'
-03:00031100 _IO_getln 
+03:000310C0 _IO_getln 
 --- From 'osfmatch.obj'
-03:000312C0 _STR_StrCat0 
+03:00031280 _STR_StrCat0 
 --- From 'meminit.obj'
-03:00031378 _MEM_GStackInit 
+03:00031338 _MEM_GStackInit 
 --- From 'memgstk.obj'
-03:00031467 _MEM_SystemFreeGStack 
+03:00031427 _MEM_SystemFreeGStack 
 --- From 'memcopyg.obj'
-03:000314EC _MEM_AllocGStack 
+03:000314AC _MEM_AllocGStack 
 --- From 'rntconv.obj'
-03:000315B1 _MEM_GetMaxGStack 
+03:00031571 _MEM_GetMaxGStack 
 --- From 'erracces.obj'
-03:00031606 _MEM_GetBigGStack 
+03:000315C6 _MEM_GetBigGStack 
 --- From 'rntconv.obj'
-03:00031621 _MEM_FreeGStack 
+03:000315E1 _MEM_FreeGStack 
 --- From 'meminit.obj'
-03:00031631 _MEM_GStackTerm 
+03:000315F1 _MEM_GStackTerm 
 --- From 'memgstk.obj'
-03:0003166C _MEM_MarkGStack  (Idle)
-03:00031681 _MEM_ReleaseGStack  (Idle)
-03:00031694 _MEM_GStat  (Idle)
+03:0003162C _MEM_MarkGStack  (Idle)
+03:00031641 _MEM_ReleaseGStack  (Idle)
+03:00031654 _MEM_GStat  (Idle)
 --- From 'conv_fs.obj'
-03:000316E0 _MEM_SetMem 
+03:000316A0 _MEM_SetMem 
 --- From 'memsetc.obj'
-03:0003170D _MEM_SetMemW  (Idle)
+03:000316CD _MEM_SetMemW  (Idle)
 --- From 'runinit.obj'
-03:00031740 _IO_Init 
+03:00031700 _IO_Init 
 --- From 'iomin.obj'
-03:000317A1 _IO_IsConsoleInput 
+03:00031761 _IO_IsConsoleInput 
 --- From 'meminit.obj'
-03:000317C0 __MEM_HeapInit 
+03:00031780 __MEM_HeapInit 
 --- From 'memcopyh.obj'
-03:00031E5E _MEM_AllocHeap@4 
+03:00031E1E _MEM_AllocHeap@4 
 --- From 'rntconv.obj'
-03:00032040 _MEM_ReleaseHeap@8 
+03:00032000 _MEM_ReleaseHeap@8 
 --- From 'memheapn.obj'
-03:000322B1 _MEM_ResizeHeap@8  (Idle)
+03:00032271 _MEM_ResizeHeap@8  (Idle)
 --- From 'meminit.obj'
-03:000325DC _MEM_HeapTerminate 
+03:0003259C _MEM_HeapTerminate 
 --- From 'memheapn.obj'
-03:00032690 _MEM_HStat  (Idle)
+03:00032650 _MEM_HStat  (Idle)
 --- From 'osrdbin.obj'
-03:000326E0 _BRK_CheckBreak 
+03:000326A0 _BRK_CheckBreak 
 --- From 'brksimp.obj'
-03:000326F4 _BRK_Init  (Idle)
-03:000326FF _BRK_End  (Idle)
-03:0003270A _BRK_Clear  (Idle)
+03:000326B4 _BRK_Init  (Idle)
+03:000326BF _BRK_End  (Idle)
+03:000326CA _BRK_Clear  (Idle)
 --- From 'runflags.obj'
-03:00032720 _RUN_VpiPresent  (Idle)
-03:00032732 _RUN_EasyWinPresent 
-03:00032744 _RUN_EasyWinBreaked 
+03:000326E0 _RUN_VpiPresent  (Idle)
+03:000326F2 _RUN_EasyWinPresent 
+03:00032704 _RUN_EasyWinBreaked 
 --- From 'memcopyg.obj'
-03:00032770 _MEM_MovMem 
+03:00032730 _MEM_MovMem 
 --- From 'convpred.obj'
-03:00032840 _CONV_s_i_oi  (Idle)
-03:00032865 _CONV_s_i_ii  (Idle)
-03:00032894 _CONV_s_i_io 
-03:00032914 _CONV_s_l_oi  (Idle)
-03:00032939 _CONV_s_l_ii  (Idle)
-03:00032968 _CONV_s_l_io 
-03:00032A23 _CONV_up_low_ii  (Idle)
-03:00032AAA _CONV_up_low_oi  (Idle)
-03:00032B19 _CONV_up_low_io  (Idle)
-03:00032B88 _CONV_UpLowCh_ii  (Idle)
-03:00032BC1 _CONV_UpLowCh_io  (Idle)
-03:00032BDE _CONV_UpLowCh_oi  (Idle)
-03:00032BFB _CONV_s_r_ii  (Idle)
-03:00032C2F _CONV_s_r_oi  (Idle)
-03:00032C70 _CONV_s_r_io 
-03:00032CE0 _CONV_Str_Ref_io 
-03:00032D4C _CONV_Str_Ref_oi  (Idle)
-03:00032DA1 _CONV_Str_Ref_ii  (Idle)
-03:00032DD0 _CONV_r_ints_io  (Idle)
-03:00032E5C _CONV_r_ints_oi  (Idle)
-03:00032EC4 _CONV_c_i_io  (Idle)
-03:00032ED9 _CONV_c_i_oi  (Idle)
-03:00032EEC _CONV_c_i_ii  (Idle)
-03:00032F0A _CONV_s_c_io  (Idle)
-03:00032F39 _CONV_s_c_oi  (Idle)
-03:00032F62 _CONV_s_c_ii  (Idle)
-03:00032F9C _CONV_str_DOSstr_oi 
-03:0003308D _CONV_str_DOSstr_io  (Idle)
-03:00033192 _CONV_str_DOSstr_ii  (Idle)
+03:00032800 _CONV_s_i_oi  (Idle)
+03:00032825 _CONV_s_i_ii  (Idle)
+03:00032854 _CONV_s_i_io 
+03:000328D4 _CONV_s_l_oi  (Idle)
+03:000328F9 _CONV_s_l_ii  (Idle)
+03:00032928 _CONV_s_l_io 
+03:000329E3 _CONV_up_low_ii  (Idle)
+03:00032A6A _CONV_up_low_oi  (Idle)
+03:00032AD9 _CONV_up_low_io  (Idle)
+03:00032B48 _CONV_UpLowCh_ii  (Idle)
+03:00032B81 _CONV_UpLowCh_io  (Idle)
+03:00032B9E _CONV_UpLowCh_oi  (Idle)
+03:00032BBB _CONV_s_r_ii  (Idle)
+03:00032BEF _CONV_s_r_oi  (Idle)
+03:00032C30 _CONV_s_r_io 
+03:00032CA0 _CONV_Str_Ref_io 
+03:00032D0C _CONV_Str_Ref_oi  (Idle)
+03:00032D61 _CONV_Str_Ref_ii  (Idle)
+03:00032D90 _CONV_r_ints_io  (Idle)
+03:00032E1C _CONV_r_ints_oi  (Idle)
+03:00032E84 _CONV_c_i_io  (Idle)
+03:00032E99 _CONV_c_i_oi  (Idle)
+03:00032EAC _CONV_c_i_ii  (Idle)
+03:00032ECA _CONV_s_c_io  (Idle)
+03:00032EF9 _CONV_s_c_oi  (Idle)
+03:00032F22 _CONV_s_c_ii  (Idle)
+03:00032F5C _CONV_str_DOSstr_oi 
+03:0003304D _CONV_str_DOSstr_io  (Idle)
+03:00033152 _CONV_str_DOSstr_ii  (Idle)
 --- From 'ioin.obj'
-03:000331D0 _IO_FillReadBuf 
-03:0003328F _IO_GetCh 
+03:00033190 _IO_FillReadBuf 
+03:0003324F _IO_GetCh 
 --- From 'errfatal.obj'
-03:00033340 _RUN_FatalExit 
+03:00033300 _RUN_FatalExit 
 --- From 'runinit.obj'
-03:00033358 _RUN_InstallModule  (Idle)
-03:000333C8 _RUN_SetDllMode  (Idle)
-03:000333DA _RUN_GetRunTimeVars 
-03:0003398F _RUN_Init 
-03:00033AB3 _RUN_End 
-03:00033AFB _RUN_Main  (Idle)
-03:00033C44 _RUN_GetErrorFlag 
-03:00033C59 _RUN_GetExitCode 
-03:00033C6E _RUN_SetExitCode  (Idle)
-03:00033C81 _RUN_GetPTD_ptr  (Idle)
-03:00033C96 _RUN_SetPTD_ptr  (Idle)
-03:00033CA9 _RUN_GetBTop  (Idle)
-03:00033CBE _RUN_SetBTop  (Idle)
-03:00033CD1 _RUN_GetTrapTop  (Idle)
-03:00033CE6 _RUN_SetTrapTop  (Idle)
-03:00033CF9 _RUN_GetGTop  (Idle)
-03:00033D0E _RUN_SetGTop  (Idle)
-03:00033D21 _RUN_SetUC0  (Idle)
-03:00033D36 _RUN_SetUC1  (Idle)
-03:00033D4B _PDC_GetLibraryVersion  (Idle)
+03:00033318 _RUN_InstallModule  (Idle)
+03:00033388 _RUN_SetDllMode  (Idle)
+03:0003339A _RUN_GetRunTimeVars 
+03:0003394F _RUN_Init 
+03:00033A73 _RUN_End 
+03:00033ABB _RUN_Main  (Idle)
+03:00033C04 _RUN_GetErrorFlag 
+03:00033C19 _RUN_GetExitCode 
+03:00033C2E _RUN_SetExitCode  (Idle)
+03:00033C41 _RUN_GetPTD_ptr  (Idle)
+03:00033C56 _RUN_SetPTD_ptr  (Idle)
+03:00033C69 _RUN_GetBTop  (Idle)
+03:00033C7E _RUN_SetBTop  (Idle)
+03:00033C91 _RUN_GetTrapTop  (Idle)
+03:00033CA6 _RUN_SetTrapTop  (Idle)
+03:00033CB9 _RUN_GetGTop  (Idle)
+03:00033CCE _RUN_SetGTop  (Idle)
+03:00033CE1 _RUN_SetUC0  (Idle)
+03:00033CF6 _RUN_SetUC1  (Idle)
+03:00033D0B _PDC_GetLibraryVersion  (Idle)
 --- From 'osfmatch.obj'
-03:00033D70 _STR_StrCat 
+03:00033D30 _STR_StrCat 
 --- From 'errputms.obj'
-03:00033DB0 _ERR_UseMessageBox 
+03:00033D70 _ERR_UseMessageBox 
 --- From 'errrep1.obj'
-03:00033DE0 _ERR_ReportLevel1 
+03:00033DA0 _ERR_ReportLevel1 
 --- From 'osinit.obj'
-03:00033F10 _OS_Init 
+03:00033ED0 _OS_Init 
 --- From 'ioout.obj'
-03:00033F91 _IO_WrCh  (Idle)
+03:00033F51 _IO_WrCh  (Idle)
 --- From 'iowritef.obj'
-03:00034033 _IO_WrStr 
+03:00033FF3 _IO_WrStr 
 --- From 'rntcount.obj'
-03:00034130 _IO_WrLong 
+03:000340F0 _IO_WrLong 
 --- From 'iowlong.obj'
-03:00034150 _IO_WrULong  (Idle)
+03:00034110 _IO_WrULong  (Idle)
 --- From 'rntcount.obj'
-03:00034170 _RNT_Count 
-03:00034181 _RNT_SCount 
+03:00034130 _RNT_Count 
+03:00034141 _RNT_SCount 
 --- From 'runexit1.obj'
-03:000341E0 _RUN_Exit 
-03:00034209 _RUN_ExitZero 
+03:000341A0 _RUN_Exit 
+03:000341C9 _RUN_ExitZero 
 --- From 'errsave.obj'
-03:00034220 _ERR_SaveLastError 
+03:000341E0 _ERR_SaveLastError 
 --- From 'rntconv.obj'
-03:00034250 _MEM_AdjustGStackAlloc 
+03:00034210 _MEM_AdjustGStackAlloc 
 --- From 'iobuff.obj'
-03:000342A0 _IO_BuffInit 
-03:000342BF _IO_BuffSize_ii  (Idle)
-03:00034326 _IO_BuffSize_oo  (Idle)
+03:00034260 _IO_BuffInit 
+03:0003427F _IO_BuffSize_ii  (Idle)
+03:000342E6 _IO_BuffSize_oo  (Idle)
 --- From 'ioclose.obj'
-03:00034350 _IO_FlushBuf 
+03:00034310 _IO_FlushBuf 
 --- From 'ioflush.obj'
-03:000343B5 _IO_Flush 
+03:00034375 _IO_Flush 
 --- From 'meminit.obj'
-03:00034440 _MEM_Init 
-03:000344B4 _MEM_Terminate 
+03:00034400 _MEM_Init 
+03:00034474 _MEM_Terminate 
 --- From 'ioclose.obj'
-03:000344D0 _IO_init_pr_files 
+03:00034490 _IO_init_pr_files 
 --- From 'ioinit.obj'
-03:00034723 _IO_End  (Idle)
+03:000346E3 _IO_End  (Idle)
 --- From 'rnthread.obj'
-03:000347E0 _MEM_SetMem0 
+03:000347A0 _MEM_SetMem0 
 --- From 'memsetc0.obj'
-03:00034801 _MEM_SetMemW0  (Idle)
+03:000347C1 _MEM_SetMemW0  (Idle)
 --- From 'errinit.obj'
-03:00034830 _Reduce 
-03:000348BE _LookForErrDir 
-03:00034A0E _ERR_Init 
-03:00034A84 _ERR_InstallUserRepFns  (Idle)
+03:000347F0 _Reduce 
+03:0003487E _LookForErrDir 
+03:000349CE _ERR_Init 
+03:00034A44 _ERR_InstallUserRepFns  (Idle)
 --- From 'errfatal.obj'
-03:00034AA0 _ERR_Fatal 
+03:00034A60 _ERR_Fatal 
 --- From 'rntcpyg4.obj'
-03:00034AD0 _MEM_SaveBinaryGStack 
+03:00034A90 _MEM_SaveBinaryGStack 
 --- From 'memsave.obj'
-03:00034B18 _MEM_SaveBinaryHeap  (Idle)
+03:00034AD8 _MEM_SaveBinaryHeap  (Idle)
 --- From 'rntcpyg4.obj'
-03:00034B5D _MEM_SaveStringGStack 
+03:00034B1D _MEM_SaveStringGStack 
 --- From 'memsave.obj'
-03:00034BA6 _MEM_SaveStringHeap  (Idle)
-03:00034BEC _MEM_ReleaseStringHeap  (Idle)
+03:00034B66 _MEM_SaveStringHeap  (Idle)
+03:00034BAC _MEM_ReleaseStringHeap  (Idle)
 --- From 'erracces.obj'
-03:00034C10 _CONV_IntToStr 
-03:00034CB9 _CONV_UnsignedToStr 
-03:00034E41 _SCAN_Intg 
+03:00034BD0 _CONV_IntToStr 
+03:00034C79 _CONV_UnsignedToStr 
+03:00034E01 _SCAN_Intg 
 --- From 'chinit.obj'
-03:000350C0 _CH_Init 
+03:00035080 _CH_Init 
 --- From 'erracces.obj'
-03:000352CA _Get_CH_ClassTab 
+03:0003528A _Get_CH_ClassTab 
 --- From 'strcmpi.obj'
-03:000352DF _Get_CH_UpperTab 
+03:0003529F _Get_CH_UpperTab 
 --- From 'strlower.obj'
-03:000352F4 _Get_CH_LowerTab 
+03:000352B4 _Get_CH_LowerTab 
 --- From 'iowritef.obj'
-03:000363BD _IO_WritefInit  (Idle)
-03:000363FA _IO_WritefDom  (Idle)
-03:00036531 _IO_FormatInit  (Idle)
-03:00036563 _IO_Format  (Idle)
-03:00036692 _IO_FormatEnd  (Idle)
-03:000366F4 _IO_WritefDisplaced 
+03:0003637D _IO_WritefInit  (Idle)
+03:000363BA _IO_WritefDom  (Idle)
+03:000364F1 _IO_FormatInit  (Idle)
+03:00036523 _IO_Format  (Idle)
+03:00036652 _IO_FormatEnd  (Idle)
+03:000366B4 _IO_WritefDisplaced 
 --- From 'memobj.obj'
-03:000368BE _IO_Writef 
+03:0003687E _IO_Writef 
 --- From 'iowritef.obj'
-03:000368E2 _IO_VSPrintf 
-03:000369F8 _IO_SPrintf 
+03:000368A2 _IO_VSPrintf 
+03:000369B8 _IO_SPrintf 
 --- From 'scanreal.obj'
-03:00036A30 _SCAN_Real 
-03:00036A52 _SCAN_Real1 
+03:000369F0 _SCAN_Real 
+03:00036A12 _SCAN_Real1 
 --- From 'scanref.obj'
-03:00037050 _SCAN_Ref 
+03:00037010 _SCAN_Ref 
 --- From 'erracces.obj'
-03:00037160 _CONV_LongHexToStr 
+03:00037120 _CONV_LongHexToStr 
 --- From 'osfmatch.obj'
-03:000371E0 _STR_StrCmp 
+03:000371A0 _STR_StrCmp 
 --- From 'osrdtext.obj'
-03:00037210 _OS_ReadBin 
-03:000372C0 _CONV_BinText 
+03:000371D0 _OS_ReadBin 
+03:00037280 _CONV_BinText 
 --- From 'rntinit.obj'
-03:0003745A _OS_AbendMessage_2 
+03:0003741A _OS_AbendMessage_2 
 --- From 'runexcpt.obj'
-03:00037512 _OS_AbendMessage 
-03:00037530 _OS_AbortApp 
+03:000374D2 _OS_AbendMessage 
+03:000374F0 _OS_AbortApp 
 --- From 'osabort.obj'
-03:00037616 _OS_PressAnyKey 
+03:000375D6 _OS_PressAnyKey 
 --- From 'runexcpt.obj'
-03:00037641 _OS_IsConsoleApp 
+03:00037601 _OS_IsConsoleApp 
 --- From 'hashinit.obj'
-03:00037680 _Get_HASH_GlobSymbPtr  (Idle)
-03:00037695 _HASH_Init 
+03:00037640 _Get_HASH_GlobSymbPtr  (Idle)
+03:00037655 _HASH_Init 
 --- From 'dbmin.obj'
-03:000376C0 _DB_Init 
-03:00037728 _DB_End 
+03:00037680 _DB_Init 
+03:000376E8 _DB_End 
 --- From 'rntinit.obj'
-03:0003792C _GetMainSymTab 
-03:00037964 _RNT_GetUserDomDef  (Idle)
-03:00037979 _RNT_GetNoOfUserDoms  (Idle)
-03:0003798F _RNT_Init 
-03:000379F5 _RNT_End 
+03:000378EC _GetMainSymTab 
+03:00037924 _RNT_GetUserDomDef  (Idle)
+03:00037939 _RNT_GetNoOfUserDoms  (Idle)
+03:0003794F _RNT_Init 
+03:000379B5 _RNT_End 
 --- From 'errsys.obj'
-03:00037A20 _OS_SysPath 
+03:000379E0 _OS_SysPath 
 --- From 'pfpbindc.obj'
-03:00037B38 _PFP_Round@8  (Idle)
-03:00037B63 _PFP_Trunc@8  (Idle)
-03:00037B87 _PFP_Abs@8  (Idle)
-03:00037B9E _PFP_RealLong@8 
-03:00037C31 _PFP_RealUChar@8  (Idle)
-03:00037CB0 _PFP_RealChar@8  (Idle)
-03:00037D43 _PFP_RealInt@8  (Idle)
-03:00037DD6 _PFP_RealUnsigned@8  (Idle)
-03:00037E55 _PFP_RealULong@8  (Idle)
-03:00037ED4 _PFP_ULongReal@4  (Idle)
-03:00037EF9 _PFP_LongReal@4  (Idle)
-03:00037F17 _PFP_UnsReal@4  (Idle)
-03:00037F3C _PFP_IntReal@4  (Idle)
-03:00037F5A _LONG_Mod@8  (Idle)
-03:00037F75 _LONG_UMod@8  (Idle)
-03:00037F91 _LONG_Div@8  (Idle)
-03:00037FAA _LONG_UDiv@8  (Idle)
-03:00037FC4 _LONG_Mul@8  (Idle)
-03:00037FDD _LONG_UMul@8  (Idle)
-03:00037FF6 _PFP_Add@16  (Idle)
-03:0003800E _PFP_Sub@16  (Idle)
-03:00038026 _PFP_Mult@16  (Idle)
-03:0003803E _PFP_Div@16  (Idle)
-03:00038056 _PFP_RealRound@8  (Idle)
-03:0003807F _PFP_Sin@8  (Idle)
-03:000380A3 _PFP_Cos@8  (Idle)
-03:000380C7 _PFP_Tan@8  (Idle)
-03:000380EB _PFP_Atan@8  (Idle)
-03:0003810F _PFP_Ln@8  (Idle)
-03:00038133 _PFP_Log@8  (Idle)
-03:00038157 _PFP_Exp@8  (Idle)
-03:0003817B _PFP_Sqrt@8  (Idle)
-03:0003819D _PFP_InitRestoreFpu 
-03:0003824F _PFP_TrigFunction 
-03:000383B1 _PFP_SqrtFunction 
-03:00038434 _PFP_LogFunction 
-03:00038500 _PFP_ExpFunction 
-03:00038718 _PFP_RoundFunction 
-03:00038879 _PFP_FloatToLong 
-03:000388B1 _PFP_FloatToInt 
-03:000388E9 _PFP_CheckOverflow 
-03:0003891D _PFP_Error 
+03:00037AF8 _PFP_Round@8  (Idle)
+03:00037B23 _PFP_Trunc@8  (Idle)
+03:00037B47 _PFP_Abs@8  (Idle)
+03:00037B5E _PFP_RealLong@8 
+03:00037BF1 _PFP_RealUChar@8  (Idle)
+03:00037C70 _PFP_RealChar@8  (Idle)
+03:00037D03 _PFP_RealInt@8  (Idle)
+03:00037D96 _PFP_RealUnsigned@8  (Idle)
+03:00037E15 _PFP_RealULong@8  (Idle)
+03:00037E94 _PFP_ULongReal@4  (Idle)
+03:00037EB9 _PFP_LongReal@4  (Idle)
+03:00037ED7 _PFP_UnsReal@4  (Idle)
+03:00037EFC _PFP_IntReal@4  (Idle)
+03:00037F1A _LONG_Mod@8  (Idle)
+03:00037F35 _LONG_UMod@8  (Idle)
+03:00037F51 _LONG_Div@8  (Idle)
+03:00037F6A _LONG_UDiv@8  (Idle)
+03:00037F84 _LONG_Mul@8  (Idle)
+03:00037F9D _LONG_UMul@8  (Idle)
+03:00037FB6 _PFP_Add@16  (Idle)
+03:00037FCE _PFP_Sub@16  (Idle)
+03:00037FE6 _PFP_Mult@16  (Idle)
+03:00037FFE _PFP_Div@16  (Idle)
+03:00038016 _PFP_RealRound@8  (Idle)
+03:0003803F _PFP_Sin@8  (Idle)
+03:00038063 _PFP_Cos@8  (Idle)
+03:00038087 _PFP_Tan@8  (Idle)
+03:000380AB _PFP_Atan@8  (Idle)
+03:000380CF _PFP_Ln@8  (Idle)
+03:000380F3 _PFP_Log@8  (Idle)
+03:00038117 _PFP_Exp@8  (Idle)
+03:0003813B _PFP_Sqrt@8  (Idle)
+03:0003815D _PFP_InitRestoreFpu 
+03:0003820F _PFP_TrigFunction 
+03:00038371 _PFP_SqrtFunction 
+03:000383F4 _PFP_LogFunction 
+03:000384C0 _PFP_ExpFunction 
+03:000386D8 _PFP_RoundFunction 
+03:00038839 _PFP_FloatToLong 
+03:00038871 _PFP_FloatToInt 
+03:000388A9 _PFP_CheckOverflow 
+03:000388DD _PFP_Error 
 --- From 'runexcpt.obj'
-03:0003893E _PFP_FPUReset 
+03:000388FE _PFP_FPUReset 
 --- From 'rnthread.obj'
-03:00038960 _RNT_GetThreadsList  (Idle)
-03:00038975 _RNT_SetThreadsList  (Idle)
-03:0003899B _RNT_GetAllocThreadFNS  (Idle)
-03:000389B0 _RNT_SetAllocThreadFNS  (Idle)
-03:000389D6 _RNT_InitThreads 
+03:00038920 _RNT_GetThreadsList  (Idle)
+03:00038935 _RNT_SetThreadsList  (Idle)
+03:0003895B _RNT_GetAllocThreadFNS  (Idle)
+03:00038970 _RNT_SetAllocThreadFNS  (Idle)
+03:00038996 _RNT_InitThreads 
 --- From 'runexcpt.obj'
-03:00038C2D _RUN_Error_From_Exception 
-03:000390DB _RUN_ExceptionsHandling_i 
-03:000390FF _RUN_ExceptionsHandling_o  (Idle)
+03:00038BED _RUN_Error_From_Exception 
+03:0003909B _RUN_ExceptionsHandling_i 
+03:000390BF _RUN_ExceptionsHandling_o  (Idle)
 --- From 'osgdir.obj'
-03:00039120 _STR_StrCat0Max 
+03:000390E0 _STR_StrCat0Max 
 --- From 'errputms.obj'
-03:00039190 _ERR_OutputMessage 
+03:00039150 _ERR_OutputMessage 
 --- From 'errsys.obj'
-03:00039260 _ERR_GetSysErrorMsg 
+03:00039220 _ERR_GetSysErrorMsg 
 --- From 'errlast.obj'
-03:00039370 _ERR_LastError 
+03:00039330 _ERR_LastError 
 --- From 'oswrtext.obj'
-03:00039430 _OS_WriteBin 
-03:000394A0 _OS_WriteText 
+03:000393F0 _OS_WriteBin 
+03:00039460 _OS_WriteText 
 --- From 'osflush.obj'
-03:00039540 _OS_Flush 
+03:00039500 _OS_Flush 
 --- From 'memobj.obj'
-03:00039580 _MEM_AllocObject  (Idle)
-03:00039614 _MEM_TestingObject  (Idle)
-03:000396A4 _MEM_ReleaseObject  (Idle)
-03:000397AD _MEM_InitiateObjects 
-03:00039810 _MEM_TerminateObjects 
-03:00039879 _MEM_ObjectsDiag  (Idle)
+03:00039540 _MEM_AllocObject  (Idle)
+03:000395D4 _MEM_TestingObject  (Idle)
+03:00039664 _MEM_ReleaseObject  (Idle)
+03:0003976D _MEM_InitiateObjects 
+03:000397D0 _MEM_TerminateObjects 
+03:00039839 _MEM_ObjectsDiag  (Idle)
 --- From 'ioclose.obj'
-03:00039A60 _IO_CloseFile 
-03:00039B8D _IO_Close  (Idle)
+03:00039A20 _IO_CloseFile 
+03:00039B4D _IO_Close  (Idle)
 --- From 'fnmfns.obj'
-03:00039C60 _FNM_AddSlash 
-03:00039CD2 _FNM_RemoveSlash  (Idle)
-03:00039D2D _FNM_ReducePath 
-03:00039F40 _FNM_ReduceCD  (Idle)
-03:00039F7C _FNM_Reduce 
+03:00039C20 _FNM_AddSlash 
+03:00039C92 _FNM_RemoveSlash  (Idle)
+03:00039CED _FNM_ReducePath 
+03:00039F00 _FNM_ReduceCD  (Idle)
+03:00039F3C _FNM_Reduce 
 --- From 'fnmsrch.obj'
-03:0003A1BA _FNM_BuildExtFName 
-03:0003A540 _FNM_BuildFullFName 
+03:0003A17A _FNM_BuildExtFName 
+03:0003A500 _FNM_BuildFullFName 
 --- From 'osfmatch.obj'
-03:0003A560 _FNM_SplitCatSpec 
+03:0003A520 _FNM_SplitCatSpec 
 --- From 'fnmfns.obj'
-03:0003A624 _FNM_RemoveFileMask 
-03:0003A64C _FNM_RemovePath 
-03:0003A751 _FNM_RemoveExt 
-03:0003A77F _FNM_NewFileExt 
-03:0003A7DB _FNM_SeeExt 
-03:0003A819 _FNM_DefExt  (Idle)
-03:0003A8C8 _FNM_RemovePathAndExt  (Idle)
-03:0003A935 _FNM_GetExt  (Idle)
+03:0003A5E4 _FNM_RemoveFileMask 
+03:0003A60C _FNM_RemovePath 
+03:0003A711 _FNM_RemoveExt 
+03:0003A73F _FNM_NewFileExt 
+03:0003A79B _FNM_SeeExt 
+03:0003A7D9 _FNM_DefExt  (Idle)
+03:0003A888 _FNM_RemovePathAndExt  (Idle)
+03:0003A8F5 _FNM_GetExt  (Idle)
 --- From 'fnmsrch.obj'
-03:0003A990 _OS_Exist 
+03:0003A950 _OS_Exist 
 --- From 'erracces.obj'
-03:0003BA15 _ERR_ReadInitiate 
-03:0003BB8A _ERR_ReadErrorMsg 
-03:0003BC7A _ERR_SetAdditiveInfo  (Idle)
+03:0003B9D5 _ERR_ReadInitiate 
+03:0003BB4A _ERR_ReadErrorMsg 
+03:0003BC3A _ERR_SetAdditiveInfo  (Idle)
 --- From 'memreall.obj'
-03:0003BC90 _MEM_ReAllocHeap 
+03:0003BC50 _MEM_ReAllocHeap 
 --- From 'conv_fs.obj'
-03:0003C063 _pow10 
-03:0003C5A4 _CONV_DoubleToString 
+03:0003C023 _pow10 
+03:0003C564 _CONV_DoubleToString 
 --- From 'conv_bs.obj'
-03:0003CA30 _CONV_BinToStr 
-03:0003CB7D _CONV_Bin_To_StrList  (Idle)
+03:0003C9F0 _CONV_BinToStr 
+03:0003CB3D _CONV_Bin_To_StrList  (Idle)
 --- From 'strupper.obj'
-03:0003CC70 _STR_ToUpper 
+03:0003CC30 _STR_ToUpper 
 --- From 'emmend.obj'
-03:0003CCB0 _EMM_End 
+03:0003CC70 _EMM_End 
 --- From 'osclose.obj'
-03:0003CCE0 _OS_Close 
+03:0003CCA0 _OS_Close 
 --- From 'osflock.obj'
-03:0003CD20 _OS_FLock  (Idle)
-03:0003CD83 _OS_FUnlock 
+03:0003CCE0 _OS_FLock  (Idle)
+03:0003CD43 _OS_FUnlock 
 --- From 'rntsynch.obj'
-03:0003CDF0 _RNT_EnterPredefCriticalSection  (Idle)
-03:0003CE08 _RNT_LeavePredefCriticalSection  (Idle)
-03:0003CE20 _RNT_SynchInit 
-03:0003CE38 _RNT_SynchTerm 
+03:0003CDB0 _RNT_EnterPredefCriticalSection  (Idle)
+03:0003CDC8 _RNT_LeavePredefCriticalSection  (Idle)
+03:0003CDE0 _RNT_SynchInit 
+03:0003CDF8 _RNT_SynchTerm 
 --- From 'rntcfact.obj'
-03:0003CE50 _RNT_GatherModTab 
-03:0003CF2F _RNT_InitFactsShadowTable 
-03:0003CF44 _RNT_TermFactsShadowTable 
-03:0003D097 _RNT_CopyFacts 
-03:0003D1BD _RNT_CopyObjectFacts  (Idle)
+03:0003CE10 _RNT_GatherModTab 
+03:0003CEEF _RNT_InitFactsShadowTable 
+03:0003CF04 _RNT_TermFactsShadowTable 
+03:0003D057 _RNT_CopyFacts 
+03:0003D17D _RNT_CopyObjectFacts  (Idle)
 --- From 'rntassz.obj'
-03:0003D260 _RNT_Assertz  (Idle)
-03:0003D388 _RNT_AssertzIniTime 
-03:0003D45C _RNT_FC_Get 
-03:0003D51D _RNT_FC_Free  (Idle)
-03:0003D557 _RNT_FC_Terminate 
+03:0003D220 _RNT_Assertz  (Idle)
+03:0003D348 _RNT_AssertzIniTime 
+03:0003D41C _RNT_FC_Get 
+03:0003D4DD _RNT_FC_Free  (Idle)
+03:0003D517 _RNT_FC_Terminate 
 --- From 'osthread.obj'
-03:0003D5C0 _OS_CreateCriticalUnChecked 
-03:0003D5DC _OS_CreateCriticalSection 
-03:0003D616 _OS_DeleteCriticalSection 
-03:0003D62B _OS_EnterCriticalSection 
-03:0003D640 _OS_LeaveCriticalSection 
-03:0003D655 _OS_DuplicateHandle  (Idle)
-03:0003D6AC _OS_GetCurrentThreadID 
+03:0003D580 _OS_CreateCriticalUnChecked 
+03:0003D59C _OS_CreateCriticalSection 
+03:0003D5D6 _OS_DeleteCriticalSection 
+03:0003D5EB _OS_EnterCriticalSection 
+03:0003D600 _OS_LeaveCriticalSection 
+03:0003D615 _OS_DuplicateHandle  (Idle)
+03:0003D66C _OS_GetCurrentThreadID 
 --- From 'rntcpyg3.obj'
-03:0003D6D0 _RNT_CopyUnify 
+03:0003D690 _RNT_CopyUnify 
 --- From 'memgsptr.obj'
-03:0003D720 _MEM_PtrOlder  (Idle)
-03:0003D73F _MEM_PtrPtrOlder  (Idle)
+03:0003D6E0 _MEM_PtrOlder  (Idle)
+03:0003D6FF _MEM_PtrPtrOlder  (Idle)
 --- From 'fnmsrch.obj'
-03:0003D770 _FNM_SearchFile 
-03:0003D990 _FNM_SearchFile_iio  (Idle)
+03:0003D730 _FNM_SearchFile 
+03:0003D950 _FNM_SearchFile_iio  (Idle)
 --- From 'osgenvs.obj'
-03:0003D9F0 _OS_GetEnvSymb 
+03:0003D9B0 _OS_GetEnvSymb 
 --- From 'convtxbn.obj'
-03:0003DA50 _CONV_TextBin 
+03:0003DA10 _CONV_TextBin 
 --- From 'iogpath.obj'
-03:0003DB00 _IO_GetPath 
+03:0003DAC0 _IO_GetPath 
 --- From 'osgdisk.obj'
-03:0003DBA0 _OS_GetDisk 
+03:0003DB60 _OS_GetDisk 
 --- From 'osgdir.obj'
-03:0003DBF0 _OS_GetDir 
+03:0003DBB0 _OS_GetDir 
 --- From 'osfmatch.obj'
-03:0003E3A4 _OS_FindFirst 
-03:0003E4AE _OS_FindNext  (Idle)
-03:0003E5BB _OS_FindClose 
+03:0003E364 _OS_FindFirst 
+03:0003E46E _OS_FindNext  (Idle)
+03:0003E57B _OS_FindClose 
 --- From 'osrdtext.obj'
-03:0003E5F0 _OS_ReadText 
+03:0003E5B0 _OS_ReadText 
 --- From 'osseek.obj'
-03:0003E630 _OS_Seek 
+03:0003E5F0 _OS_Seek 
 --- From 'osopen.obj'
-03:0003E680 _OS_Open 
+03:0003E640 _OS_Open 
 --- From 'strcatm.obj'
-03:0003E8D0 _STR_StrCatMax 
+03:0003E890 _STR_StrCatMax 
 --- From 'osseekrd.obj'
-03:0003E970 _OS_SeekRdBin 
+03:0003E930 _OS_SeekRdBin 
 --- From 'strcmpi.obj'
-03:0003E9E0 _STR_StrCmpi 
+03:0003E9A0 _STR_StrCmpi 
 --- From 'strncmp.obj'
-03:0003EA90 _STR_StrNCmp 
+03:0003EA50 _STR_StrNCmp 
 --- From 'rntconv.obj'
-03:0003F6B4 _RNT_CopyToHeap 
-03:0003F7AF _RNT_DBTermToBin  (Idle)
-03:0003FAD9 _RNT_CopyComplxToHeap  (Idle)
+03:0003F674 _RNT_CopyToHeap 
+03:0003F76F _RNT_DBTermToBin  (Idle)
+03:0003FA99 _RNT_CopyComplxToHeap  (Idle)
 --- From 'rntcpyg4.obj'
-03:0003FBD0 _RNT_CopyComplxToGStack 
-03:0003FC80 _RNT_CopyTermToGStack 
+03:0003FB90 _RNT_CopyComplxToGStack 
+03:0003FC40 _RNT_CopyTermToGStack 
 --- From 'strsstr.obj'
-03:0003FFF0 _STR_SearchChar  (Idle)
-03:000400D8 _STR_SearchStr 
+03:0003FFB0 _STR_SearchChar  (Idle)
+03:00040098 _STR_SearchStr 
 --- From 'strlower.obj'
-03:000401B0 _STR_ToLower 
+03:00040170 _STR_ToLower 
 --- From 'rntfixup.obj'
-03:000401F0 _RNT_FixUpBinChunk 
+03:000401B0 _RNT_FixUpBinChunk 
 --- From 'memcopyh.obj'
-03:00040240 _MEM_NewCopyHeap 
+03:00040200 _MEM_NewCopyHeap 
 --- From 'memcopyg.obj'
-03:00040280 _MEM_NewCopyGStack 
-030000:0102C0 000018   STRSTRLEN_TEXT::CODE::<no group> F=4
+03:00040240 _MEM_NewCopyGStack 
+030000:010280 000018   STRSTRLEN_TEXT::CODE::<no group> F=4
 --- From 'rntconv.obj'
-03:000402C0 _STR_StrLen 
-030000:0102D8 000378   RUNBTRAK_TEXT::CODE::<no group> F=4
+03:00040280 _STR_StrLen 
+030000:010298 000378   RUNBTRAK_TEXT::CODE::<no group> F=4
 --- From 'runbtrak.obj'
-03:000402D8 _RUN_stkb1 
-03:00040300 _RUN_stkb2  (Idle)
-03:00040328 _RUN_stkb3  (Idle)
-03:00040350 _RUN_stktrap  (Idle)
+03:00040298 _RUN_stkb1 
+03:000402C0 _RUN_stkb2  (Idle)
+03:000402E8 _RUN_stkb3  (Idle)
+03:00040310 _RUN_stktrap  (Idle)
 --- From 'runinit.obj'
-03:00040378 _RUN_StackBTrack 
+03:00040338 _RUN_StackBTrack 
 --- From 'runbtrak.obj'
-03:00040384 _RUN_StackBTrack3@4  (Idle)
+03:00040344 _RUN_StackBTrack3@4  (Idle)
 --- From 'rntconv.obj'
-03:000403BC _RUN_StackTrap 
+03:0004037C _RUN_StackTrap 
 --- From 'runbtrak.obj'
-03:000403FC _RUN_JmpReturn  (Idle)
+03:000403BC _RUN_JmpReturn  (Idle)
 --- From 'rntconv.obj'
-03:00040408 _RUN_JmpReturn1 
+03:000403C8 _RUN_JmpReturn1 
 --- From 'fnmsrch.obj'
-03:00040414 _RUN_Fail 
+03:000403D4 _RUN_Fail 
 --- From 'runbtrak.obj'
-03:0004046C _RUN_True  (Idle)
-03:00040470 _RUN_ChkRetract  (Idle)
-03:000404B4 _RUN_ChkTrail  (Idle)
-03:000404F8 _RUN_Cut_ 
-03:0004052C _RUN_Cut  (Idle)
+03:0004042C _RUN_True  (Idle)
+03:00040430 _RUN_ChkRetract  (Idle)
+03:00040474 _RUN_ChkTrail  (Idle)
+03:000404B8 _RUN_Cut_ 
+03:000404EC _RUN_Cut  (Idle)
 --- From 'rntconv.obj'
-03:0004057C _RUN_RemoveTrap 
+03:0004053C _RUN_RemoveTrap 
 --- From 'runbtrak.obj'
-03:000405BC _RUN_BTop_o  (Idle)
-03:000405C8 _RUN_BTop_i  (Idle)
-03:00040608 _RUN_get_trailsize  (Idle)
-03:00040614 _RUN_BPoints  (Idle)
-03:00040638 _RUN_Cursor 
-030000:010650 000008   RUNSTK_TEXT::CODE::<no group> F=4
+03:0004057C _RUN_BTop_o  (Idle)
+03:00040588 _RUN_BTop_i  (Idle)
+03:000405C8 _RUN_get_trailsize  (Idle)
+03:000405D4 _RUN_BPoints  (Idle)
+03:000405F8 _RUN_Cursor 
+030000:010610 000008   RUNSTK_TEXT::CODE::<no group> F=4
 --- From 'rntconv.obj'
-03:00040650 _RUN_GetSP 
-030000:010658 000124   MEMSIDI_TEXT::CODE::<no group> F=4
+03:00040610 _RUN_GetSP 
+030000:010618 000124   MEMSIDI_TEXT::CODE::<no group> F=4
 --- From 'rununify.obj'
-03:00040658 _MEM_alloc_ax 
-03:00040688 _MEM_alloc_bx 
-03:000406B8 _MEM_alloc_cx 
-03:000406E8 _MEM_alloc_dx 
-03:0004071C _MEM_alloc_si 
-03:0004074C _MEM_alloc_di 
-030000:01077C 0002EC   RUNUNIFY_TEXT::CODE::<no group> F=4
+03:00040618 _MEM_alloc_ax 
+03:00040648 _MEM_alloc_bx 
+03:00040678 _MEM_alloc_cx 
+03:000406A8 _MEM_alloc_dx 
+03:000406DC _MEM_alloc_si 
+03:0004070C _MEM_alloc_di 
+030000:01073C 0002EC   RUNUNIFY_TEXT::CODE::<no group> F=4
 --- From 'rununify.obj'
-03:0004077C _RUN_allocrefterm_si  (Idle)
-03:000407C0 _RUN_allocrefterm_di  (Idle)
-03:000407CC _RUN_allocrefterm_ax  (Idle)
-03:000407D8 _RUN_allocrefterm_bx  (Idle)
-03:000407E4 _RUN_allocrefterm_cx  (Idle)
-03:000407F0 _RUN_allocrefterm_dx  (Idle)
-03:000407FC _RUN_allocref_di  (Idle)
-03:00040810 _RUN_allocref_si  (Idle)
-03:00040824 _RUN_allocref_ax  (Idle)
-03:00040838 _RUN_allocref_bx  (Idle)
-03:0004084C _RUN_allocref_cx  (Idle)
-03:00040860 _RUN_allocref_dx  (Idle)
-03:00040874 _RUN_coerse_di  (Idle)
-03:00040888 _RUN_coerse_si  (Idle)
-03:0004089C _RUN_coerse_ax  (Idle)
-03:000408B0 _RUN_coerse_bx  (Idle)
-03:000408C4 _RUN_coerse_cx  (Idle)
-03:000408D8 _RUN_coerse_dx  (Idle)
-03:000408EC _RUN_trail_di  (Idle)
-03:00040954 _RUN_trail_si  (Idle)
-03:00040960 _RUN_trail_ax  (Idle)
-03:0004096C _RUN_trail_bx  (Idle)
-03:00040978 _RUN_trail_cx  (Idle)
-03:00040984 _RUN_trail_dx  (Idle)
-03:00040990 _RUN_trail_ptr  (Idle)
-03:0004099C _RUN_Unify  (Idle)
-030000:010A68 0001F4   PFPMATH_TEXT::CODE::<no group> F=4
+03:0004073C _RUN_allocrefterm_si  (Idle)
+03:00040780 _RUN_allocrefterm_di  (Idle)
+03:0004078C _RUN_allocrefterm_ax  (Idle)
+03:00040798 _RUN_allocrefterm_bx  (Idle)
+03:000407A4 _RUN_allocrefterm_cx  (Idle)
+03:000407B0 _RUN_allocrefterm_dx  (Idle)
+03:000407BC _RUN_allocref_di  (Idle)
+03:000407D0 _RUN_allocref_si  (Idle)
+03:000407E4 _RUN_allocref_ax  (Idle)
+03:000407F8 _RUN_allocref_bx  (Idle)
+03:0004080C _RUN_allocref_cx  (Idle)
+03:00040820 _RUN_allocref_dx  (Idle)
+03:00040834 _RUN_coerse_di  (Idle)
+03:00040848 _RUN_coerse_si  (Idle)
+03:0004085C _RUN_coerse_ax  (Idle)
+03:00040870 _RUN_coerse_bx  (Idle)
+03:00040884 _RUN_coerse_cx  (Idle)
+03:00040898 _RUN_coerse_dx  (Idle)
+03:000408AC _RUN_trail_di  (Idle)
+03:00040914 _RUN_trail_si  (Idle)
+03:00040920 _RUN_trail_ax  (Idle)
+03:0004092C _RUN_trail_bx  (Idle)
+03:00040938 _RUN_trail_cx  (Idle)
+03:00040944 _RUN_trail_dx  (Idle)
+03:00040950 _RUN_trail_ptr  (Idle)
+03:0004095C _RUN_Unify  (Idle)
+030000:010A28 0001F4   PFPMATH_TEXT::CODE::<no group> F=4
 --- From 'pfpmath.obj'
-03:00040A68 _PFP_GetTypeArgument 
-03:00040A8A _PFP_FInit 
-03:00040A8F _PFP_GetControlWord 
-03:00040A9E _PFP_GetStatusWord 
-03:00040AA2 _PFP_SetControlWord 
-03:00040AAB _PFP_GetExponent 
-03:00040ADC _PFP_MakeRange 
-03:00040AF8 _PFP_CalcSin 
-03:00040AFF _PFP_CalcCos 
-03:00040B06 _PFP_CalcTan 
-03:00040B33 _PFP_CalcArcTan 
-03:00040B3C _PFP_CalcSqrtFunction 
-03:00040B43 _PFP_CalcLog10 
-03:00040B4E _PFP_CalcLn 
-03:00040B59 _PFP_CalcExpFunction 
-03:00040B79 _PFP_CalcRound 
-03:00040B80 _PFP_GetLog2_E 
-03:00040B83 _PFP_GetLog2_10 
-03:00040B86 _PFP_GetLog10_2  (Idle)
-03:00040B89 _PFP_CalcFloatToLong 
-03:00040B9A _PFP_DoubleToBCD  (Idle)
-03:00040BAA _PFP_CheckInteger  (Idle)
-03:00040BD5 _PFP_ClearExceptionFlags 
-03:00040BE5 _PFP_ClearFPUStack 
-03:00040BFE __fuistq 
-03:00040C23 __qdiv10 
-03:00040C49 __fxam 
-030000:010C5C 000008   RNTCFCI_TEXT::CODE::<no group> F=4
+03:00040A28 _PFP_GetTypeArgument 
+03:00040A4A _PFP_FInit 
+03:00040A4F _PFP_GetControlWord 
+03:00040A5E _PFP_GetStatusWord 
+03:00040A62 _PFP_SetControlWord 
+03:00040A6B _PFP_GetExponent 
+03:00040A9C _PFP_MakeRange 
+03:00040AB8 _PFP_CalcSin 
+03:00040ABF _PFP_CalcCos 
+03:00040AC6 _PFP_CalcTan 
+03:00040AF3 _PFP_CalcArcTan 
+03:00040AFC _PFP_CalcSqrtFunction 
+03:00040B03 _PFP_CalcLog10 
+03:00040B0E _PFP_CalcLn 
+03:00040B19 _PFP_CalcExpFunction 
+03:00040B39 _PFP_CalcRound 
+03:00040B40 _PFP_GetLog2_E 
+03:00040B43 _PFP_GetLog2_10 
+03:00040B46 _PFP_GetLog10_2  (Idle)
+03:00040B49 _PFP_CalcFloatToLong 
+03:00040B5A _PFP_DoubleToBCD  (Idle)
+03:00040B6A _PFP_CheckInteger  (Idle)
+03:00040B95 _PFP_ClearExceptionFlags 
+03:00040BA5 _PFP_ClearFPUStack 
+03:00040BBE __fuistq 
+03:00040BE3 __qdiv10 
+03:00040C09 __fxam 
+030000:010C1C 000008   RNTCFCI_TEXT::CODE::<no group> F=4
 --- From 'rntcfci.obj'
-03:00040C5C _RNT_InitEndData 
+03:00040C1C _RNT_InitEndData 
 Frame 050000   Size 000530.  Name=<    .bss>, 	Chars=C0000080h. [URW]
 050000:000000 000524   *** Comm1 ***::BSS::<no group> F=0
 --- From 'C:\VIP52\LIB\WIN32\MSC\EASYWIN.OBJ'
