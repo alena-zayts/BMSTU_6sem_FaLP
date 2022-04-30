@@ -1,0 +1,83 @@
+domains
+    list = integer*.
+
+predicates
+    leaveGreater(list, integer, list).
+    leaveOddPos(list, list).
+    deleteOne(list, integer, list).
+    deleteAll(list, integer, list).
+
+    set(list, list).
+
+clauses
+    leaveGreater([H|T], Num, [H|ResultTail]) :-
+                                H > Num,
+                                !,
+                                leaveGreater(T, Num, ResultTail).
+    leaveGreater([_|T], Num, ResultList) :- 
+				leaveGreater(T, Num, ResultList), 
+				!.
+    leaveGreater([], _, []).
+
+
+
+
+    leaveOddPos([_|[H|T]], [H|ResultList]) :-
+    				!,
+                                leaveOddPos(T, ResultList).
+    leaveOddPos([_|[]], []) :- !. % if list has odd length
+    leaveOddPos([], []).
+
+
+
+    deleteOne([Elem|T], Elem, T) :- !.
+    deleteOne([H|T], Elem, [H|ResultTail]) :- 
+                                !,
+                                deleteOne(T, Elem, ResultTail).
+    deleteOne([], _, []).
+
+
+
+    deleteAll([Elem|T], Elem, ResultList) :-
+                                !,
+                                deleteAll(T, Elem, ResultList).
+    deleteAll([H|T], Elem, [H|ResultTail]) :- 
+    				!,
+                                deleteAll(T, Elem, ResultTail).
+                                
+    deleteAll([], _, []).
+    
+    
+
+    set([H|T], [H|ResultTail]) :- 
+    				deleteAll(T, H, TWithoutH),
+    				!,
+    				set(TWithoutH, ResultTail).
+    set([], []).
+
+goal
+    %
+    % leaveGreater([1, 2, -1, 3, -2], 0, Result_).
+    % Result_=[1,2,3]
+    % 1 Solution
+    
+    %
+    % leaveOddPos([0, 1, 2, 3, 4, 5, 6], Result_).
+    % Result_=[1,3,5]
+    % 1 Solution
+    
+    % leaveOddPos([0, 1, 2, 3, 4, 5], Result_).
+    % Result_=[1,3,5]
+    % 1 Solution
+    
+    
+    %
+    % deleteOne([1, 5, 1, 6, 1, 4], 1, Result_).
+    % Result_=[5,1,6,1,4]
+    % 1 Solution
+    
+    % deleteAll([1, 5, 1, 6], 1, Result_).
+    % Result_=[5,6,4]
+    % 1 Solution
+
+    set([1, 2, 2, 1], Result_).
